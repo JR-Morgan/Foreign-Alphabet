@@ -10,7 +10,7 @@ This program will display one character at a time from a chosen alphabet or syll
 Just load one of the XML files that we include (or create your own)
 and select which characters you want to display.
 The best way to learn a new alphabet is to try and recall its sounds from memory.
-This program will display a single character, once you recall the sound of this character, you can press next to display the next character.
+This program will display a random character, once you recall the sound of this character, you can press next to display the next character.
 If you cannot recall it's sound, you can display its Latin and IPA form.
 However, recommend you don’t do this often, as recalling the character is the only way you will learn the character.
 So keep struggling and try and remember.
