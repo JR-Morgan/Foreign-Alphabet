@@ -12,6 +12,7 @@ namespace Foreign_Alphabet
         private List<Character> SelectedCharacters;
         private Character lastSelectedCharacter;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -26,14 +27,15 @@ namespace Foreign_Alphabet
                 //Get the path of specified file
                 filePath = ofdAlphabetFileDialogue.FileName;
                 txtFile.Text = filePath;
+                if (txtFile.Text.EndsWith(".xml"))
+                {
+                    ResetLoadedAlphabet();
+                    XDocument doc = XDocument.Load(filePath);
+                    this.alphabet = ParseElement(doc.Element("alphabet"));
 
-                XDocument doc = XDocument.Load(filePath);
-                this.alphabet = ParseElement(doc.Element("alphabet"));
 
-
-                trvAlphabetGroups.Nodes.Add(PopulateTree(this.alphabet));
-
-
+                    trvAlphabetGroups.Nodes.Add(PopulateTree(this.alphabet));
+                }
             }
 
         }
@@ -44,6 +46,7 @@ namespace Foreign_Alphabet
                 Text = alphabet.Name,
                 Tag = alphabet
             };
+            node.Expand();
             foreach (Alphabet a in alphabet.subGroup)
             {
                 node.Nodes.Add(PopulateTree(a));
@@ -81,7 +84,18 @@ namespace Foreign_Alphabet
             return alphabet;
         }
 
+        private void ResetLoadedAlphabet()
+        {
+            trvAlphabetGroups.Nodes.Clear();
+            alphabet = new Alphabet();
+            UpdateSelectedCharacters();
+        }
         
+        private void UpdateSelectedCharacters()
+        {
+            SelectedCharacters = alphabet.GetAllEnabledCharacters();
+            btnNext.Enabled = SelectedCharacters.Count != 0;
+        }
 
         private void TrvAlphabetGroups_AfterCheck(object sender, TreeViewEventArgs e)
         {
@@ -94,11 +108,8 @@ namespace Foreign_Alphabet
                 {
                     SetParentsChecked(e.Node, false);
                 }
-                
 
-
-                SelectedCharacters = alphabet.GetAllEnabledCharacters();
-                btnNext.Enabled = SelectedCharacters.Count != 0;
+                UpdateSelectedCharacters();
             }
             
         }
@@ -146,7 +157,19 @@ namespace Foreign_Alphabet
 
             foreach (String s in c.representation.Keys)
             {
-                description.Add(s + " : " + c.representation[s]);
+                switch(s)
+                {
+                    case "latin":
+                        description.Add("Latin : " + c.representation[s]);
+                        break;
+                    case "ipa":
+                        description.Add("  IPA : " + c.representation[s]);
+                        break;
+                    case "audio":
+                        //TODO audio;
+                        break;
+                }
+                
             }
 
             chkDescription.Enabled = description.Count != 0;
@@ -162,6 +185,7 @@ namespace Foreign_Alphabet
         private void Form1_Load(object sender, EventArgs e)
         {
             rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+            rtbCharacterDisplay.Font = fontDialog.Font;
         }
 
         private void BtnLoadFile_Click(object sender, EventArgs e)
@@ -175,9 +199,38 @@ namespace Foreign_Alphabet
             lboDescription.Visible = chkDescription.Checked;
         }
 
+        private void FontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fontDialog.ShowDialog() == DialogResult.OK)
+            {
+                rtbCharacterDisplay.Font = fontDialog.Font;
+            }
+        }
+
+        private void FontColourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (codTextColor.ShowDialog() == DialogResult.OK)
+            {
+                rtbCharacterDisplay.ForeColor = codTextColor.Color;
+            }
+        }
+
+        private void BackgroundColourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (codBGColor.ShowDialog() == DialogResult.OK)
+            {
+                rtbCharacterDisplay.BackColor = codBGColor.Color;
+            }
+        }
+
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            LoadFile();
+        }
 
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            ResetLoadedAlphabet();
         }
     }
 }

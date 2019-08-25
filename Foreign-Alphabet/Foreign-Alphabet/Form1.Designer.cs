@@ -31,6 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rtbCharacterDisplay = new System.Windows.Forms.RichTextBox();
             this.gboAlphabet = new System.Windows.Forms.GroupBox();
             this.lboDescription = new System.Windows.Forms.ListBox();
@@ -44,9 +46,12 @@
             this.ofdAlphabetFileDialogue = new System.Windows.Forms.OpenFileDialog();
             this.btnAnalytics = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontDialog = new System.Windows.Forms.FontDialog();
+            this.codBGColor = new System.Windows.Forms.ColorDialog();
+            this.codTextColor = new System.Windows.Forms.ColorDialog();
+            this.fontColourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundColourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClear = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gboAlphabet.SuspendLayout();
             this.gboConfig.SuspendLayout();
@@ -78,9 +83,25 @@
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fontToolStripMenuItem,
+            this.fontColourToolStripMenuItem,
+            this.backgroundColourToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // fontToolStripMenuItem
+            // 
+            this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontToolStripMenuItem.Text = "Font";
+            this.fontToolStripMenuItem.Click += new System.EventHandler(this.FontToolStripMenuItem_Click);
+            // 
             // rtbCharacterDisplay
             // 
-            this.rtbCharacterDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbCharacterDisplay.Location = new System.Drawing.Point(6, 19);
             this.rtbCharacterDisplay.Name = "rtbCharacterDisplay";
             this.rtbCharacterDisplay.ReadOnly = true;
@@ -105,6 +126,8 @@
             // 
             // lboDescription
             // 
+            this.lboDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lboDescription.Enabled = false;
             this.lboDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lboDescription.FormattingEnabled = true;
@@ -143,6 +166,7 @@
             // 
             // btnNext
             // 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNext.Enabled = false;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.Location = new System.Drawing.Point(6, 452);
@@ -158,6 +182,7 @@
             this.gboConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gboConfig.Controls.Add(this.btnClear);
             this.gboConfig.Controls.Add(this.trvAlphabetGroups);
             this.gboConfig.Controls.Add(this.btnLoadFile);
             this.gboConfig.Controls.Add(this.txtFile);
@@ -170,10 +195,13 @@
             // 
             // trvAlphabetGroups
             // 
+            this.trvAlphabetGroups.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.trvAlphabetGroups.CheckBoxes = true;
-            this.trvAlphabetGroups.Location = new System.Drawing.Point(6, 48);
+            this.trvAlphabetGroups.Location = new System.Drawing.Point(6, 77);
             this.trvAlphabetGroups.Name = "trvAlphabetGroups";
-            this.trvAlphabetGroups.Size = new System.Drawing.Size(240, 392);
+            this.trvAlphabetGroups.Size = new System.Drawing.Size(240, 361);
             this.trvAlphabetGroups.TabIndex = 2;
             this.trvAlphabetGroups.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.TrvAlphabetGroups_AfterCheck);
             // 
@@ -227,19 +255,47 @@
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // settingsToolStripMenuItem
+            // fontDialog
             // 
-            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fontToolStripMenuItem});
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.settingsToolStripMenuItem.Text = "Settings";
+            this.fontDialog.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // fontToolStripMenuItem
+            // codBGColor
             // 
-            this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fontToolStripMenuItem.Text = "Font";
+            this.codBGColor.AnyColor = true;
+            this.codBGColor.Color = System.Drawing.Color.LightGray;
+            this.codBGColor.FullOpen = true;
+            this.codBGColor.SolidColorOnly = true;
+            // 
+            // codTextColor
+            // 
+            this.codTextColor.AnyColor = true;
+            this.codTextColor.FullOpen = true;
+            this.codTextColor.SolidColorOnly = true;
+            // 
+            // fontColourToolStripMenuItem
+            // 
+            this.fontColourToolStripMenuItem.Name = "fontColourToolStripMenuItem";
+            this.fontColourToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontColourToolStripMenuItem.Text = "Font Colour";
+            this.fontColourToolStripMenuItem.Click += new System.EventHandler(this.FontColourToolStripMenuItem_Click);
+            // 
+            // backgroundColourToolStripMenuItem
+            // 
+            this.backgroundColourToolStripMenuItem.Name = "backgroundColourToolStripMenuItem";
+            this.backgroundColourToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.backgroundColourToolStripMenuItem.Text = "Background Colour";
+            this.backgroundColourToolStripMenuItem.Click += new System.EventHandler(this.BackgroundColourToolStripMenuItem_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClear.Location = new System.Drawing.Point(171, 48);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // Form1
             // 
@@ -252,7 +308,7 @@
             this.Controls.Add(this.gboAlphabet);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(667, 472);
+            this.MinimumSize = new System.Drawing.Size(667, 450);
             this.Name = "Form1";
             this.Text = "Foreign Alphabet";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -287,7 +343,12 @@
         private System.Windows.Forms.ListBox lboDescription;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
-        private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.FontDialog fontDialog;
+        private System.Windows.Forms.ColorDialog codBGColor;
+        private System.Windows.Forms.ColorDialog codTextColor;
+        private System.Windows.Forms.ToolStripMenuItem fontColourToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backgroundColourToolStripMenuItem;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
