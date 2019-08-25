@@ -20,6 +20,6 @@ It's much better to struggle a little longer and really try and remember.
 Included is xml files for Hiragana, Katakana and Russian.
 With audio for none at the moment
 
-In the farther I plan to create more xml files for more languages and record more audio.
+In the future I plan to create more xml files for more languages and record more audio.
 
 You can even create your own files, you only need to have very basic xml knowledge, you can use one of the provided files as a template.
