@@ -11,25 +11,31 @@ namespace Foreign_Alphabet
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public bool enabled;
+        public bool Enabled { get; set; } = false;
 
-        public LinkedList<Alphabet> subGroup;
-        public LinkedList<Character> characters;
+        public List<Alphabet> subGroup;
+        public List<Character> characters;
 
         public Alphabet()
         {
-            subGroup = new LinkedList<Alphabet>();
-            characters = new LinkedList<Character>();
+            subGroup = new List<Alphabet>();
+            characters = new List<Character>();
         }
-        public LinkedList<Character> getAllCharacters()
+        public List<Character> getAllEnabledCharacters()
         {
-            LinkedList<Character> characters = this.characters;
+            
+            List<Character> characters = this.characters;
+
+            if(!Enabled)
+            {
+                characters = new List<Character>();
+            }
 
             foreach(Alphabet a in subGroup)
             {
-                foreach(Character c in a.getAllCharacters())
+                foreach(Character c in a.getAllEnabledCharacters())
                 {
-                    characters.AddLast(c);
+                    characters.Add(c);
                 }
                 
             }

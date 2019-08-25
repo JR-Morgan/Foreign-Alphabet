@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -16,12 +9,13 @@ namespace Foreign_Alphabet
     {
 
         private Alphabet alphabet;
+        private List<Character> SelectedCharacters;
+        private Character lastSelectedCharacter;
+
         public Form1()
         {
             InitializeComponent();
         }
-
-
 
         private void loadFile()
         {
@@ -39,14 +33,7 @@ namespace Foreign_Alphabet
 
                 trvAlphabetGroups.Nodes.Add(populateTree(this.alphabet));
 
-                /*
-                String msg = "";
-                foreach (Character c in alphabet.getAllCharacters())
-                {
-                    msg += c.character;
-                }
-                System.Windows.Forms.MessageBox.Show(msg);
-                */
+
             }
 
         }
@@ -75,7 +62,7 @@ namespace Foreign_Alphabet
             {
                 if (node.Name == "alphabet")
                 {
-                    alphabet.subGroup.AddLast(parseElement(node));
+                    alphabet.subGroup.Add(parseElement(node));
                 }
                 else if (node.Name == "char")
                 {
@@ -87,7 +74,7 @@ namespace Foreign_Alphabet
                     {
                         c.representation.Add(a.Name.ToString(), a.Value);
                     }
-                    alphabet.characters.AddLast(c);
+                    alphabet.characters.Add(c);
                 }
 
             }
@@ -104,5 +91,54 @@ namespace Foreign_Alphabet
             loadFile();
         }
 
+        private void TrvAlphabetGroups_AfterCheck(object sender, TreeViewEventArgs e)
+        {
+            ((Alphabet)e.Node.Tag).Enabled = e.Node.Checked;
+            SelectedCharacters = alphabet.getAllEnabledCharacters();
+
+            //String msg = "";
+            //foreach (Character c in SelectedCharacters)
+            //{
+            //    msg += c.character;
+            //}
+            //MessageBox.Show(msg);
+
+            btnNext.Enabled = SelectedCharacters.Count != 0;
+        }
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            Character c = RandomCharacter(SelectedCharacters);
+            rtbCharacterDisplay.Text = c.character;
+            String description = "";
+            foreach(String s in c.representation.Keys)
+            {
+                description += s + " : " + c.representation[s] + "\n ";
+            }
+            lblDescription.Text = description;
+            btnHint.Enabled = description != "";
+            
+
+            rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+        }
+
+        private Character RandomCharacter(List<Character> characters)
+        {
+            Random rand = new Random();
+            Character c = characters[rand.Next(characters.Count)];
+
+            while (c == lastSelectedCharacter && characters.Count > 1)
+            {
+                c = characters[rand.Next(characters.Count)];
+            }
+
+            lastSelectedCharacter = c;
+            return c;
+        }
+
+        private void BtnHint_Click(object sender, EventArgs e)
+        {
+            lblDescription.Visible = !lblDescription.Visible;
+        }
     }
 }
