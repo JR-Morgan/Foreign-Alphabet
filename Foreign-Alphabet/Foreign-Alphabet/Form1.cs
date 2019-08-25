@@ -17,9 +17,9 @@ namespace Foreign_Alphabet
             InitializeComponent();
         }
 
-        private void loadFile()
+        private void LoadFile()
         {
-            String filePath = string.Empty;
+            String filePath;
 
             if (ofdAlphabetFileDialogue.ShowDialog() == DialogResult.OK)
             {
@@ -28,16 +28,16 @@ namespace Foreign_Alphabet
                 txtFile.Text = filePath;
 
                 XDocument doc = XDocument.Load(filePath);
-                this.alphabet = parseElement(doc.Element("alphabet"));
+                this.alphabet = ParseElement(doc.Element("alphabet"));
 
 
-                trvAlphabetGroups.Nodes.Add(populateTree(this.alphabet));
+                trvAlphabetGroups.Nodes.Add(PopulateTree(this.alphabet));
 
 
             }
 
         }
-        private TreeNode populateTree(Alphabet alphabet)
+        private TreeNode PopulateTree(Alphabet alphabet)
         {
             TreeNode node = new TreeNode()
             {
@@ -46,13 +46,13 @@ namespace Foreign_Alphabet
             };
             foreach (Alphabet a in alphabet.subGroup)
             {
-                node.Nodes.Add(populateTree(a));
+                node.Nodes.Add(PopulateTree(a));
             }
 
             return node;
         }
 
-        private Alphabet parseElement(XElement rootElement)
+        private Alphabet ParseElement(XElement rootElement)
         {
             Alphabet alphabet = new Alphabet
             {
@@ -62,7 +62,7 @@ namespace Foreign_Alphabet
             {
                 if (node.Name == "alphabet")
                 {
-                    alphabet.subGroup.Add(parseElement(node));
+                    alphabet.subGroup.Add(ParseElement(node));
                 }
                 else if (node.Name == "char")
                 {
@@ -81,65 +81,49 @@ namespace Foreign_Alphabet
             return alphabet;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
-        }
-
-        private void BtnLoadFile_Click(object sender, EventArgs e)
-        {
-            loadFile();
-        }
+        
 
         private void TrvAlphabetGroups_AfterCheck(object sender, TreeViewEventArgs e)
         {
-            ((Alphabet)e.Node.Tag).Enabled = e.Node.Checked;
 
 
             if (e.Action != TreeViewAction.Unknown)
             {
-                SetChildrenChecked(e.Node);
-            }
-            SelectedCharacters = alphabet.getAllEnabledCharacters();
-            btnNext.Enabled = SelectedCharacters.Count != 0;
-        }
-        private void SetChildrenChecked(TreeNode treeNode)
-        {
-            foreach (TreeNode item in treeNode.Nodes)
-            {
-                if (item.Checked != treeNode.Checked)
+                SetChildrenChecked(e.Node, e.Node.Checked);
+                if(!e.Node.Checked)
                 {
-                    item.Checked = treeNode.Checked;
+                    SetParentsChecked(e.Node, false);
                 }
+                
 
-                if (item.Nodes.Count > 0)
-                {
-                    SetChildrenChecked(item);
-                }
+
+                SelectedCharacters = alphabet.GetAllEnabledCharacters();
+                btnNext.Enabled = SelectedCharacters.Count != 0;
             }
-        }
-
-
-        private void BtnNext_Click(object sender, EventArgs e)
-        {
-            Character c = RandomCharacter(SelectedCharacters);
-            rtbCharacterDisplay.Text = c.character;
-            List<String> description = new List<String>();
-            rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
-            
-            foreach (String s in c.representation.Keys)
-            {
-                description.Add(s + " : " + c.representation[s]);
-            }
-
-            chkDescription.Enabled = description.Count != 0;
-
-            lboDescription.Items.Clear();
-            lboDescription.Items.AddRange(description.ToArray());
-
             
         }
+        private void SetChildrenChecked(TreeNode parentNode, bool check)
+        {
+            ((Alphabet)parentNode.Tag).Enabled = check;
+            parentNode.Checked = check;
 
+            foreach (TreeNode childNode in parentNode.Nodes)
+            {
+                SetChildrenChecked(childNode, check);
+            }
+        }
+
+        private void SetParentsChecked(TreeNode RootNode, bool check)
+        {
+            ((Alphabet)RootNode.Tag).Enabled = check;
+            RootNode.Checked = check;
+
+            if(RootNode.Parent != null)
+            {
+                SetParentsChecked(RootNode.Parent, check);
+            }
+            
+        }
         private Character RandomCharacter(List<Character> characters)
         {
             Random rand = new Random();
@@ -153,10 +137,47 @@ namespace Foreign_Alphabet
             lastSelectedCharacter = c;
             return c;
         }
+        private void NextCharacter()
+        {
+            Character c = RandomCharacter(SelectedCharacters);
+            rtbCharacterDisplay.Text = c.character;
+            List<String> description = new List<String>();
+            rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+
+            foreach (String s in c.representation.Keys)
+            {
+                description.Add(s + " : " + c.representation[s]);
+            }
+
+            chkDescription.Enabled = description.Count != 0;
+
+            lboDescription.Items.Clear();
+            lboDescription.Items.AddRange(description.ToArray());
+        }
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            NextCharacter();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+        }
+
+        private void BtnLoadFile_Click(object sender, EventArgs e)
+        {
+            LoadFile();
+        }
+
 
         private void ChkDescription_CheckedChanged(object sender, EventArgs e)
         {
             lboDescription.Visible = chkDescription.Checked;
+        }
+
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -33,6 +33,8 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rtbCharacterDisplay = new System.Windows.Forms.RichTextBox();
             this.gboAlphabet = new System.Windows.Forms.GroupBox();
+            this.lboDescription = new System.Windows.Forms.ListBox();
+            this.chkDescription = new System.Windows.Forms.CheckBox();
             this.btnListen = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.gboConfig = new System.Windows.Forms.GroupBox();
@@ -42,8 +44,9 @@
             this.ofdAlphabetFileDialogue = new System.Windows.Forms.OpenFileDialog();
             this.btnAnalytics = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.chkDescription = new System.Windows.Forms.CheckBox();
-            this.lboDescription = new System.Windows.Forms.ListBox();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.gboAlphabet.SuspendLayout();
             this.gboConfig.SuspendLayout();
@@ -52,7 +55,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(651, 24);
@@ -70,8 +74,9 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // rtbCharacterDisplay
             // 
@@ -97,6 +102,32 @@
             this.gboAlphabet.Size = new System.Drawing.Size(369, 497);
             this.gboAlphabet.TabIndex = 0;
             this.gboAlphabet.TabStop = false;
+            // 
+            // lboDescription
+            // 
+            this.lboDescription.Enabled = false;
+            this.lboDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lboDescription.FormattingEnabled = true;
+            this.lboDescription.ItemHeight = 24;
+            this.lboDescription.Location = new System.Drawing.Point(109, 242);
+            this.lboDescription.Name = "lboDescription";
+            this.lboDescription.Size = new System.Drawing.Size(254, 196);
+            this.lboDescription.TabIndex = 2;
+            this.lboDescription.Visible = false;
+            // 
+            // chkDescription
+            // 
+            this.chkDescription.AutoSize = true;
+            this.chkDescription.Enabled = false;
+            this.chkDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkDescription.Location = new System.Drawing.Point(7, 242);
+            this.chkDescription.Name = "chkDescription";
+            this.chkDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkDescription.Size = new System.Drawing.Size(95, 22);
+            this.chkDescription.TabIndex = 1;
+            this.chkDescription.Text = "Show Hint";
+            this.chkDescription.UseVisualStyleBackColor = true;
+            this.chkDescription.CheckedChanged += new System.EventHandler(this.ChkDescription_CheckedChanged);
             // 
             // btnListen
             // 
@@ -196,31 +227,19 @@
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // chkDescription
+            // settingsToolStripMenuItem
             // 
-            this.chkDescription.AutoSize = true;
-            this.chkDescription.Enabled = false;
-            this.chkDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDescription.Location = new System.Drawing.Point(7, 242);
-            this.chkDescription.Name = "chkDescription";
-            this.chkDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkDescription.Size = new System.Drawing.Size(95, 22);
-            this.chkDescription.TabIndex = 1;
-            this.chkDescription.Text = "Show Hint";
-            this.chkDescription.UseVisualStyleBackColor = true;
-            this.chkDescription.CheckedChanged += new System.EventHandler(this.ChkDescription_CheckedChanged);
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fontToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
             // 
-            // lboDescription
+            // fontToolStripMenuItem
             // 
-            this.lboDescription.Enabled = false;
-            this.lboDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lboDescription.FormattingEnabled = true;
-            this.lboDescription.ItemHeight = 24;
-            this.lboDescription.Location = new System.Drawing.Point(109, 242);
-            this.lboDescription.Name = "lboDescription";
-            this.lboDescription.Size = new System.Drawing.Size(254, 196);
-            this.lboDescription.TabIndex = 2;
-            this.lboDescription.Visible = false;
+            this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontToolStripMenuItem.Text = "Font";
             // 
             // Form1
             // 
@@ -235,7 +254,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(667, 472);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Foreign Alphabet";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -266,6 +285,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox chkDescription;
         private System.Windows.Forms.ListBox lboDescription;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 

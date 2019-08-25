@@ -21,7 +21,7 @@ namespace Foreign_Alphabet
             subGroup = new List<Alphabet>();
             characters = new List<Character>();
         }
-        public List<Character> getAllEnabledCharacters()
+        public List<Character> GetAllEnabledCharacters()
         {
             
             List<Character> characters = this.characters;
@@ -33,7 +33,7 @@ namespace Foreign_Alphabet
 
             foreach(Alphabet a in subGroup)
             {
-                foreach(Character c in a.getAllEnabledCharacters())
+                foreach(Character c in a.GetAllEnabledCharacters())
                 {
                     characters.Add(c);
                 }

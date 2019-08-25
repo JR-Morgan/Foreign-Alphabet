@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foreign-Alphabet", "Foreign
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Alphabets", "Alphabets", "{B8980B11-E1B6-4CCF-9751-87623200851B}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\..\Desktop\hirigana.xml = ..\..\..\..\..\Desktop\hirigana.xml
+		Hiragana.xml = Hiragana.xml
 	EndProjectSection
 EndProject
 Global

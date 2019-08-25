@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<alphabet name="Hiragana" version="1.0">
+  <alphabet name="Gojūon" description = "Main set of Hiragana">
+    <alphabet name="Vowels" description="Vowels">
+      <char latin="a" ipa="a">あ</char>
+      <char latin="i" ipa="i">い</char>
+      <char latin="u" ipa="ɯ">う</char>
+      <char latin="e" ipa="e">え</char>
+      <char latin="o" ipa="o">お</char>
+    </alphabet>
+    <alphabet name="K" description="K + Vowel">
+      <char latin="ka" ipa="ka">か</char>
+      <char latin="ki" ipa="ki">き</char>
+      <char latin="ku" ipa="kɯ">く</char>
+      <char latin="ke" ipa="ke">け</char>
+      <char latin="ko" ipa="ko">こ</char>
+    </alphabet>
+    <alphabet name="S" description="S + Vowel">
+      <char latin="sa" ipa="sa">さ</char>
+      <char latin="shi" ipa="ɕi">し</char>
+      <char latin="su" ipa="sɯ">す</char>
+      <char latin="se" ipa="se">せ</char>
+      <char latin="so" ipa="so">そ</char>
+    </alphabet>
+    <alphabet name="T" description="T + Vowel">
+      <char latin="ta" ipa="ta">た</char>
+      <char latin="chi" ipa="tɕi">ち</char>
+      <char latin="tsu" ipa="tsɯ">つ</char>
+      <char latin="te" ipa="te">て</char>
+      <char latin="to" ipa="to">と</char>
+    </alphabet>
+    <alphabet name="N" description="N + Vowel">
+      <char latin="na" ipa="na">な</char>
+      <char latin="ni" ipa="ɲi">に</char>
+      <char latin="nu" ipa="nɯ">ぬ</char>
+      <char latin="ne" ipa="ne">ね</char>
+      <char latin="no" ipa="no">の</char>
+    </alphabet>
+    <alphabet name="H" description="H + Vowel">
+      <char latin="ha" ipa="ha">は</char>
+      <char latin="hi" ipa="çi">ひ</char>
+      <char latin="fu" ipa="ɸɯ">ふ</char>
+      <char latin="he" ipa="he">へ</char>
+      <char latin="ho" ipa="ho">ほ</char>
+    </alphabet>
+    <alphabet name="M" description="M + Vowel">
+      <char latin="ma" ipa="na">ま</char>
+      <char latin="mi" ipa="mi">み</char>
+      <char latin="mu" ipa="mɯ">む</char>
+      <char latin="me" ipa="me">め</char>
+      <char latin="mo" ipa="mo">も</char>
+    </alphabet>
+    <alphabet name="Y" description="Y + Vowel">
+      <char latin="ya" ipa="ja">や</char>
+      <char latin="yu" ipa="jɯ">ゆ</char>
+      <char latin="yo" ipa="jo">よ</char>
+    </alphabet>
+    <alphabet name="R" description="R + Vowel">
+      <char latin="ra" ipa="ɾa">ら</char>
+      <char latin="ri" ipa="ɾi">り</char>
+      <char latin="ru" ipa="ɾɯ">る</char>
+      <char latin="re" ipa="ɾe">れ</char>
+      <char latin="ro" ipa="ɾo">ろ</char>
+    </alphabet>
+    <alphabet name="W" description="W + Vowel">
+      <char latin="wa" ipa="ɰa">わ</char>
+      <char latin="wo" ipa="o">を</char>
+    </alphabet>
+    <alphabet name="ん" description="ん">
+      <char latin="n" ipa="ɴ">ん</char>
+    </alphabet>
+  </alphabet>
+  <alphabet name="Dakuten" description = "Gojūon characters with dakuten diacritic">
+    <alphabet name="G" description="G + Vowel">
+      <char latin="ga" ipa="ga">が</char>
+      <char latin="gi" ipa="gi">ぎ</char>
+      <char latin="gu" ipa="gɯ">ぐ</char>
+      <char latin="ge" ipa="ge">げ</char>
+      <char latin="go" ipa="go">ご</char>
+    </alphabet>
+    <alphabet name="Z" description="Z + Vowel">
+      <char latin="za" ipa="(d)za">ざ</char>
+      <char latin="ji" ipa="(d)ʑi">じ</char>
+      <char latin="zu" ipa="(d)zɯ">ず</char>
+      <char latin="ze" ipa="(d)ze">ぜ</char>
+      <char latin="zo" ipa="(d)zo">ぞ</char>
+    </alphabet>
+    <alphabet name="D" description="D + Vowel">
+      <char latin="da" ipa="da">だ</char>
+      <char latin="dji" ipa="(d)ʑi">ぢ</char>
+      <char latin="dzu" ipa="(d)zɯ">づ</char>
+      <char latin="de" ipa="de">で</char>
+      <char latin="do" ipa="do">ど</char>
+    </alphabet>
+    <alphabet name="B" description="B + Vowel">
+      <char latin="ba" ipa="ba">ば</char>
+      <char latin="bi" ipa="bi">び</char>
+      <char latin="bu" ipa="bɯ">ぶ</char>
+      <char latin="be" ipa="be">べ</char>
+      <char latin="bo" ipa="bo">ぼ</char>
+    </alphabet>
+    <alphabet name="P" description="P + Vowel">
+      <char latin="pa" ipa="pa">ぱ</char>
+      <char latin="pi" ipa="pi">ぴ</char>
+      <char latin="pu" ipa="pɯ">ぷ</char>
+      <char latin="pe" ipa="pe">ぺ</char>
+      <char latin="po" ipa="po">ぽ</char>
+    </alphabet>
+  </alphabet>
+  <alphabet name="Yōon">
+    <alphabet name="K" description="">
+      <char latin="kya" ipa="kʲa">きゃ</char>
+      <char latin="kyu" ipa="kʲɯ">きゅ</char>
+      <char latin="kyo" ipa="kʲo">きょ</char>
+    </alphabet>
+    <alphabet name="S" description="">
+      <char latin="sha" ipa="ɕa">しゃ</char>
+      <char latin="shu" ipa="ɕɯ">しゅ</char>
+      <char latin="sho" ipa="ɕo">しょ</char>
+    </alphabet>
+    <alphabet name="T" description="">
+      <char latin="cha" ipa="tɕa">ちゃ</char>
+      <char latin="chu" ipa="tɕɯ">ちゅ</char>
+      <char latin="cho" ipa="tɕo">ちょ</char>
+    </alphabet>
+    <alphabet name="N" description="">
+      <char latin="nya" ipa="ɲa">にゃ</char>
+      <char latin="nyu" ipa="ɲɯ">にゅ</char>
+      <char latin="nyo" ipa="ɲo">にょ</char>
+    </alphabet>
+    <alphabet name="H" description="">
+      <char latin="hya" ipa="ça">ひゃ</char>
+      <char latin="hyu" ipa="çɯ">ひゅ</char>
+      <char latin="hyo" ipa="ço">ひょ</char>
+    </alphabet>
+    <alphabet name="M" description="">
+      <char latin="mya" ipa="mʲa">みゃ</char>
+      <char latin="myu" ipa="mʲɯ">みゅ</char>
+      <char latin="myo" ipa="mʲo">みょ</char>
+    </alphabet>
+    <alphabet name="R" description="">
+      <char latin="rya" ipa="ɾʲa">りゃ</char>
+      <char latin="ryu" ipa="ɾʲɯ">りゅ</char>
+      <char latin="ryo" ipa="ɾʲo">りょ</char>
+    </alphabet>
+  </alphabet>
+  <alphabet name="Yōon dakuten">
+    <alphabet name="G" description="">
+      <char latin="gya" ipa="ɡʲa">ぎゃ</char>
+      <char latin="gyu" ipa="ɡʲɯ">ぎゅ</char>
+      <char latin="gyo" ipa="ɡʲo">ぎょ</char>
+    </alphabet>
+    <alphabet name="Z" description="">
+      <char latin="ja" ipa="(d)ʑa">じゃ</char>
+      <char latin="ju" ipa="(d)ʑɯ">じゅ</char>
+      <char latin="jo" ipa="(d)ʑo">じょ</char>
+    </alphabet>
+    <alphabet name="B" description="">
+      <char latin="bya" ipa="bʲa">びゃ</char>
+      <char latin="byu" ipa="bʲɯ">びゅ</char>
+      <char latin="byo" ipa="bʲo">びょ</char>
+    </alphabet>
+    <alphabet name="P" description="">
+      <char latin="pya" ipa="pʲa">ぴゃ</char>
+      <char latin="pyu" ipa="pʲɯ">ぴゅ</char>
+      <char latin="pyo" ipa="pʲo">ぴょ</char>
+    </alphabet>
+  </alphabet>
+</alphabet>
