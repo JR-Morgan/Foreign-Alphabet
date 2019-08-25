@@ -17,10 +17,9 @@ If you cannot recall it's sound, you can display its Latin and IPA form.
 However, only do this if your really stuck, as recalling the character from memory is the only way you will learn the character.
 It's much better to struggle a little longer and really try and remember.
 ## What Alphabets are included
-Included is xml files for Hiragana
+Included is xml files for Hiragana, Katakana and Russian.
 With audio for none at the moment
 
-In the very near future you will see Katakana, Cyrillic, and Swedish with audio for all of them.
-In the farther future I plan to create more xml files for more languages and record more audio.
+In the farther I plan to create more xml files for more languages and record more audio.
 
 You can even create your own files, you only need to have very basic xml knowledge, you can use one of the provided files as a template.
