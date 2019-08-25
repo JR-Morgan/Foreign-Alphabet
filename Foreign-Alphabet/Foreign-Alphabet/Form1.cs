@@ -94,32 +94,50 @@ namespace Foreign_Alphabet
         private void TrvAlphabetGroups_AfterCheck(object sender, TreeViewEventArgs e)
         {
             ((Alphabet)e.Node.Tag).Enabled = e.Node.Checked;
+
+
+            if (e.Action != TreeViewAction.Unknown)
+            {
+                SetChildrenChecked(e.Node);
+            }
             SelectedCharacters = alphabet.getAllEnabledCharacters();
-
-            //String msg = "";
-            //foreach (Character c in SelectedCharacters)
-            //{
-            //    msg += c.character;
-            //}
-            //MessageBox.Show(msg);
-
             btnNext.Enabled = SelectedCharacters.Count != 0;
         }
+        private void SetChildrenChecked(TreeNode treeNode)
+        {
+            foreach (TreeNode item in treeNode.Nodes)
+            {
+                if (item.Checked != treeNode.Checked)
+                {
+                    item.Checked = treeNode.Checked;
+                }
+
+                if (item.Nodes.Count > 0)
+                {
+                    SetChildrenChecked(item);
+                }
+            }
+        }
+
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
             Character c = RandomCharacter(SelectedCharacters);
             rtbCharacterDisplay.Text = c.character;
-            String description = "";
-            foreach(String s in c.representation.Keys)
-            {
-                description += s + " : " + c.representation[s] + "\n ";
-            }
-            lblDescription.Text = description;
-            btnHint.Enabled = description != "";
-            
-
+            List<String> description = new List<String>();
             rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+            
+            foreach (String s in c.representation.Keys)
+            {
+                description.Add(s + " : " + c.representation[s]);
+            }
+
+            chkDescription.Enabled = description.Count != 0;
+
+            lboDescription.Items.Clear();
+            lboDescription.Items.AddRange(description.ToArray());
+
+            
         }
 
         private Character RandomCharacter(List<Character> characters)
@@ -136,9 +154,9 @@ namespace Foreign_Alphabet
             return c;
         }
 
-        private void BtnHint_Click(object sender, EventArgs e)
+        private void ChkDescription_CheckedChanged(object sender, EventArgs e)
         {
-            lblDescription.Visible = !lblDescription.Visible;
+            lboDescription.Visible = chkDescription.Checked;
         }
     }
 }
