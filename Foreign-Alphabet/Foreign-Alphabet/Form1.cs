@@ -9,8 +9,9 @@ namespace Foreign_Alphabet
     {
 
         private Alphabet alphabet;
-        private List<Character> SelectedCharacters;
-        private Character lastSelectedCharacter;
+        private List<Character> selectedCharacters;
+        //private Character currentCharacter;
+        private Character lastCharacter;
 
 
         public Form1()
@@ -63,23 +64,32 @@ namespace Foreign_Alphabet
             };
             foreach (XElement node in rootElement.Elements())
             {
-                if (node.Name == "alphabet")
+                switch (node.Name.ToString())
                 {
-                    alphabet.subGroup.Add(ParseElement(node));
+                    case "alphabet":
+                        alphabet.subGroup.Add(ParseElement(node));
+                        break;
+                    case "char":
+                        Character c = new Character();
+                        foreach (XElement charNode in node.Elements())
+                        {
+                            switch (charNode.Name.ToString())
+                            {
+                                case "reading":
+                                    c.readings.Add(node.Attribute("name").ToString(), node.Value);
+                                    break;
+                                case "meaning":
+                                    c.meanings.Add(node.Attribute("name").ToString(), node.Value);
+                                    break;
+                                case "string":
+                                    c.characters = node.Value;
+                                    break;
+                            }
+                        }
+                        alphabet.characters.Add(c);
+                        break;
                 }
-                else if (node.Name == "char")
-                {
-                    Character c = new Character
-                    {
-                        character = node.Value
-                    };
-                    foreach (XAttribute a in node.Attributes())
-                    {
-                        c.representation.Add(a.Name.ToString(), a.Value);
-                    }
-                    alphabet.characters.Add(c);
-                }
-
+                
             }
             return alphabet;
         }
@@ -93,8 +103,8 @@ namespace Foreign_Alphabet
         
         private void UpdateSelectedCharacters()
         {
-            SelectedCharacters = alphabet.GetAllEnabledCharacters();
-            btnNext.Enabled = SelectedCharacters.Count != 0;
+            selectedCharacters = alphabet.GetAllEnabledCharacters();
+            btnNext.Enabled = selectedCharacters.Count != 0;
         }
 
         private void TrvAlphabetGroups_AfterCheck(object sender, TreeViewEventArgs e)
@@ -140,30 +150,30 @@ namespace Foreign_Alphabet
             Random rand = new Random();
             Character c = characters[rand.Next(characters.Count)];
 
-            while (c == lastSelectedCharacter && characters.Count > 1)
+            while (c == lastCharacter && characters.Count > 1)
             {
                 c = characters[rand.Next(characters.Count)];
             }
 
-            lastSelectedCharacter = c;
+            lastCharacter = c;
             return c;
         }
         private void NextCharacter()
         {
-            Character c = RandomCharacter(SelectedCharacters);
-            rtbCharacterDisplay.Text = c.character;
+            Character c = RandomCharacter(selectedCharacters);
+            rtbCharacterDisplay.Text = c.characters;
             List<String> description = new List<String>();
             rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
 
-            foreach (String s in c.representation.Keys)
+            foreach (String s in c.readings.Keys)
             {
                 switch(s)
                 {
                     case "latin":
-                        description.Add("Latin : " + c.representation[s]);
+                        description.Add("Latin : " + c.readings[s]);
                         break;
                     case "ipa":
-                        description.Add("  IPA : " + c.representation[s]);
+                        description.Add("  IPA : " + c.readings[s]);
                         break;
                     case "audio":
                         //TODO audio;

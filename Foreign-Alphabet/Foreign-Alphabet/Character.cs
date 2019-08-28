@@ -4,12 +4,14 @@ namespace Foreign_Alphabet
 {
     public class Character
     {
-        public Dictionary<string,string> representation;
-        public string character;
+        public Dictionary<string,string> readings;
+        public Dictionary<string, string> meanings;
+        public string characters;
 
         public Character()
         {
-            representation = new Dictionary<string, string>();
+            readings = new Dictionary<string, string>();
+            readings = new Dictionary<string, string>();
         }
     }
 }

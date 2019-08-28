@@ -1,169 +1,585 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<alphabet name="Hiragana" version="1.0">
-  <alphabet name="Gojūon" description = "Main set of Hiragana">
-    <alphabet name="Vowels" description="Vowels">
-      <char latin="a" ipa="a">あ</char>
-      <char latin="i" ipa="i">い</char>
-      <char latin="u" ipa="ɯ">う</char>
-      <char latin="e" ipa="e">え</char>
-      <char latin="o" ipa="o">お</char>
-    </alphabet>
-    <alphabet name="K" description="K + Vowel">
-      <char latin="ka" ipa="ka">か</char>
-      <char latin="ki" ipa="ki">き</char>
-      <char latin="ku" ipa="kɯ">く</char>
-      <char latin="ke" ipa="ke">け</char>
-      <char latin="ko" ipa="ko">こ</char>
-    </alphabet>
-    <alphabet name="S" description="S + Vowel">
-      <char latin="sa" ipa="sa">さ</char>
-      <char latin="shi" ipa="ɕi">し</char>
-      <char latin="su" ipa="sɯ">す</char>
-      <char latin="se" ipa="se">せ</char>
-      <char latin="so" ipa="so">そ</char>
-    </alphabet>
-    <alphabet name="T" description="T + Vowel">
-      <char latin="ta" ipa="ta">た</char>
-      <char latin="chi" ipa="tɕi">ち</char>
-      <char latin="tsu" ipa="tsɯ">つ</char>
-      <char latin="te" ipa="te">て</char>
-      <char latin="to" ipa="to">と</char>
-    </alphabet>
-    <alphabet name="N" description="N + Vowel">
-      <char latin="na" ipa="na">な</char>
-      <char latin="ni" ipa="ɲi">に</char>
-      <char latin="nu" ipa="nɯ">ぬ</char>
-      <char latin="ne" ipa="ne">ね</char>
-      <char latin="no" ipa="no">の</char>
-    </alphabet>
-    <alphabet name="H" description="H + Vowel">
-      <char latin="ha" ipa="ha">は</char>
-      <char latin="hi" ipa="çi">ひ</char>
-      <char latin="fu" ipa="ɸɯ">ふ</char>
-      <char latin="he" ipa="he">へ</char>
-      <char latin="ho" ipa="ho">ほ</char>
-    </alphabet>
-    <alphabet name="M" description="M + Vowel">
-      <char latin="ma" ipa="na">ま</char>
-      <char latin="mi" ipa="mi">み</char>
-      <char latin="mu" ipa="mɯ">む</char>
-      <char latin="me" ipa="me">め</char>
-      <char latin="mo" ipa="mo">も</char>
-    </alphabet>
-    <alphabet name="Y" description="Y + Vowel">
-      <char latin="ya" ipa="ja">や</char>
-      <char latin="yu" ipa="jɯ">ゆ</char>
-      <char latin="yo" ipa="jo">よ</char>
-    </alphabet>
-    <alphabet name="R" description="R + Vowel">
-      <char latin="ra" ipa="ɾa">ら</char>
-      <char latin="ri" ipa="ɾi">り</char>
-      <char latin="ru" ipa="ɾɯ">る</char>
-      <char latin="re" ipa="ɾe">れ</char>
-      <char latin="ro" ipa="ɾo">ろ</char>
-    </alphabet>
-    <alphabet name="W" description="W + Vowel">
-      <char latin="wa" ipa="ɰa">わ</char>
-      <char latin="wo" ipa="o">を</char>
-    </alphabet>
-    <alphabet name="ん" description="ん">
-      <char latin="n" ipa="ɴ">ん</char>
-    </alphabet>
-  </alphabet>
-  <alphabet name="Dakuten" description = "Gojūon characters with dakuten diacritic">
-    <alphabet name="G" description="G + Vowel">
-      <char latin="ga" ipa="ga">が</char>
-      <char latin="gi" ipa="gi">ぎ</char>
-      <char latin="gu" ipa="gɯ">ぐ</char>
-      <char latin="ge" ipa="ge">げ</char>
-      <char latin="go" ipa="go">ご</char>
-    </alphabet>
-    <alphabet name="Z" description="Z + Vowel">
-      <char latin="za" ipa="(d)za">ざ</char>
-      <char latin="ji" ipa="(d)ʑi">じ</char>
-      <char latin="zu" ipa="(d)zɯ">ず</char>
-      <char latin="ze" ipa="(d)ze">ぜ</char>
-      <char latin="zo" ipa="(d)zo">ぞ</char>
-    </alphabet>
-    <alphabet name="D" description="D + Vowel">
-      <char latin="da" ipa="da">だ</char>
-      <char latin="dji" ipa="(d)ʑi">ぢ</char>
-      <char latin="dzu" ipa="(d)zɯ">づ</char>
-      <char latin="de" ipa="de">で</char>
-      <char latin="do" ipa="do">ど</char>
-    </alphabet>
-    <alphabet name="B" description="B + Vowel">
-      <char latin="ba" ipa="ba">ば</char>
-      <char latin="bi" ipa="bi">び</char>
-      <char latin="bu" ipa="bɯ">ぶ</char>
-      <char latin="be" ipa="be">べ</char>
-      <char latin="bo" ipa="bo">ぼ</char>
-    </alphabet>
-    <alphabet name="P" description="P + Vowel">
-      <char latin="pa" ipa="pa">ぱ</char>
-      <char latin="pi" ipa="pi">ぴ</char>
-      <char latin="pu" ipa="pɯ">ぷ</char>
-      <char latin="pe" ipa="pe">ぺ</char>
-      <char latin="po" ipa="po">ぽ</char>
-    </alphabet>
-  </alphabet>
-  <alphabet name="Yōon">
-    <alphabet name="K" description="">
-      <char latin="kya" ipa="kʲa">きゃ</char>
-      <char latin="kyu" ipa="kʲɯ">きゅ</char>
-      <char latin="kyo" ipa="kʲo">きょ</char>
-    </alphabet>
-    <alphabet name="S" description="">
-      <char latin="sha" ipa="ɕa">しゃ</char>
-      <char latin="shu" ipa="ɕɯ">しゅ</char>
-      <char latin="sho" ipa="ɕo">しょ</char>
-    </alphabet>
-    <alphabet name="T" description="">
-      <char latin="cha" ipa="tɕa">ちゃ</char>
-      <char latin="chu" ipa="tɕɯ">ちゅ</char>
-      <char latin="cho" ipa="tɕo">ちょ</char>
-    </alphabet>
-    <alphabet name="N" description="">
-      <char latin="nya" ipa="ɲa">にゃ</char>
-      <char latin="nyu" ipa="ɲɯ">にゅ</char>
-      <char latin="nyo" ipa="ɲo">にょ</char>
-    </alphabet>
-    <alphabet name="H" description="">
-      <char latin="hya" ipa="ça">ひゃ</char>
-      <char latin="hyu" ipa="çɯ">ひゅ</char>
-      <char latin="hyo" ipa="ço">ひょ</char>
-    </alphabet>
-    <alphabet name="M" description="">
-      <char latin="mya" ipa="mʲa">みゃ</char>
-      <char latin="myu" ipa="mʲɯ">みゅ</char>
-      <char latin="myo" ipa="mʲo">みょ</char>
-    </alphabet>
-    <alphabet name="R" description="">
-      <char latin="rya" ipa="ɾʲa">りゃ</char>
-      <char latin="ryu" ipa="ɾʲɯ">りゅ</char>
-      <char latin="ryo" ipa="ɾʲo">りょ</char>
-    </alphabet>
-  </alphabet>
-  <alphabet name="Yōon dakuten">
-    <alphabet name="G" description="">
-      <char latin="gya" ipa="ɡʲa">ぎゃ</char>
-      <char latin="gyu" ipa="ɡʲɯ">ぎゅ</char>
-      <char latin="gyo" ipa="ɡʲo">ぎょ</char>
-    </alphabet>
-    <alphabet name="Z" description="">
-      <char latin="ja" ipa="(d)ʑa">じゃ</char>
-      <char latin="ju" ipa="(d)ʑɯ">じゅ</char>
-      <char latin="jo" ipa="(d)ʑo">じょ</char>
-    </alphabet>
-    <alphabet name="B" description="">
-      <char latin="bya" ipa="bʲa">びゃ</char>
-      <char latin="byu" ipa="bʲɯ">びゅ</char>
-      <char latin="byo" ipa="bʲo">びょ</char>
-    </alphabet>
-    <alphabet name="P" description="">
-      <char latin="pya" ipa="pʲa">ぴゃ</char>
-      <char latin="pyu" ipa="pʲɯ">ぴゅ</char>
-      <char latin="pyo" ipa="pʲo">ぴょ</char>
-    </alphabet>
-  </alphabet>
+<alphabet name="Hiragana" version="1.1">
+	<alphabet name="Gojūon" description="Main set of Kana">
+		<alphabet name="Vowels" description="Vowels">
+			<char>
+				<reading name="latin">a</reading>
+				<reading name="ipa">a</reading>
+				<string>あ</string>
+			</char>
+			<char>
+				<reading name="latin">i</reading>
+				<reading name="ipa">i</reading>
+				<string>い</string>
+			</char>
+			<char>
+				<reading name="latin">u</reading>
+				<reading name="ipa">ɯ</reading>
+				<string>う</string>
+			</char>
+			<char>
+				<reading name="latin">e</reading>
+				<reading name="ipa">e</reading>
+				<string>え</string>
+			</char>
+			<char>
+				<reading name="latin">o</reading>
+				<reading name="ipa">o</reading>
+				<string>お</string>
+			</char>
+		</alphabet>
+		<alphabet name="K" description="K + Vowel">
+			<char>
+				<reading name="latin">ka</reading>
+				<reading name="ipa">ka</reading>
+				<string>か</string>
+			</char>
+			<char>
+				<reading name="latin">ki</reading>
+				<reading name="ipa">ki</reading>
+				<string>き</string>
+			</char>
+			<char>
+				<reading name="latin">ku</reading>
+				<reading name="ipa">kɯ</reading>
+				<string>く</string>
+			</char>
+			<char>
+				<reading name="latin">ke</reading>
+				<reading name="ipa">ke</reading>
+				<string>け</string>
+			</char>
+			<char>
+				<reading name="latin">ko</reading>
+				<reading name="ipa">ko</reading>
+				<string>こ</string>
+			</char>
+		</alphabet>
+		<alphabet name="S" description="S + Vowel">
+			<char>
+				<reading name="latin">sa</reading>
+				<reading name="ipa">sa</reading>
+				<string>さ</string>
+			</char>
+			<char>
+				<reading name="latin">shi</reading>
+				<reading name="ipa">ɕi</reading>
+				<string>し</string>
+			</char>
+			<char>
+				<reading name="latin">su</reading>
+				<reading name="ipa">sɯ</reading>
+				<string>す</string>
+			</char>
+			<char>
+				<reading name="latin">se</reading>
+				<reading name="ipa">se</reading>
+				<string>せ</string>
+			</char>
+			<char>
+				<reading name="latin">so</reading>
+				<reading name="ipa">so</reading>
+				<string>そ</string>
+			</char>
+		</alphabet>
+		<alphabet name="T" description="T + Vowel">
+			<char>
+				<reading name="latin">ta</reading>
+				<reading name="ipa">ta</reading>
+				<string>た</string>
+			</char>
+			<char>
+				<reading name="latin">chi</reading>
+				<reading name="ipa">tɕi</reading>
+				<string>ち</string>
+			</char>
+			<char>
+				<reading name="latin">tsu</reading>
+				<reading name="ipa">tsɯ</reading>
+				<string>つ</string>
+			</char>
+			<char>
+				<reading name="latin">te</reading>
+				<reading name="ipa">te</reading>
+				<string>て</string>
+			</char>
+			<char>
+				<reading name="latin">to</reading>
+				<reading name="ipa">to</reading>
+				<string>と</string>
+			</char>
+		</alphabet>
+		<alphabet name="N" description="N + Vowel">
+			<char>
+				<reading name="latin">na</reading>
+				<reading name="ipa">na</reading>
+				<string>な</string>
+			</char>
+			<char>
+				<reading name="latin">ni</reading>
+				<reading name="ipa">ɲi</reading>
+				<string>に</string>
+			</char>
+			<char>
+				<reading name="latin">nu</reading>
+				<reading name="ipa">nɯ</reading>
+				<string>ぬ</string>
+			</char>
+			<char>
+				<reading name="latin">ne</reading>
+				<reading name="ipa">ne</reading>
+				<string>ね</string>
+			</char>
+			<char>
+				<reading name="latin">no</reading>
+				<reading name="ipa">no</reading>
+				<string>の</string>
+			</char>
+		</alphabet>
+		<alphabet name="H" description="H + Vowel">
+			<char>
+				<reading name="latin">ha</reading>
+				<reading name="ipa">ha</reading>
+				<string>は</string>
+			</char>
+			<char>
+				<reading name="latin">hi</reading>
+				<reading name="ipa">çi</reading>
+				<string>ひ</string>
+			</char>
+			<char>
+				<reading name="latin">fu</reading>
+				<reading name="ipa">ɸɯ</reading>
+				<string>ふ</string>
+			</char>
+			<char>
+				<reading name="latin">he</reading>
+				<reading name="ipa">he</reading>
+				<string>へ</string>
+			</char>
+			<char>
+				<reading name="latin">ho</reading>
+				<reading name="ipa">ho</reading>
+				<string>ほ</string>
+			</char>
+		</alphabet>
+		<alphabet name="M" description="M + Vowel">
+			<char>
+				<reading name="latin">ma</reading>
+				<reading name="ipa">na</reading>
+				<string>ま</string>
+			</char>
+			<char>
+				<reading name="latin">mi</reading>
+				<reading name="ipa">mi</reading>
+				<string>み</string>
+			</char>
+			<char>
+				<reading name="latin">mu</reading>
+				<reading name="ipa">mɯ</reading>
+				<string>む</string>
+			</char>
+			<char>
+				<reading name="latin">me</reading>
+				<reading name="ipa">me</reading>
+				<string>め</string>
+			</char>
+			<char>
+				<reading name="latin">mo</reading>
+				<reading name="ipa">mo</reading>
+				<string>も</string>
+			</char>
+		</alphabet>
+		<alphabet name="Y" description="Y + Vowel">
+			<char>
+				<reading name="latin">ya</reading>
+				<reading name="ipa">ja</reading>
+				<string>や</string>
+			</char>
+			<char>
+				<reading name="latin">yu</reading>
+				<reading name="ipa">jɯ</reading>
+				<string>ゆ</string>
+			</char>
+			<char>
+				<reading name="latin">yo</reading>
+				<reading name="ipa">jo</reading>
+				<string>よ</string>
+			</char>
+		</alphabet>
+		<alphabet name="R" description="R + Vowel">
+			<char>
+				<reading name="latin">ra</reading>
+				<reading name="ipa">ɾa</reading>
+				<string>ら</string>
+			</char>
+			<char>
+				<reading name="latin">ri</reading>
+				<reading name="ipa">ɾi</reading>
+				<string>り</string>
+			</char>
+			<char>
+				<reading name="latin">ru</reading>
+				<reading name="ipa">ɾɯ</reading>
+				<string>る</string>
+			</char>
+			<char>
+				<reading name="latin">re</reading>
+				<reading name="ipa">ɾe</reading>
+				<string>れ</string>
+			</char>
+			<char>
+				<reading name="latin">ro</reading>
+				<reading name="ipa">ɾo</reading>
+				<string>ろ</string>
+			</char>
+		</alphabet>
+		<alphabet name="W" description="W + Vowel">
+			<char>
+				<reading name="latin">wa</reading>
+				<reading name="ipa">ɰa</reading>
+				<string>わ</string>
+			</char>
+			<char>
+				<reading name="latin">wo</reading>
+				<reading name="ipa">o</reading>
+				<string>を</string>
+			</char>
+		</alphabet>
+		<alphabet name="ん" description="ん">
+			<char>
+				<reading name="latin">n</reading>
+				<reading name="ipa">ɴ</reading>
+				<string>ん</string>
+			</char>
+		</alphabet>
+	</alphabet>
+	<alphabet name="Dakuten" description="Gojūon characters with dakuten diacritic">
+		<alphabet name="G" description="G + Vowel">
+			<char>
+				<reading name="latin">ga</reading>
+				<reading name="ipa">ga</reading>
+				<string>が</string>
+			</char>
+			<char>
+				<reading name="latin">gi</reading>
+				<reading name="ipa">gi</reading>
+				<string>ぎ</string>
+			</char>
+			<char>
+				<reading name="latin">gu</reading>
+				<reading name="ipa">gɯ</reading>
+				<string>ぐ</string>
+			</char>
+			<char>
+				<reading name="latin">ge</reading>
+				<reading name="ipa">ge</reading>
+				<string>げ</string>
+			</char>
+			<char>
+				<reading name="latin">go</reading>
+				<reading name="ipa">go</reading>
+				<string>ご</string>
+			</char>
+		</alphabet>
+		<alphabet name="Z" description="Z + Vowel">
+			<char>
+				<reading name="latin">za</reading>
+				<reading name="ipa">(d)za</reading>
+				<string>ざ</string>
+			</char>
+			<char>
+				<reading name="latin">ji</reading>
+				<reading name="ipa">(d)ʑi</reading>
+				<string>じ</string>
+			</char>
+			<char>
+				<reading name="latin">zu</reading>
+				<reading name="ipa">(d)zɯ</reading>
+				<string>ず</string>
+			</char>
+			<char>
+				<reading name="latin">ze</reading>
+				<reading name="ipa">(d)ze</reading>
+				<string>ぜ</string>
+			</char>
+			<char>
+				<reading name="latin">zo</reading>
+				<reading name="ipa">(d)zo</reading>
+				<string>ぞ</string>
+			</char>
+		</alphabet>
+		<alphabet name="D" description="D + Vowel">
+			<char>
+				<reading name="latin">da</reading>
+				<reading name="ipa">da</reading>
+				<string>だ</string>
+			</char>
+			<char>
+				<reading name="latin">dji</reading>
+				<reading name="ipa">(d)ʑi</reading>
+				<string>ぢ</string>
+			</char>
+			<char>
+				<reading name="latin">dzu</reading>
+				<reading name="ipa">(d)zɯ</reading>
+				<string>づ</string>
+			</char>
+			<char>
+				<reading name="latin">de</reading>
+				<reading name="ipa">de</reading>
+				<string>で</string>
+			</char>
+			<char>
+				<reading name="latin">do</reading>
+				<reading name="ipa">do</reading>
+				<string>ど</string>
+			</char>
+		</alphabet>
+		<alphabet name="B" description="B + Vowel">
+			<char>
+				<reading name="latin">ba</reading>
+				<reading name="ipa">ba</reading>
+				<string>ば</string>
+			</char>
+			<char>
+				<reading name="latin">bi</reading>
+				<reading name="ipa">bi</reading>
+				<string>び</string>
+			</char>
+			<char>
+				<reading name="latin">bu</reading>
+				<reading name="ipa">bɯ</reading>
+				<string>ぶ</string>
+			</char>
+			<char>
+				<reading name="latin">be</reading>
+				<reading name="ipa">be</reading>
+				<string>べ</string>
+			</char>
+			<char>
+				<reading name="latin">bo</reading>
+				<reading name="ipa">bo</reading>
+				<string>ぼ</string>
+			</char>
+		</alphabet>
+		<alphabet name="P" description="P + Vowel">
+			<char>
+				<reading name="latin">pa</reading>
+				<reading name="ipa">pa</reading>
+				<string>ぱ</string>
+			</char>
+			<char>
+				<reading name="latin">pi</reading>
+				<reading name="ipa">pi</reading>
+				<string>ぴ</string>
+			</char>
+			<char>
+				<reading name="latin">pu</reading>
+				<reading name="ipa">pɯ</reading>
+				<string>ぷ</string>
+			</char>
+			<char>
+				<reading name="latin">pe</reading>
+				<reading name="ipa">pe</reading>
+				<string>ぺ</string>
+			</char>
+			<char>
+				<reading name="latin">po</reading>
+				<reading name="ipa">po</reading>
+				<string>ぽ</string>
+			</char>
+		</alphabet>
+	</alphabet>
+	<alphabet name="Yōon">
+		<alphabet name="K" description="">
+			<char>
+				<reading name="latin">kya</reading>
+				<reading name="ipa">kʲa</reading>
+				<string>きゃ</string>
+			</char>
+			<char>
+				<reading name="latin">kyu</reading>
+				<reading name="ipa">kʲɯ</reading>
+				<string>きゅ</string>
+			</char>
+			<char>
+				<reading name="latin">kyo</reading>
+				<reading name="ipa">kʲo</reading>
+				<string>きょ</string>
+			</char>
+		</alphabet>
+		<alphabet name="S" description="">
+			<char>
+				<reading name="latin">sha</reading>
+				<reading name="ipa">ɕa</reading>
+				<string>しゃ</string>
+			</char>
+			<char>
+				<reading name="latin">shu</reading>
+				<reading name="ipa">ɕɯ</reading>
+				<string>しゅ</string>
+			</char>
+			<char>
+				<reading name="latin">sho</reading>
+				<reading name="ipa">ɕo</reading>
+				<string>しょ</string>
+			</char>
+		</alphabet>
+		<alphabet name="T" description="">
+			<char>
+				<reading name="latin">cha</reading>
+				<reading name="ipa">tɕa</reading>
+				<string>ちゃ</string>
+			</char>
+			<char>
+				<reading name="latin">chu</reading>
+				<reading name="ipa">tɕɯ</reading>
+				<string>ちゅ</string>
+			</char>
+			<char>
+				<reading name="latin">cho</reading>
+				<reading name="ipa">tɕo</reading>
+				<string>ちょ</string>
+			</char>
+		</alphabet>
+		<alphabet name="N" description="">
+			<char>
+				<reading name="latin">nya</reading>
+				<reading name="ipa">ɲa</reading>
+				<string>にゃ</string>
+			</char>
+			<char>
+				<reading name="latin">nyu</reading>
+				<reading name="ipa">ɲɯ</reading>
+				<string>にゅ</string>
+			</char>
+			<char>
+				<reading name="latin">nyo</reading>
+				<reading name="ipa">ɲo</reading>
+				<string>にょ</string>
+			</char>
+		</alphabet>
+		<alphabet name="H" description="">
+			<char>
+				<reading name="latin">hya</reading>
+				<reading name="ipa">ça</reading>
+				<string>ひゃ</string>
+			</char>
+			<char>
+				<reading name="latin">hyu</reading>
+				<reading name="ipa">çɯ</reading>
+				<string>ひゅ</string>
+			</char>
+			<char>
+				<reading name="latin">hyo</reading>
+				<reading name="ipa">ço</reading>
+				<string>ひょ</string>
+			</char>
+		</alphabet>
+		<alphabet name="M" description="">
+			<char>
+				<reading name="latin">mya</reading>
+				<reading name="ipa">mʲa</reading>
+				<string>みゃ</string>
+			</char>
+			<char>
+				<reading name="latin">myu</reading>
+				<reading name="ipa">mʲɯ</reading>
+				<string>みゅ</string>
+			</char>
+			<char>
+				<reading name="latin">myo</reading>
+				<reading name="ipa">mʲo</reading>
+				<string>みょ</string>
+			</char>
+		</alphabet>
+		<alphabet name="R" description="">
+			<char>
+				<reading name="latin">rya</reading>
+				<reading name="ipa">ɾʲa</reading>
+				<string>りゃ</string>
+			</char>
+			<char>
+				<reading name="latin">ryu</reading>
+				<reading name="ipa">ɾʲɯ</reading>
+				<string>りゅ</string>
+			</char>
+			<char>
+				<reading name="latin">ryo</reading>
+				<reading name="ipa">ɾʲo</reading>
+				<string>りょ</string>
+			</char>
+		</alphabet>
+	</alphabet>
+	<alphabet name="Yōon dakuten">
+		<alphabet name="G" description="">
+			<char>
+				<reading name="latin">gya</reading>
+				<reading name="ipa">ɡʲa</reading>
+				<string>ぎゃ</string>
+			</char>
+			<char>
+				<reading name="latin">gyu</reading>
+				<reading name="ipa">ɡʲɯ</reading>
+				<string>ぎゅ</string>
+			</char>
+			<char>
+				<reading name="latin">gyo</reading>
+				<reading name="ipa">ɡʲo</reading>
+				<string>ぎょ</string>
+			</char>
+		</alphabet>
+		<alphabet name="Z" description="">
+			<char>
+				<reading name="latin">ja</reading>
+				<reading name="ipa">(d)ʑa</reading>
+				<string>じゃ</string>
+			</char>
+			<char>
+				<reading name="latin">ju</reading>
+				<reading name="ipa">(d)ʑɯ</reading>
+				<string>じゅ</string>
+			</char>
+			<char>
+				<reading name="latin">jo</reading>
+				<reading name="ipa">(d)ʑo</reading>
+				<string>じょ</string>
+			</char>
+		</alphabet>
+		<alphabet name="B" description="">
+			<char>
+				<reading name="latin">bya</reading>
+				<reading name="ipa">bʲa</reading>
+				<string>びゃ</string>
+			</char>
+			<char>
+				<reading name="latin">byu</reading>
+				<reading name="ipa">bʲɯ</reading>
+				<string>びゅ</string>
+			</char>
+			<char>
+				<reading name="latin">byo</reading>
+				<reading name="ipa">bʲo</reading>
+				<string>びょ</string>
+			</char>
+		</alphabet>
+		<alphabet name="P" description="">
+			<char>
+				<reading name="latin">pya</reading>
+				<reading name="ipa">pʲa</reading>
+				<string>ぴゃ</string>
+			</char>
+			<char>
+				<reading name="latin">pyu</reading>
+				<reading name="ipa">pʲɯ</reading>
+				<string>ぴゅ</string>
+			</char>
+			<char>
+				<reading name="latin">pyo</reading>
+				<reading name="ipa">pʲo</reading>
+				<string>ぴょ</string>
+			</char>
+		</alphabet>
+	</alphabet>
 </alphabet>

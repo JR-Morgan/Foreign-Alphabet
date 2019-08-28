@@ -9,7 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Alphabets", "Alphabets", "{
 	ProjectSection(SolutionItems) = preProject
 		Japanese Hiragana.xml = Japanese Hiragana.xml
 		Japanese Katakana.xml = Japanese Katakana.xml
-		Russian Cyrillic.xml = Russian Cyrillic.xml
 	EndProjectSection
 EndProject
 Global
