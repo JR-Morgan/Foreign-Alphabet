@@ -71,18 +71,18 @@ namespace Foreign_Alphabet
                         break;
                     case "char":
                         Character c = new Character();
-                        foreach (XElement charNode in node.Elements())
+                        foreach (XElement cNode in node.Elements())
                         {
-                            switch (charNode.Name.ToString())
+                            switch (cNode.Name.ToString())
                             {
                                 case "reading":
-                                    c.readings.Add(node.Attribute("name").ToString(), node.Value);
+                                    c.readings.Add(cNode.Attribute("name").Value, cNode.Value);
                                     break;
                                 case "meaning":
-                                    c.meanings.Add(node.Attribute("name").ToString(), node.Value);
+                                    c.meanings.Add(cNode.Attribute("name").Value, cNode.Value);
                                     break;
                                 case "string":
-                                    c.characters = node.Value;
+                                    c.characters = cNode.Value;
                                     break;
                             }
                         }
