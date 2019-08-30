@@ -8,10 +8,12 @@ namespace Foreign_Alphabet
     public partial class Form1 : Form
     {
 
-        private Alphabet alphabet;
+        public Alphabet Alphabet { get; set; }
         private List<Character> selectedCharacters;
-        //private Character currentCharacter;
         private Character lastCharacter;
+        private long deltaT;
+
+        private FrmAverages analyticsForm;
 
 
         public Form1()
@@ -32,10 +34,13 @@ namespace Foreign_Alphabet
                 {
                     ResetLoadedAlphabet();
                     XDocument doc = XDocument.Load(filePath);
-                    this.alphabet = ParseElement(doc.Element("alphabet"));
+                    this.Alphabet = ParseElement(doc.Element("alphabet"));
 
 
-                    trvAlphabetGroups.Nodes.Add(PopulateTree(this.alphabet));
+                    trvAlphabetGroups.Nodes.Add(PopulateTree(this.Alphabet));
+
+                    analyticsForm = new FrmAverages();
+                    btnAnalytics.Enabled = true;
                 }
             }
 
@@ -82,14 +87,14 @@ namespace Foreign_Alphabet
                                     c.meanings.Add(cNode.Attribute("name").Value, cNode.Value);
                                     break;
                                 case "string":
-                                    c.characters = cNode.Value;
+                                    c.str = cNode.Value;
                                     break;
                             }
                         }
                         alphabet.characters.Add(c);
                         break;
                 }
-                
+
             }
             return alphabet;
         }
@@ -97,13 +102,13 @@ namespace Foreign_Alphabet
         private void ResetLoadedAlphabet()
         {
             trvAlphabetGroups.Nodes.Clear();
-            alphabet = new Alphabet();
+            Alphabet = new Alphabet();
             UpdateSelectedCharacters();
         }
-        
+
         private void UpdateSelectedCharacters()
         {
-            selectedCharacters = alphabet.GetAllEnabledCharacters();
+            selectedCharacters = Alphabet.GetAllEnabledCharacters();
             btnNext.Enabled = selectedCharacters.Count != 0;
         }
 
@@ -114,14 +119,14 @@ namespace Foreign_Alphabet
             if (e.Action != TreeViewAction.Unknown)
             {
                 SetChildrenChecked(e.Node, e.Node.Checked);
-                if(!e.Node.Checked)
+                if (!e.Node.Checked)
                 {
                     SetParentsChecked(e.Node, false);
                 }
 
                 UpdateSelectedCharacters();
             }
-            
+
         }
         private void SetChildrenChecked(TreeNode parentNode, bool check)
         {
@@ -139,12 +144,18 @@ namespace Foreign_Alphabet
             ((Alphabet)RootNode.Tag).Enabled = check;
             RootNode.Checked = check;
 
-            if(RootNode.Parent != null)
+            if (RootNode.Parent != null)
             {
                 SetParentsChecked(RootNode.Parent, check);
             }
-            
+
         }
+       private Character SequentialCharacter(List<Character> characters)
+       {
+            int lastCharIndex = characters.IndexOf(lastCharacter);
+            return characters[(lastCharIndex + 1) % (characters.Count)];
+       }
+
         private Character RandomCharacter(List<Character> characters)
         {
             Random rand = new Random();
@@ -155,47 +166,64 @@ namespace Foreign_Alphabet
                 c = characters[rand.Next(characters.Count)];
             }
 
-            lastCharacter = c;
             return c;
         }
-        private void NextCharacter()
+        private void NextCharacter(List<Character> characters)
         {
-            Character c = RandomCharacter(selectedCharacters);
-            rtbCharacterDisplay.Text = c.characters;
-            List<String> description = new List<String>();
+            deltaT = DateTime.Now.Ticks;
+            Character c;
+            switch(cboSelectionMethod.Text)
+            {
+                case "Random":
+                    c = RandomCharacter(characters);
+                    break;
+                case "Sequential":
+                    c = SequentialCharacter(characters);
+                    break;
+                default:
+                    c = RandomCharacter(characters);
+                    break;
+            }
+            lastCharacter = c;
+            rtbCharacterDisplay.Text = c.str;
+            List<String> characterReadings = new List<String>();
+            List<String> characterMeanings = new List<String>();
             rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
 
             foreach (String s in c.readings.Keys)
             {
-                switch(s)
-                {
-                    case "latin":
-                        description.Add("Latin : " + c.readings[s]);
-                        break;
-                    case "ipa":
-                        description.Add("  IPA : " + c.readings[s]);
-                        break;
-                    case "audio":
-                        //TODO audio;
-                        break;
-                }
-                
+                characterReadings.Add(s + ":\t " + c.readings[s]);  
+            }
+            foreach (String s in c.meanings.Keys)
+            {
+                characterMeanings.Add(s + ":\t " + c.meanings[s]);
             }
 
-            chkDescription.Enabled = description.Count != 0;
+            chkReading.Enabled = characterReadings.Count != 0;
+            chkMeaning.Enabled = characterMeanings.Count != 0;
 
-            lboDescription.Items.Clear();
-            lboDescription.Items.AddRange(description.ToArray());
+            lboReading.Items.Clear();
+            lboReading.Items.AddRange(characterReadings.ToArray());
+            lboMeaning.Items.Clear();
+            lboMeaning.Items.AddRange(characterMeanings.ToArray());
         }
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            NextCharacter();
+            
+
+            NextCharacter(selectedCharacters);
+            if(lastCharacter != null)
+            {
+                analyticsForm.AddChart(lastCharacter, DateTime.Now.Ticks - deltaT);
+            }
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
             rtbCharacterDisplay.Font = fontDialog.Font;
+            cboSelectionMethod.SelectedItem = cboSelectionMethod.Items[0];
         }
 
         private void BtnLoadFile_Click(object sender, EventArgs e)
@@ -206,7 +234,11 @@ namespace Foreign_Alphabet
 
         private void ChkDescription_CheckedChanged(object sender, EventArgs e)
         {
-            lboDescription.Visible = chkDescription.Checked;
+            lboReading.Visible = chkReading.Checked;
+        }
+        private void ChkReading_CheckedChanged(object sender, EventArgs e)
+        {
+            lboMeaning.Visible = chkMeaning.Checked;
         }
 
         private void FontToolStripMenuItem_Click(object sender, EventArgs e)
@@ -241,6 +273,11 @@ namespace Foreign_Alphabet
         private void BtnClear_Click(object sender, EventArgs e)
         {
             ResetLoadedAlphabet();
+        }
+
+        private void BtnAnalytics_Click(object sender, EventArgs e)
+        {
+            analyticsForm.Show();
         }
     }
 }

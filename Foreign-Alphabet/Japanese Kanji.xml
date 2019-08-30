@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<alphabet name="Kanji" version="1.1">
+	<alphabet name="Begginers Kanji">
+		<alphabet name="Numbers">
+			<char>
+				<reading name="Onyomi Reading">ichi</reading>
+				<reading name="Onyomi Japanese">いち</reading>
+				<reading name="Kunyomi Reading">hito(tsu)</reading>
+				<reading name="Kunyomi Japanese">ひと・つ</reading>
+				<meaning name="Meaning">One - 1</meaning>
+				<string>一</string>
+			</char>
+			<char>
+				<reading name="Onyomi Reading">ni</reading>
+				<reading name="Onyomi Japanese">に</reading>
+				<reading name="Kunyomi Reading">futa(tsu)</reading>
+				<reading name="Kunyomi Japanese">ふた・つ</reading>
+				<meaning name="Meaning">Two - 2</meaning>
+				<string>二</string>
+			</char>
+			<char>
+				<reading name="Onyomi Reading">san</reading>
+				<reading name="Onyomi Japanese">さん</reading>
+				<reading name="Kunyomi Reading">mit(tsu)</reading>
+				<reading name="Kunyomi Japanese">みっ・つ</reading>
+				<meaning name="Meaning">Three - 3</meaning>
+				<string>三</string>
+			</char>
+			<char>
+				<reading name="Onyomi Reading">shi, yon</reading>
+				<reading name="Onyomi Japanese">し、よん</reading>
+				<reading name="Kunyomi Reading">yon, yot(tsu)</reading>
+				<reading name="Kunyomi Japanese">よん、よっ・つ</reading>
+				<meaning name="Meaning">Four - 4</meaning>
+				<string>四</string>
+			</char>
+			<char>
+				<reading name="Onyomi Reading">go</reading>
+				<reading name="Onyomi Japanese">ご</reading>
+				<reading name="Kunyomi Reading">itsu(tsu)</reading>
+				<reading name="Kunyomi Japanese">いつ・つ</reading>
+				<meaning name="Meaning">Five - 5</meaning>
+				<string>五</string>
+			</char>
+			<char>
+				<reading name="Onyomi Reading">roku</reading>
+				<reading name="Onyomi Japanese">ろく</reading>
+				<reading name="Kunyomi Reading">mut(tsu)</reading>
+				<reading name="Kunyomi Japanese">むっ・つ</reading>
+				<meaning name="Meaning">Six - 6</meaning>
+				<string>六</string>
+			</char>
+			<char>
+				<reading name="Onyomi Reading">shichi, nana</reading>
+				<reading name="Onyomi Japanese">しち、なな</reading>
+				<reading name="Kunyomi Reading">nana(tsu)</reading>
+				<reading name="Kunyomi Japanese">なな・つ</reading>
+				<meaning name="Meaning">Seven - 7</meaning>
+				<string>七</string>
+			</char>
+			<char>
+				<reading name="Onyomi Reading">hachi</reading>
+				<reading name="Onyomi Japanese">はち</reading>
+				<reading name="Kunyomi Reading">yat(tsu)</reading>
+				<reading name="Kunyomi Japanese">やっ・つ</reading>
+				<meaning name="Meaning">Eight - 8</meaning>
+				<string>八</string>
+			</char>
+			<char>
+				<reading name="Onyomi Reading">ku, kyuu</reading>
+				<reading name="Onyomi Japanese">く、きゅう</reading>
+				<reading name="Kunyomi Reading">kokono(tsu)</reading>
+				<reading name="Kunyomi Japanese">ここの・つ</reading>
+				<meaning name="Meaning">Nine - 9</meaning>
+				<string>九</string>
+			</char>
+			<char>
+				<reading name="Onyomi Reading">juu</reading>
+				<reading name="Onyomi Japanese">じゅう</reading>
+				<reading name="Kunyomi Reading">tō</reading>
+				<reading name="Kunyomi Japanese">とお</reading>
+				<meaning name="Meaning">Ten - 10</meaning>
+				<string>十</string>
+			</char>
+			<char>
+				<reading name="Onyomi Reading">rei</reading>
+				<reading name="Onyomi Japanese">れい</reading>
+				<reading name="Alternate Reading">Zero</reading>
+				<reading name="Alternate Japanese">ゼロ</reading>
+				<meaning name="Meaning">Zero - 0</meaning>
+				<string>零</string>
+			</char>
+		</alphabet>
+	</alphabet>
+</alphabet>

@@ -6,12 +6,12 @@ namespace Foreign_Alphabet
     {
         public Dictionary<string,string> readings;
         public Dictionary<string, string> meanings;
-        public string characters;
+        public string str;
 
         public Character()
         {
             readings = new Dictionary<string, string>();
-            readings = new Dictionary<string, string>();
+            meanings = new Dictionary<string, string>();
         }
     }
 }
