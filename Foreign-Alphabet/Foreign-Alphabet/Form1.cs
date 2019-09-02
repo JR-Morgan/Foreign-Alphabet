@@ -63,10 +63,12 @@ namespace Foreign_Alphabet
 
         private Alphabet ParseElement(XElement rootElement)
         {
+            
             Alphabet alphabet = new Alphabet
             {
-                Name = rootElement.Attribute("name").Value
+                Name = rootElement.Attribute("name") != null ? rootElement.Attribute("name").Value : "Unamed Group"
             };
+            
             foreach (XElement node in rootElement.Elements())
             {
                 switch (node.Name.ToString())
