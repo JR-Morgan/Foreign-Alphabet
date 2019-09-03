@@ -1,5 +1,5 @@
 # Foreign-Alphabet
-Learning tool for learning Foreign Alphabets and Syllabaries
+Learning tool for learning Foreign Alphabets and Syllabaries<br>
 This program is still a work in progress, however the all relases are a very usable state, and I am activly developing this program
 
 ## Who this application is for
