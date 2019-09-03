@@ -50,7 +50,8 @@ namespace Foreign_Alphabet
             chart1.Series[series].Points.Clear();
             foreach (KeyValuePair<Character, List<long>> character in characterTimes)
             {
-                chart1.Series[series].Points.AddXY(character.Key.str, character.Value.Average());
+                //FIXME
+                //chart1.Series[series].Points.AddXY(character.Key.str, character.Value.Average());
             }
 
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.IO;
 
 namespace Foreign_Alphabet
 {
@@ -10,10 +11,21 @@ namespace Foreign_Alphabet
 
         public Alphabet Alphabet { get; set; }
         private List<Character> selectedCharacters;
-        private Character lastCharacter;
-        private long deltaT;
+        private Character currentCharacter;
+
+        //The method of selecting characters
+        private string selectionMethod;
+
+        //The reading/meaning to be displayed
+        private string displayMode;
+        //The reading/meaning to be typed
+        private string typeMode;
+        //The options of readings/meanigns
+        private HashSet<string> modes;
 
         private FrmAverages analyticsForm;
+        //Time user takes to guess character
+        private long deltaT;
 
 
         public Form1()
@@ -24,20 +36,35 @@ namespace Foreign_Alphabet
         private void LoadFile()
         {
             String filePath;
-
+            lblInstructions.Text = "Error loading alphabet";
             if (ofdAlphabetFileDialogue.ShowDialog() == DialogResult.OK)
             {
                 //Get the path of specified file
                 filePath = ofdAlphabetFileDialogue.FileName;
-                txtFile.Text = filePath;
-                if (txtFile.Text.EndsWith(".xml"))
+                txtFile.Text = Path.GetFileNameWithoutExtension (filePath);
+                if (filePath.EndsWith(".xml"))
                 {
+                    
                     ResetLoadedAlphabet();
                     XDocument doc = XDocument.Load(filePath);
                     this.Alphabet = ParseElement(doc.Element("alphabet"));
-
-
+                    
+                    
                     trvAlphabetGroups.Nodes.Add(PopulateTree(this.Alphabet));
+
+                    string[] modeArray = new string[modes.Count];
+                    modes.CopyTo(modeArray);
+                    cboDisplayMode.Items.Clear();
+                    cboTypeMode.Items.Clear();
+                    cboDisplayMode.Items.AddRange(modeArray);
+                    cboTypeMode.Items.Add("None");
+                    cboTypeMode.Items.AddRange(modeArray);
+
+
+                    lblInstructions.Text = "Select alphabet group";
+
+                    cboDisplayMode.SelectedItem = Alphabet.DefaultDisplay;
+                    cboTypeMode.SelectedItem = Alphabet.DefaultType;
 
                     analyticsForm = new FrmAverages();
                     btnAnalytics.Enabled = true;
@@ -66,7 +93,9 @@ namespace Foreign_Alphabet
             
             Alphabet alphabet = new Alphabet
             {
-                Name = rootElement.Attribute("name") != null ? rootElement.Attribute("name").Value : "Unamed Group"
+                Name = rootElement.Attribute("name") != null ? rootElement.Attribute("name").Value : "Unamed Group",
+                DefaultDisplay = rootElement.Attribute("defaultDisplay") != null ? rootElement.Attribute("defaultDisplay").Value : "",
+                DefaultType = rootElement.Attribute("defaultType") != null ? rootElement.Attribute("defaultType").Value : ""
             };
             
             foreach (XElement node in rootElement.Elements())
@@ -83,19 +112,22 @@ namespace Foreign_Alphabet
                             switch (cNode.Name.ToString())
                             {
                                 case "reading":
-                                    c.readings.Add(cNode.Attribute("name").Value, cNode.Value);
+                                    c.readings.Add(cNode.Attribute("name").Value, new List<string>(cNode.Value.Trim().Split(',')));
+                                    //FIXME this breaks functional rules!
+                                    modes.Add(cNode.Attribute("name").Value);
                                     break;
                                 case "meaning":
-                                    c.meanings.Add(cNode.Attribute("name").Value, cNode.Value);
-                                    break;
-                                case "string":
-                                    c.str = cNode.Value;
+                                    c.meanings.Add(cNode.Attribute("name").Value, new List<string>(cNode.Value.Trim().Split(',')));
+                                    //FIXME this breaks functional rules!
+                                    modes.Add(cNode.Attribute("name").Value);
                                     break;
                             }
                         }
                         alphabet.characters.Add(c);
                         break;
                 }
+                alphabet.DefaultDisplay = rootElement.Attribute("defaultDisplay") != null ? rootElement.Attribute("defaultDisplay").Value : "" ;
+                alphabet.DefaultType = rootElement.Attribute("defaultType") != null ? rootElement.Attribute("defaultType").Value : "";
 
             }
             return alphabet;
@@ -103,15 +135,27 @@ namespace Foreign_Alphabet
 
         private void ResetLoadedAlphabet()
         {
+            currentCharacter = null;
             trvAlphabetGroups.Nodes.Clear();
             Alphabet = new Alphabet();
+            modes = new HashSet<string>();
             UpdateSelectedCharacters();
         }
 
         private void UpdateSelectedCharacters()
         {
+            
             selectedCharacters = Alphabet.GetAllEnabledCharacters();
             btnNext.Enabled = selectedCharacters.Count != 0;
+            txtCharacterInput.Enabled = selectedCharacters.Count != 0;
+            if(selectedCharacters.Count != 0)
+            {
+                lblInstructions.Text = "";
+                NextCharacter(selectedCharacters, displayMode, typeMode);
+            } else
+            {
+                lblInstructions.Text = "Select alphabet group";
+            }
         }
 
         private void TrvAlphabetGroups_AfterCheck(object sender, TreeViewEventArgs e)
@@ -154,7 +198,7 @@ namespace Foreign_Alphabet
         }
        private Character SequentialCharacter(List<Character> characters)
        {
-            int lastCharIndex = characters.IndexOf(lastCharacter);
+            int lastCharIndex = characters.IndexOf(currentCharacter);
             return characters[(lastCharIndex + 1) % (characters.Count)];
        }
 
@@ -163,18 +207,25 @@ namespace Foreign_Alphabet
             Random rand = new Random();
             Character c = characters[rand.Next(characters.Count)];
 
-            while (c == lastCharacter && characters.Count > 1)
+            while (c == currentCharacter && characters.Count > 1)
             {
                 c = characters[rand.Next(characters.Count)];
             }
 
             return c;
         }
-        private void NextCharacter(List<Character> characters)
+        private void NextCharacter(List<Character> characters, String display, String type)
         {
-            deltaT = DateTime.Now.Ticks;
+            //TODO
+            //if (currentCharacter != null)
+            //{
+            //    analyticsForm.AddChart(currentCharacter, DateTime.Now.Ticks - deltaT);
+            //}
+            //deltaT = DateTime.Now.Ticks;
+
+            //Select Character
             Character c;
-            switch(cboSelectionMethod.Text)
+            switch(selectionMethod)
             {
                 case "Random":
                     c = RandomCharacter(characters);
@@ -186,23 +237,31 @@ namespace Foreign_Alphabet
                     c = RandomCharacter(characters);
                     break;
             }
-            lastCharacter = c;
-            rtbCharacterDisplay.Text = c.str;
+            currentCharacter = c;
+
+            displayCharacter(c, displayMode);
+
+
+            //TODO Type
             List<String> characterReadings = new List<String>();
             List<String> characterMeanings = new List<String>();
-            rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+            
 
-            foreach (String s in c.readings.Keys)
+            //Add Readings and Meanings
+            foreach (String k in c.readings.Keys)
             {
-                characterReadings.Add(s + ":\t " + c.readings[s]);  
+                characterReadings.Add(k + ":\t " + String.Join(",", c.readings[k]));  
             }
-            foreach (String s in c.meanings.Keys)
+            foreach (String k in c.meanings.Keys)
             {
-                characterMeanings.Add(s + ":\t " + c.meanings[s]);
+                characterMeanings.Add(k + ":\t " + String.Join("," , c.meanings[k]));
             }
 
+            //Enable CheckBoxes
             chkReading.Enabled = characterReadings.Count != 0;
             chkMeaning.Enabled = characterMeanings.Count != 0;
+            lboReading.Visible = characterReadings.Count != 0 && lboReading.Visible;
+            lboMeaning.Visible = characterMeanings.Count != 0 && lboMeaning.Visible;
 
             lboReading.Items.Clear();
             lboReading.Items.AddRange(characterReadings.ToArray());
@@ -210,22 +269,39 @@ namespace Foreign_Alphabet
             lboMeaning.Items.AddRange(characterMeanings.ToArray());
         }
 
+        private void displayCharacter(Character c, string display)
+        {
+            rtbCharacterDisplay.Text = string.Join(",", c.readings[display]);
+            rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+        }
+
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            
-
-            NextCharacter(selectedCharacters);
-            if(lastCharacter != null)
+            NextCharacter(selectedCharacters, displayMode, typeMode);
+        }
+        private void TxtCharacterInput_TextChanged(object sender, EventArgs e)
+        {
+            bool correct = false;
+            foreach(String s in currentCharacter.GetAllMetaData()[typeMode])
             {
-                analyticsForm.AddChart(lastCharacter, DateTime.Now.Ticks - deltaT);
+                if (txtCharacterInput.Text.ToLower().Trim() == s.ToLower().Trim())
+                {
+                    correct = true;
+                }
             }
-
+            if (correct)
+            {
+                txtCharacterInput.Text = "";
+                NextCharacter(selectedCharacters, displayMode, typeMode);
+            }
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
             rtbCharacterDisplay.Font = fontDialog.Font;
             cboSelectionMethod.SelectedItem = cboSelectionMethod.Items[0];
+            lblInstructions.Text = "Load an alphabet";
+            txtFile.Text = "";
         }
 
         private void BtnLoadFile_Click(object sender, EventArgs e)
@@ -281,5 +357,26 @@ namespace Foreign_Alphabet
         {
             analyticsForm.Show();
         }
+
+        private void CboSelectionMethod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectionMethod = cboSelectionMethod.Text;
+        }
+
+        private void CboDisplayMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            displayMode = cboDisplayMode.Text;
+            if(selectedCharacters.Count > 0)
+                displayCharacter(currentCharacter, displayMode);
+        }
+
+        private void CboTypeMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            typeMode = cboTypeMode.Text;
+            btnNext.Visible = typeMode == "None";
+            txtCharacterInput.Visible = typeMode != "None";
+        }
+
+
     }
 }

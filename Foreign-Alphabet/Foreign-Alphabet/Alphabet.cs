@@ -13,6 +13,9 @@ namespace Foreign_Alphabet
 
         public bool Enabled { get; set; } = false;
 
+        public string DefaultDisplay { get; set; }
+        public string DefaultType { get; set; }
+
         public List<Alphabet> subGroup;
         public List<Character> characters;
 
