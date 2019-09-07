@@ -27,9 +27,9 @@
 				<reading name="Kanji">三</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Reading">shi yon</reading>
+				<reading name="Onyomi Reading">shi,yon</reading>
 				<reading name="Onyomi Japanese">しよん</reading>
-				<reading name="Kunyomi Reading">yon yot(tsu)</reading>
+				<reading name="Kunyomi Reading">yon,yot(tsu)</reading>
 				<reading name="Kunyomi Japanese">よんよっ・つ</reading>
 				<meaning name="Meaning">Four</meaning>
 				<reading name="Kanji">四</reading>
@@ -51,8 +51,8 @@
 				<reading name="Kanji">六</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Reading">shichi nana</reading>
-				<reading name="Onyomi Japanese">しちなな</reading>
+				<reading name="Onyomi Reading">shichi,nana</reading>
+				<reading name="Onyomi Japanese">しち,なな</reading>
 				<reading name="Kunyomi Reading">nana(tsu)</reading>
 				<reading name="Kunyomi Japanese">なな・つ</reading>
 				<meaning name="Meaning">Seven</meaning>
@@ -67,8 +67,8 @@
 				<reading name="Kanji">八</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Reading">ku kyuu</reading>
-				<reading name="Onyomi Japanese">くきゅう</reading>
+				<reading name="Onyomi Reading">ku,kyuu</reading>
+				<reading name="Onyomi Japanese">く,きゅう</reading>
 				<reading name="Kunyomi Reading">kokono(tsu)</reading>
 				<reading name="Kunyomi Japanese">ここの・つ</reading>
 				<meaning name="Meaning">Nine</meaning>
@@ -94,91 +94,108 @@
 		<alphabet name="Begginers Kanji">
 			<char>
 				<reading name="Onyomi Japanese">じょう</reading>
+				<reading name="Kunyomi Japanese">うえ, あ, のぼ, うわ, かみ</reading>
 				<meaning name="Meaning">Above</meaning>
 				<reading name="Kanji">上</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Japanese">か</reading>
+				<reading name="Onyomi Japanese">か, げ </reading>
+				<reading name="Kunyomi Japanese">した, さ, くだ, お </reading>
 				<meaning name="Meaning">Below</meaning>
 				<reading name="Kanji">下</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Japanese">たい</reading>
+				<reading name="Onyomi Japanese">たい, だい</reading>
+				<reading name="Kunyomi Japanese">おお</reading>
 				<meaning name="Meaning">Big</meaning>
 				<reading name="Kanji">大</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Japanese">こう</reading>
+				<reading name="Onyomi Japanese">こう, く </reading>
 				<meaning name="Meaning">Construction</meaning>
 				<reading name="Kanji">工</reading>
 			</char>
 			<char>
 				<reading name="Onyomi Japanese">はち</reading>
+				<reading name="Kunyomi Japanese">や, よう</reading>
 				<meaning name="Meaning">Eight</meaning>
 				<reading name="Kanji">八</reading>
 			</char>
 			<char>
 				<reading name="Onyomi Japanese">にゅう</reading>
+				<reading name="Kunyomi Japanese">はい, い</reading>
 				<meaning name="Meaning">Enter</meaning>
 				<reading name="Kanji">入</reading>
 			</char>
 			<char>
 				<reading name="Onyomi Japanese">さん</reading>
+				<reading name="Kunyomi Japanese">やま</reading>
 				<meaning name="Meaning">Mountain</meaning>
 				<reading name="Kanji">山</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Japanese">こう</reading>
+				<reading name="Onyomi Japanese">こう, く</reading>
+				<reading name="Kunyomi Japanese">くち</reading>
 				<meaning name="Meaning">Mouth</meaning>
 				<reading name="Kanji">口</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Japanese">く</reading>
+				<reading name="Onyomi Japanese">く, きゅう</reading>
+				<reading name="Kunyomi Japanese">ここの</reading>
 				<meaning name="Meaning">Nine</meaning>
 				<reading name="Kanji">九</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Japanese">いち</reading>
+				<reading name="Onyomi Japanese">いち, いつ</reading>
+				<reading name="Kunyomi Japanese">ひと</reading>
 				<meaning name="Meaning">One</meaning>
 				<reading name="Kanji">一</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Japanese">にん</reading>
+				<reading name="Onyomi Japanese">にん, じん</reading>
+				<reading name="Kunyomi Japanese">ひと, と</reading>
 				<meaning name="Meaning">Person</meaning>
 				<reading name="Kanji">人</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Japanese">りょく</reading>
+				<reading name="Onyomi Japanese">りょく, りき</reading>
+				<reading name="Kunyomi Japanese">ちから</reading>
 				<meaning name="Meaning">Power</meaning>
 				<reading name="Kanji">力</reading>
 			</char>
 			<char>
-				<reading name="Onyomi Japanese">かわ</reading>
+				<reading name="Onyomi Japanese">せん</reading>
+				<reading name="Kunyomi Japanese">かわ</reading>
 				<meaning name="Meaning">River</meaning>
 				<reading name="Kanji">川</reading>
 			</char>
 			<char>
 				<reading name="Onyomi Japanese">しち</reading>
+				<reading name="Kunyomi Japanese">なな, なの</reading>
 				<meaning name="Meaning">Seven</meaning>
 				<reading name="Kanji">七</reading>
 			</char>
 			<char>
 				<reading name="Onyomi Japanese">じゅう</reading>
+				<reading name="Kunyomi Japanese">とお</reading>
 				<meaning name="Meaning">Ten</meaning>
 				<reading name="Kanji">十</reading>
 			</char>
 			<char>
 				<reading name="Onyomi Japanese">さん</reading>
+				<reading name="Kunyomi Japanese">み</reading>
 				<meaning name="Meaning">Three</meaning>
 				<reading name="Kanji">三</reading>
 			</char>
 			<char>
 				<reading name="Onyomi Japanese">に</reading>
+				<reading name="Kunyomi Japanese">ふた</reading>
 				<meaning name="Meaning">Two</meaning>
 				<reading name="Kanji">二</reading>
 			</char>
 			<char>
 				<reading name="Onyomi Japanese">じょ</reading>
+				<reading name="Kunyomi Japanese">おんな, め</reading>
 				<meaning name="Meaning">Woman</meaning>
 				<reading name="Kanji">女</reading>
 			</char>
