@@ -1,465 +1,466 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<alphabet name="Kana" version="1.2" defaultDisplay="Hiragana" defaultType="Latin">
-	<alphabet name="Gojūon" description="Main set of Kana">
-		<alphabet name="Vowels" description="Vowels">
-			<char>
-				<reading name="Latin">a</reading>
-				<reading name="IPA">a</reading>
-				<reading name="Hiragana">あ</reading>
-				<reading name="Katakana">ア</reading>
-			</char>
-			<char>
-				<reading name="Latin">i</reading>
-				<reading name="IPA">i</reading>
-				<reading name="Hiragana">い</reading>
-				<reading name="Katakana">イ</reading>
-			</char>
-			<char>
-				<reading name="Latin">u</reading>
-				<reading name="IPA">ɯ</reading>
-				<reading name="Hiragana">う</reading>
-				<reading name="Katakana">ウ</reading>
-			</char>
-			<char>
-				<reading name="Latin">e</reading>
-				<reading name="IPA">e</reading>
-				<reading name="Hiragana">え</reading>
-				<reading name="Katakana">エ</reading>
-			</char>
-			<char>
-				<reading name="Latin">o</reading>
-				<reading name="IPA">o</reading>
-				<reading name="Hiragana">お</reading>
-				<reading name="Katakana">オ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="K" description="K + Vowel">
-			<char>
-				<reading name="Latin">ka</reading>
-				<reading name="IPA">ka</reading>
-				<reading name="Hiragana">か</reading>
-				<reading name="Katakana">カ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ki</reading>
-				<reading name="IPA">ki</reading>
-				<reading name="Hiragana">き</reading>
-				<reading name="Katakana">キ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ku</reading>
-				<reading name="IPA">kɯ</reading>
-				<reading name="Hiragana">く</reading>
-				<reading name="Katakana">ク</reading>
-			</char>
-			<char>
-				<reading name="Latin">ke</reading>
-				<reading name="IPA">ke</reading>
-				<reading name="Hiragana">け</reading>
-				<reading name="Katakana">ケ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ko</reading>
-				<reading name="IPA">ko</reading>
-				<reading name="Hiragana">こ</reading>
-				<reading name="Katakana">コ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="S" description="S + Vowel">
-			<char>
-				<reading name="Latin">sa</reading>
-				<reading name="IPA">sa</reading>
-				<reading name="Hiragana">さ</reading>
-				<reading name="Katakana">サ</reading>
-			</char>
-			<char>
-				<reading name="Latin">shi</reading>
-				<reading name="IPA">ɕi</reading>
-				<reading name="Hiragana">し</reading>
-				<reading name="Katakana">シ</reading>
-			</char>
-			<char>
-				<reading name="Latin">su</reading>
-				<reading name="IPA">sɯ</reading>
-				<reading name="Hiragana">す</reading>
-				<reading name="Katakana">ス</reading>
-			</char>
-			<char>
-				<reading name="Latin">se</reading>
-				<reading name="IPA">se</reading>
-				<reading name="Hiragana">せ</reading>
-				<reading name="Katakana">セ</reading>
-			</char>
-			<char>
-				<reading name="Latin">so</reading>
-				<reading name="IPA">so</reading>
-				<reading name="Hiragana">そ</reading>
-				<reading name="Katakana">ソ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="T" description="T + Vowel">
-			<char>
-				<reading name="Latin">ta</reading>
-				<reading name="IPA">ta</reading>
-				<reading name="Hiragana">た</reading>
-				<reading name="Katakana">タ</reading>
-			</char>
-			<char>
-				<reading name="Latin">chi</reading>
-				<reading name="IPA">tɕi</reading>
-				<reading name="Hiragana">ち</reading>
-				<reading name="Katakana">チ</reading>
-			</char>
-			<char>
-				<reading name="Latin">tsu</reading>
-				<reading name="IPA">tsɯ</reading>
-				<reading name="Hiragana">つ</reading>
-				<reading name="Katakana">ツ</reading>
-			</char>
-			<char>
-				<reading name="Latin">te</reading>
-				<reading name="IPA">te</reading>
-				<reading name="Hiragana">て</reading>
-				<reading name="Katakana">テ</reading>
-			</char>
-			<char>
-				<reading name="Latin">to</reading>
-				<reading name="IPA">to</reading>
-				<reading name="Hiragana">と</reading>
-				<reading name="Katakana">ト</reading>
-			</char>
-		</alphabet>
-		<alphabet name="N" description="N + Vowel">
-			<char>
-				<reading name="Latin">na</reading>
-				<reading name="IPA">na</reading>
-				<reading name="Hiragana">な</reading>
-				<reading name="Katakana">ナ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ni</reading>
-				<reading name="IPA">ɲi</reading>
-				<reading name="Hiragana">に</reading>
-				<reading name="Katakana">ニ</reading>
-			</char>
-			<char>
-				<reading name="Latin">nu</reading>
-				<reading name="IPA">nɯ</reading>
-				<reading name="Hiragana">ぬ</reading>
-				<reading name="Katakana">ヌ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ne</reading>
-				<reading name="IPA">ne</reading>
-				<reading name="Hiragana">ね</reading>
-				<reading name="Katakana">ネ</reading>
-			</char>
-			<char>
-				<reading name="Latin">no</reading>
-				<reading name="IPA">no</reading>
-				<reading name="Hiragana">の</reading>
-				<reading name="Katakana">ノ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="H" description="H + Vowel">
-			<char>
-				<reading name="Latin">ha</reading>
-				<reading name="IPA">ha</reading>
-				<reading name="Hiragana">は</reading>
-				<reading name="Katakana">ハ</reading>
-			</char>
-			<char>
-				<reading name="Latin">hi</reading>
-				<reading name="IPA">çi</reading>
-				<reading name="Hiragana">ひ</reading>
-				<reading name="Katakana">ヒ</reading>
-			</char>
-			<char>
-				<reading name="Latin">fu</reading>
-				<reading name="IPA">ɸɯ</reading>
-				<reading name="Hiragana">ふ</reading>
-				<reading name="Katakana">フ</reading>
-			</char>
-			<char>
-				<reading name="Latin">he</reading>
-				<reading name="IPA">he</reading>
-				<reading name="Hiragana">へ</reading>
-				<reading name="Katakana">ヘ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ho</reading>
-				<reading name="IPA">ho</reading>
-				<reading name="Hiragana">ほ</reading>
-				<reading name="Katakana">ホ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="M" description="M + Vowel">
-			<char>
-				<reading name="Latin">ma</reading>
-				<reading name="IPA">na</reading>
-				<reading name="Hiragana">ま</reading>
-				<reading name="Katakana">マ</reading>
-			</char>
-			<char>
-				<reading name="Latin">mi</reading>
-				<reading name="IPA">mi</reading>
-				<reading name="Hiragana">み</reading>
-				<reading name="Katakana">ミ</reading>
-			</char>
-			<char>
-				<reading name="Latin">mu</reading>
-				<reading name="IPA">mɯ</reading>
-				<reading name="Hiragana">む</reading>
-				<reading name="Katakana">ム</reading>
-			</char>
-			<char>
-				<reading name="Latin">me</reading>
-				<reading name="IPA">me</reading>
-				<reading name="Hiragana">め</reading>
-				<reading name="Katakana">メ</reading>
-			</char>
-			<char>
-				<reading name="Latin">mo</reading>
-				<reading name="IPA">mo</reading>
-				<reading name="Hiragana">も</reading>
-				<reading name="Katakana">モ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="Y" description="Y + Vowel">
-			<char>
-				<reading name="Latin">ya</reading>
-				<reading name="IPA">ja</reading>
-				<reading name="Hiragana">や</reading>
-				<reading name="Katakana">ヤ</reading>
-			</char>
-			<char>
-				<reading name="Latin">yu</reading>
-				<reading name="IPA">jɯ</reading>
-				<reading name="Hiragana">ゆ</reading>
-				<reading name="Katakana">ユ</reading>
-			</char>
-			<char>
-				<reading name="Latin">yo</reading>
-				<reading name="IPA">jo</reading>
-				<reading name="Hiragana">よ</reading>
-				<reading name="Katakana">ヨ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="R" description="R + Vowel">
-			<char>
-				<reading name="Latin">ra</reading>
-				<reading name="IPA">ɾa</reading>
-				<reading name="Hiragana">ら</reading>
-				<reading name="Katakana">ラ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ri</reading>
-				<reading name="IPA">ɾi</reading>
-				<reading name="Hiragana">り</reading>
-				<reading name="Katakana">リ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ru</reading>
-				<reading name="IPA">ɾɯ</reading>
-				<reading name="Hiragana">る</reading>
-				<reading name="Katakana">ル</reading>
-			</char>
-			<char>
-				<reading name="Latin">re</reading>
-				<reading name="IPA">ɾe</reading>
-				<reading name="Hiragana">れ</reading>
-				<reading name="Katakana">レ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ro</reading>
-				<reading name="IPA">ɾo</reading>
-				<reading name="Hiragana">ろ</reading>
-				<reading name="Katakana">ロ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="W" description="W + Vowel">
-			<char>
-				<reading name="Latin">wa</reading>
-				<reading name="IPA">ɰa</reading>
-				<reading name="Hiragana">わ</reading>
-				<reading name="Katakana">ワ</reading>
-			</char>
-			<char>
-				<reading name="Latin">wo</reading>
-				<reading name="IPA">o</reading>
-				<reading name="Hiragana">を</reading>
-				<reading name="Katakana">ヲ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="ん" description="ん">
-			<char>
-				<reading name="Latin">n</reading>
-				<reading name="IPA">ɴ</reading>
-				<reading name="Hiragana">ん</reading>
-				<reading name="Katakana">ン</reading>
-			</char>
-		</alphabet>
-	</alphabet>
-	<alphabet name="Dakuten" description="Gojūon characters with dakuten diacritic">
-		<alphabet name="G" description="G + Vowel">
-			<char>
-				<reading name="Latin">ga</reading>
-				<reading name="IPA">ga</reading>
-				<reading name="Hiragana">が</reading>
-				<reading name="Katakana">ガ</reading>
-			</char>
-			<char>
-				<reading name="Latin">gi</reading>
-				<reading name="IPA">gi</reading>
-				<reading name="Hiragana">ぎ</reading>
-				<reading name="Katakana">ギ</reading>
-			</char>
-			<char>
-				<reading name="Latin">gu</reading>
-				<reading name="IPA">gɯ</reading>
-				<reading name="Hiragana">ぐ</reading>
-				<reading name="Katakana">グ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ge</reading>
-				<reading name="IPA">ge</reading>
-				<reading name="Hiragana">げ</reading>
-				<reading name="Katakana">ゲ</reading>
-			</char>
-			<char>
-				<reading name="Latin">go</reading>
-				<reading name="IPA">go</reading>
-				<reading name="Hiragana">ご</reading>
-				<reading name="Katakana">ゴ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="Z" description="Z + Vowel">
-			<char>
-				<reading name="Latin">za</reading>
-				<reading name="IPA">(d)za</reading>
-				<reading name="Hiragana">ざ</reading>
-				<reading name="Katakana">ザ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ji</reading>
-				<reading name="IPA">(d)ʑi</reading>
-				<reading name="Hiragana">じ</reading>
-				<reading name="Katakana">ジ</reading>
-			</char>
-			<char>
-				<reading name="Latin">zu</reading>
-				<reading name="IPA">(d)zɯ</reading>
-				<reading name="Hiragana">ず</reading>
-				<reading name="Katakana">ズ</reading>
-			</char>
-			<char>
-				<reading name="Latin">ze</reading>
-				<reading name="IPA">(d)ze</reading>
-				<reading name="Hiragana">ぜ</reading>
-				<reading name="Katakana">ゼ</reading>
-			</char>
-			<char>
-				<reading name="Latin">zo</reading>
-				<reading name="IPA">(d)zo</reading>
-				<reading name="Hiragana">ぞ</reading>
-				<reading name="Katakana">ゾ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="D" description="D + Vowel">
-			<char>
-				<reading name="Latin">da</reading>
-				<reading name="IPA">da</reading>
-				<reading name="Hiragana">だ</reading>
-				<reading name="Katakana">ダ</reading>
-			</char>
-			<char>
-				<reading name="Latin">dji</reading>
-				<reading name="IPA">(d)ʑi</reading>
-				<reading name="Hiragana">ぢ</reading>
-				<reading name="Katakana">ヂ</reading>
-			</char>
-			<char>
-				<reading name="Latin">dzu</reading>
-				<reading name="IPA">(d)zɯ</reading>
-				<reading name="Hiragana">づ</reading>
-				<reading name="Katakana">ヅ</reading>
-			</char>
-			<char>
-				<reading name="Latin">de</reading>
-				<reading name="IPA">de</reading>
-				<reading name="Hiragana">で</reading>
-				<reading name="Katakana">デ</reading>
-			</char>
-			<char>
-				<reading name="Latin">do</reading>
-				<reading name="IPA">do</reading>
-				<reading name="Hiragana">ど</reading>
-				<reading name="Katakana">ド</reading>
-			</char>
-		</alphabet>
-		<alphabet name="B" description="B + Vowel">
-			<char>
-				<reading name="Latin">ba</reading>
-				<reading name="IPA">ba</reading>
-				<reading name="Hiragana">ば</reading>
-				<reading name="Katakana">バ</reading>
-			</char>
-			<char>
-				<reading name="Latin">bi</reading>
-				<reading name="IPA">bi</reading>
-				<reading name="Hiragana">び</reading>
-				<reading name="Katakana">ビ</reading>
-			</char>
-			<char>
-				<reading name="Latin">bu</reading>
-				<reading name="IPA">bɯ</reading>
-				<reading name="Hiragana">ぶ</reading>
-				<reading name="Katakana">ブ</reading>
-			</char>
-			<char>
-				<reading name="Latin">be</reading>
-				<reading name="IPA">be</reading>
-				<reading name="Hiragana">べ</reading>
-				<reading name="Katakana">ベ</reading>
-			</char>
-			<char>
-				<reading name="Latin">bo</reading>
-				<reading name="IPA">bo</reading>
-				<reading name="Hiragana">ぼ</reading>
-				<reading name="Katakana">ボ</reading>
-			</char>
-		</alphabet>
-		<alphabet name="P" description="P + Vowel">
-			<char>
-				<reading name="Latin">pa</reading>
-				<reading name="IPA">pa</reading>
-				<reading name="Hiragana">ぱ</reading>
-				<reading name="Katakana">パ</reading>
-			</char>
-			<char>
-				<reading name="Latin">pi</reading>
-				<reading name="IPA">pi</reading>
-				<reading name="Hiragana">ぴ</reading>
-				<reading name="Katakana">ピ</reading>
-			</char>
-			<char>
-				<reading name="Latin">pu</reading>
-				<reading name="IPA">pɯ</reading>
-				<reading name="Hiragana">ぷ</reading>
-				<reading name="Katakana">プ</reading>
-			</char>
-			<char>
-				<reading name="Latin">pe</reading>
-				<reading name="IPA">pe</reading>
-				<reading name="Hiragana">ぺ</reading>
-				<reading name="Katakana">ペ</reading>
-			</char>
-			<char>
-				<reading name="Latin">po</reading>
-				<reading name="IPA">po</reading>
-				<reading name="Hiragana">ぽ</reading>
-				<reading name="Katakana">ポ</reading>
-			</char>
-		</alphabet>
-	</alphabet>
-</alphabet>
+<?xml version="1.0" encoding="utf-8"?>
+<alphabet-file name="Kana" version="1.3">
+	<alphabet-options>
+		<display-options default="hiragana">
+			<reading id="latin" name="Latin"/>
+			<reading id="ipa" name="IPA"/>
+			<reading id="hiragana" name="Hiragana"/>
+			<reading id="katakana" name="Katakana"/>
+		</display-options>
+		<type-options default="latin">
+			<reading id="latin" name="Latin"/>
+			<reading id="hiragana" name="Hiragana"/>
+			<reading id="katakana" name="Katakana"/>
+		</type-options>
+	</alphabet-options>
+	<alphabet-classes>
+		<group id="gojuon" name="Gojūon">
+			<group id="vowels" name="Vowels" />
+			<group id="k" name="K" />
+			<group id="s" name="S" />
+			<group id="t" name="T" />
+			<group id="n" name="N" />
+			<group id="h" name="H" />
+			<group id="m" name="M" />
+			<group id="y" name="Y" />
+			<group id="r" name="R" />
+			<group id="w" name="W" />
+			<group id="nn" name="ん" />
+		</group>
+		<group id="dakuten" name="Dakuten">
+			<group id="g" name="G" />
+			<group id="z" name="Z" />
+			<group id="d" name="D" />
+			<group id="b" name="B" />
+			<group id="p" name="P" />
+		</group>
+	</alphabet-classes>
+	<alphabet-characters>
+		<character class="vowels">
+			<reading id="latin">a</reading>
+			<reading id="ipa" >a</reading>
+			<reading id="hiragana">あ</reading>
+			<reading id="katakana">ア</reading>
+		</character>
+		<character class="vowels">
+			<reading id="latin">i</reading>
+			<reading id="ipa">i</reading>
+			<reading id="hiragana">い</reading>
+			<reading id="katakana">イ</reading>
+		</character>
+		<character class="vowels">
+			<reading id="latin">u</reading>
+			<reading id="ipa">ɯ</reading>
+			<reading id="hiragana">う</reading>
+			<reading id="katakana">ウ</reading>
+		</character>
+		<character class="vowels">
+			<reading id="latin">e</reading>
+			<reading id="ipa">e</reading>
+			<reading id="hiragana">え</reading>
+			<reading id="katakana">エ</reading>
+		</character>
+		<character class="vowels">
+			<reading id="latin">o</reading>
+			<reading id="ipa">o</reading>
+			<reading id="hiragana">お</reading>
+			<reading id="katakana">オ</reading>
+		</character>
+		<character class="k">
+				<reading id="latin">ka</reading>
+				<reading id="ipa">ka</reading>
+				<reading id="hiragana">か</reading>
+				<reading id="katakana">カ</reading>
+			</character>
+			<character class="k">
+				<reading id="latin">ki</reading>
+				<reading id="ipa">ki</reading>
+				<reading id="hiragana">き</reading>
+				<reading id="katakana">キ</reading>
+			</character>
+			<character class="k">
+				<reading id="latin">ku</reading>
+				<reading id="ipa">kɯ</reading>
+				<reading id="hiragana">く</reading>
+				<reading id="katakana">ク</reading>
+			</character>
+			<character class="k">
+				<reading id="latin">ke</reading>
+				<reading id="ipa">ke</reading>
+				<reading id="hiragana">け</reading>
+				<reading id="katakana">ケ</reading>
+			</character>
+			<character class="k">
+				<reading id="latin">ko</reading>
+				<reading id="ipa">ko</reading>
+				<reading id="hiragana">こ</reading>
+				<reading id="katakana">コ</reading>
+			</character>
+			<character class="s">
+				<reading id="latin">sa</reading>
+				<reading id="ipa">sa</reading>
+				<reading id="hiragana">さ</reading>
+				<reading id="katakana">サ</reading>
+			</character>
+			<character class="s">
+				<reading id="latin">shi</reading>
+				<reading id="ipa">ɕi</reading>
+				<reading id="hiragana">し</reading>
+				<reading id="katakana">シ</reading>
+			</character>
+			<character class="s">
+				<reading id="latin">su</reading>
+				<reading id="ipa">sɯ</reading>
+				<reading id="hiragana">す</reading>
+				<reading id="katakana">ス</reading>
+			</character>
+			<character class="s">
+				<reading id="latin">se</reading>
+				<reading id="ipa">se</reading>
+				<reading id="hiragana">せ</reading>
+				<reading id="katakana">セ</reading>
+			</character>
+			<character class="s">
+				<reading id="latin">so</reading>
+				<reading id="ipa">so</reading>
+				<reading id="hiragana">そ</reading>
+				<reading id="katakana">ソ</reading>
+			</character>
+			<character class="t">
+				<reading id="latin">ta</reading>
+				<reading id="ipa">ta</reading>
+				<reading id="hiragana">た</reading>
+				<reading id="katakana">タ</reading>
+			</character>
+			<character class="t">
+				<reading id="latin">chi</reading>
+				<reading id="ipa">tɕi</reading>
+				<reading id="hiragana">ち</reading>
+				<reading id="katakana">チ</reading>
+			</character>
+			<character class="t">
+				<reading id="latin">tsu</reading>
+				<reading id="ipa">tsɯ</reading>
+				<reading id="hiragana">つ</reading>
+				<reading id="katakana">ツ</reading>
+			</character>
+			<character class="t">
+				<reading id="latin">te</reading>
+				<reading id="ipa">te</reading>
+				<reading id="hiragana">て</reading>
+				<reading id="katakana">テ</reading>
+			</character>
+			<character class="t">
+				<reading id="latin">to</reading>
+				<reading id="ipa">to</reading>
+				<reading id="hiragana">と</reading>
+				<reading id="katakana">ト</reading>
+			</character>
+			<character class="n">
+				<reading id="latin">na</reading>
+				<reading id="ipa">na</reading>
+				<reading id="hiragana">な</reading>
+				<reading id="katakana">ナ</reading>
+			</character>
+			<character class="n">
+				<reading id="latin">ni</reading>
+				<reading id="ipa">ɲi</reading>
+				<reading id="hiragana">に</reading>
+				<reading id="katakana">ニ</reading>
+			</character>
+			<character class="n">
+				<reading id="latin">nu</reading>
+				<reading id="ipa">nɯ</reading>
+				<reading id="hiragana">ぬ</reading>
+				<reading id="katakana">ヌ</reading>
+			</character>
+			<character class="n">
+				<reading id="latin">ne</reading>
+				<reading id="ipa">ne</reading>
+				<reading id="hiragana">ね</reading>
+				<reading id="katakana">ネ</reading>
+			</character>
+			<character class="n">
+				<reading id="latin">no</reading>
+				<reading id="ipa">no</reading>
+				<reading id="hiragana">の</reading>
+				<reading id="katakana">ノ</reading>
+			</character>
+			<character class="h">
+				<reading id="latin">ha</reading>
+				<reading id="ipa">ha</reading>
+				<reading id="hiragana">は</reading>
+				<reading id="katakana">ハ</reading>
+			</character>
+			<character class="h">
+				<reading id="latin">hi</reading>
+				<reading id="ipa">çi</reading>
+				<reading id="hiragana">ひ</reading>
+				<reading id="katakana">ヒ</reading>
+			</character>
+			<character class="h">
+				<reading id="latin">fu</reading>
+				<reading id="ipa">ɸɯ</reading>
+				<reading id="hiragana">ふ</reading>
+				<reading id="katakana">フ</reading>
+			</character>
+			<character class="h">
+				<reading id="latin">he</reading>
+				<reading id="ipa">he</reading>
+				<reading id="hiragana">へ</reading>
+				<reading id="katakana">ヘ</reading>
+			</character>
+			<character class="h">
+				<reading id="latin">ho</reading>
+				<reading id="ipa">ho</reading>
+				<reading id="hiragana">ほ</reading>
+				<reading id="katakana">ホ</reading>
+			</character>
+			<character class="m">
+				<reading id="latin">ma</reading>
+				<reading id="ipa">na</reading>
+				<reading id="hiragana">ま</reading>
+				<reading id="katakana">マ</reading>
+			</character>
+			<character class="m">
+				<reading id="latin">mi</reading>
+				<reading id="ipa">mi</reading>
+				<reading id="hiragana">み</reading>
+				<reading id="katakana">ミ</reading>
+			</character>
+			<character class="m">
+				<reading id="latin">mu</reading>
+				<reading id="ipa">mɯ</reading>
+				<reading id="hiragana">む</reading>
+				<reading id="katakana">ム</reading>
+			</character>
+			<character class="m">
+				<reading id="latin">me</reading>
+				<reading id="ipa">me</reading>
+				<reading id="hiragana">め</reading>
+				<reading id="katakana">メ</reading>
+			</character>
+			<character class="m">
+				<reading id="latin">mo</reading>
+				<reading id="ipa">mo</reading>
+				<reading id="hiragana">も</reading>
+				<reading id="katakana">モ</reading>
+			</character>
+			<character class="y">
+				<reading id="latin">ya</reading>
+				<reading id="ipa">ja</reading>
+				<reading id="hiragana">や</reading>
+				<reading id="katakana">ヤ</reading>
+			</character>
+			<character class="y">
+				<reading id="latin">yu</reading>
+				<reading id="ipa">jɯ</reading>
+				<reading id="hiragana">ゆ</reading>
+				<reading id="katakana">ユ</reading>
+			</character>
+			<character class="y">
+				<reading id="latin">yo</reading>
+				<reading id="ipa">jo</reading>
+				<reading id="hiragana">よ</reading>
+				<reading id="katakana">ヨ</reading>
+			</character>
+			<character class="r">
+				<reading id="latin">ra</reading>
+				<reading id="ipa">ɾa</reading>
+				<reading id="hiragana">ら</reading>
+				<reading id="katakana">ラ</reading>
+			</character>
+			<character class="r">
+				<reading id="latin">ri</reading>
+				<reading id="ipa">ɾi</reading>
+				<reading id="hiragana">り</reading>
+				<reading id="katakana">リ</reading>
+			</character>
+			<character class="r">
+				<reading id="latin">ru</reading>
+				<reading id="ipa">ɾɯ</reading>
+				<reading id="hiragana">る</reading>
+				<reading id="katakana">ル</reading>
+			</character>
+			<character class="r">
+				<reading id="latin">re</reading>
+				<reading id="ipa">ɾe</reading>
+				<reading id="hiragana">れ</reading>
+				<reading id="katakana">レ</reading>
+			</character>
+			<character class="r">
+				<reading id="latin">ro</reading>
+				<reading id="ipa">ɾo</reading>
+				<reading id="hiragana">ろ</reading>
+				<reading id="katakana">ロ</reading>
+			</character>
+			<character class="w">
+				<reading id="latin">wa</reading>
+				<reading id="ipa">ɰa</reading>
+				<reading id="hiragana">わ</reading>
+				<reading id="katakana">ワ</reading>
+			</character>
+			<character class="w">
+				<reading id="latin">wo</reading>
+				<reading id="ipa">o</reading>
+				<reading id="hiragana">を</reading>
+				<reading id="katakana">ヲ</reading>
+			</character>
+			<character class="nn">
+				<reading id="latin">n</reading>
+				<reading id="ipa">ɴ</reading>
+				<reading id="hiragana">ん</reading>
+				<reading id="katakana">ン</reading>
+			</character>
+			<character class="g">
+				<reading id="latin">ga</reading>
+				<reading id="ipa">ga</reading>
+				<reading id="hiragana">が</reading>
+				<reading id="katakana">ガ</reading>
+			</character>
+			<character class="g">
+				<reading id="latin">gi</reading>
+				<reading id="ipa">gi</reading>
+				<reading id="hiragana">ぎ</reading>
+				<reading id="katakana">ギ</reading>
+			</character>
+			<character class="g">
+				<reading id="latin">gu</reading>
+				<reading id="ipa">gɯ</reading>
+				<reading id="hiragana">ぐ</reading>
+				<reading id="katakana">グ</reading>
+			</character>
+			<character class="g">
+				<reading id="latin">ge</reading>
+				<reading id="ipa">ge</reading>
+				<reading id="hiragana">げ</reading>
+				<reading id="katakana">ゲ</reading>
+			</character>
+			<character class="g">
+				<reading id="latin">go</reading>
+				<reading id="ipa">go</reading>
+				<reading id="hiragana">ご</reading>
+				<reading id="katakana">ゴ</reading>
+			</character>
+			<character class="z">
+				<reading id="latin">za</reading>
+				<reading id="ipa">(d)za</reading>
+				<reading id="hiragana">ざ</reading>
+				<reading id="katakana">ザ</reading>
+			</character>
+			<character class="z">
+				<reading id="latin">ji</reading>
+				<reading id="ipa">(d)ʑi</reading>
+				<reading id="hiragana">じ</reading>
+				<reading id="katakana">ジ</reading>
+			</character>
+			<character class="z">
+				<reading id="latin">zu</reading>
+				<reading id="ipa">(d)zɯ</reading>
+				<reading id="hiragana">ず</reading>
+				<reading id="katakana">ズ</reading>
+			</character>
+			<character class="z">
+				<reading id="latin">ze</reading>
+				<reading id="ipa">(d)ze</reading>
+				<reading id="hiragana">ぜ</reading>
+				<reading id="katakana">ゼ</reading>
+			</character>
+			<character class="z">
+				<reading id="latin">zo</reading>
+				<reading id="ipa">(d)zo</reading>
+				<reading id="hiragana">ぞ</reading>
+				<reading id="katakana">ゾ</reading>
+			</character>
+			<character class="d">
+				<reading id="latin">da</reading>
+				<reading id="ipa">da</reading>
+				<reading id="hiragana">だ</reading>
+				<reading id="katakana">ダ</reading>
+			</character>
+			<character class="d">
+				<reading id="latin">dji</reading>
+				<reading id="ipa">(d)ʑi</reading>
+				<reading id="hiragana">ぢ</reading>
+				<reading id="katakana">ヂ</reading>
+			</character>
+			<character class="d">
+				<reading id="latin">dzu</reading>
+				<reading id="ipa">(d)zɯ</reading>
+				<reading id="hiragana">づ</reading>
+				<reading id="katakana">ヅ</reading>
+			</character>
+			<character class="d">
+				<reading id="latin">de</reading>
+				<reading id="ipa">de</reading>
+				<reading id="hiragana">で</reading>
+				<reading id="katakana">デ</reading>
+			</character>
+			<character class="d">
+				<reading id="latin">do</reading>
+				<reading id="ipa">do</reading>
+				<reading id="hiragana">ど</reading>
+				<reading id="katakana">ド</reading>
+			</character>
+			<character class="b">
+				<reading id="latin">ba</reading>
+				<reading id="ipa">ba</reading>
+				<reading id="hiragana">ば</reading>
+				<reading id="katakana">バ</reading>
+			</character>
+			<character class="b">
+				<reading id="latin">bi</reading>
+				<reading id="ipa">bi</reading>
+				<reading id="hiragana">び</reading>
+				<reading id="katakana">ビ</reading>
+			</character>
+			<character class="b">
+				<reading id="latin">bu</reading>
+				<reading id="ipa">bɯ</reading>
+				<reading id="hiragana">ぶ</reading>
+				<reading id="katakana">ブ</reading>
+			</character>
+			<character class="b">
+				<reading id="latin">be</reading>
+				<reading id="ipa">be</reading>
+				<reading id="hiragana">べ</reading>
+				<reading id="katakana">ベ</reading>
+			</character>
+			<character class="b">
+				<reading id="latin">bo</reading>
+				<reading id="ipa">bo</reading>
+				<reading id="hiragana">ぼ</reading>
+				<reading id="katakana">ボ</reading>
+			</character>
+			<character class="p">
+				<reading id="latin">pa</reading>
+				<reading id="ipa">pa</reading>
+				<reading id="hiragana">ぱ</reading>
+				<reading id="katakana">パ</reading>
+			</character>
+			<character class="p">
+				<reading id="latin">pi</reading>
+				<reading id="ipa">pi</reading>
+				<reading id="hiragana">ぴ</reading>
+				<reading id="katakana">ピ</reading>
+			</character>
+			<character class="p">
+				<reading id="latin">pu</reading>
+				<reading id="ipa">pɯ</reading>
+				<reading id="hiragana">ぷ</reading>
+				<reading id="katakana">プ</reading>
+			</character>
+			<character class="p">
+				<reading id="latin">pe</reading>
+				<reading id="ipa">pe</reading>
+				<reading id="hiragana">ぺ</reading>
+				<reading id="katakana">ペ</reading>
+			</character>
+			<character class="p">
+				<reading id="latin">po</reading>
+				<reading id="ipa">po</reading>
+				<reading id="hiragana">ぽ</reading>
+				<reading id="katakana">ポ</reading>
+			</character>
+	</alphabet-characters>
+</alphabet-file>

@@ -45,6 +45,7 @@
             this.lboMeaning = new System.Windows.Forms.ListBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.gboConfig = new System.Windows.Forms.GroupBox();
+            this.lblInstructions = new System.Windows.Forms.Label();
             this.lblSelectionMethod = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.cboSelectionMethod = new System.Windows.Forms.ComboBox();
@@ -60,7 +61,6 @@
             this.fontDialog = new System.Windows.Forms.FontDialog();
             this.codBGColor = new System.Windows.Forms.ColorDialog();
             this.codTextColor = new System.Windows.Forms.ColorDialog();
-            this.lblInstructions = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.gboAlphabet.SuspendLayout();
             this.tblDescription.SuspendLayout();
@@ -277,6 +277,18 @@
             this.gboConfig.TabStop = false;
             this.gboConfig.Text = "Configuration";
             // 
+            // lblInstructions
+            // 
+            this.lblInstructions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions.Location = new System.Drawing.Point(6, 48);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(172, 23);
+            this.lblInstructions.TabIndex = 9;
+            this.lblInstructions.Text = "Program is initialising";
+            this.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblSelectionMethod
             // 
             this.lblSelectionMethod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -399,6 +411,7 @@
             // ofdAlphabetFileDialogue
             // 
             this.ofdAlphabetFileDialogue.DefaultExt = "xml";
+            this.ofdAlphabetFileDialogue.Filter = "XML files|*.xml";
             this.ofdAlphabetFileDialogue.Title = "Open Alphabet File";
             // 
             // btnAnalytics
@@ -430,18 +443,6 @@
             this.codTextColor.AnyColor = true;
             this.codTextColor.FullOpen = true;
             this.codTextColor.SolidColorOnly = true;
-            // 
-            // lblInstructions
-            // 
-            this.lblInstructions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstructions.Location = new System.Drawing.Point(6, 48);
-            this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(172, 23);
-            this.lblInstructions.TabIndex = 9;
-            this.lblInstructions.Text = "Program is initialising";
-            this.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
