@@ -8,39 +8,39 @@ namespace Foreign_Alphabet
 {
     class AlphabetManager
     {
-        private readonly Alphabet alphabet;
-        private Character currentCharacter;
-        public List<string> SelectedGroups { get; set; }
+        public Alphabet Alphabet { get; }
+        public Character CurrentCharacter { get; set; }
+
 
         public AlphabetManager(Alphabet alphabet)
         {
-            this.alphabet = alphabet;
-            SelectedGroups = new List<string>();
+            this.Alphabet = alphabet;
+            
         }
 
         /// <summary>
-        /// Sets a new character with a selected mode.
+        /// returns a new character with a selected mode.
         /// </summary>
         /// <param name="mode">Selection mode - the way inwhich the character is selected</param>
         /// <returns></returns>
         /// <exception cref="System.NotImplementedException ">thrown if mode is not implemented</exception>
-        public Character NewCharacter(SelectionModes mode)
+        public Character NewCharacter(SelectionMode mode, IEnumerable<CharacterGroup> groups)
         {
             
-            List<Character> characters = alphabet.GetCharacters(SelectedGroups);
+            List<Character> characters = Alphabet.GetCharacters(groups);
             Character c;
             switch (mode)
             {
-                case SelectionModes.random:
-                    c = RandomCharacter(characters, currentCharacter);
+                case SelectionMode.Random:
+                    c = RandomCharacter(characters, CurrentCharacter);
                     break;
-                case SelectionModes.sequential:
-                    c = SequentialCharacter(characters, currentCharacter);
+                case SelectionMode.Sequential:
+                    c = SequentialCharacter(characters, CurrentCharacter);
                     break;
                 default:
                     throw new NotImplementedException(String.Format("{0} is not an imlemented selection mode", mode));
             }
-            currentCharacter = c;
+            CurrentCharacter = c;
             return c;
         }
 
@@ -79,7 +79,7 @@ namespace Foreign_Alphabet
 
             Character c = characters[rand.Next(characters.Count)];
 
-            while (c == currentCharacter && characters.Count > 1)
+            while (c == CurrentCharacter && characters.Count > 1)
             {
                 c = characters[rand.Next(characters.Count)];
             }

@@ -158,9 +158,8 @@
             this.txtCharacterInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCharacterInput.Location = new System.Drawing.Point(9, 509);
             this.txtCharacterInput.Name = "txtCharacterInput";
-            this.txtCharacterInput.Size = new System.Drawing.Size(374, 38);
+            this.txtCharacterInput.Size = new System.Drawing.Size(275, 38);
             this.txtCharacterInput.TabIndex = 4;
-            this.txtCharacterInput.Visible = false;
             this.txtCharacterInput.TextChanged += new System.EventHandler(this.TxtCharacterInput_TextChanged);
             // 
             // tblDescription
@@ -243,15 +242,14 @@
             // 
             // btnNext
             // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNext.Enabled = false;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(6, 509);
+            this.btnNext.Location = new System.Drawing.Point(290, 509);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(380, 39);
+            this.btnNext.Size = new System.Drawing.Size(96, 39);
             this.btnNext.TabIndex = 4;
-            this.btnNext.Text = "Next";
+            this.btnNext.Text = "Skip";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
@@ -318,9 +316,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboSelectionMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSelectionMethod.FormattingEnabled = true;
-            this.cboSelectionMethod.Items.AddRange(new object[] {
-            "Random",
-            "Sequential"});
             this.cboSelectionMethod.Location = new System.Drawing.Point(87, 413);
             this.cboSelectionMethod.Name = "cboSelectionMethod";
             this.cboSelectionMethod.Size = new System.Drawing.Size(172, 24);

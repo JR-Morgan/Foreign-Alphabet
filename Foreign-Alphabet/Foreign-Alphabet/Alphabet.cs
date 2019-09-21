@@ -11,22 +11,13 @@ namespace Foreign_Alphabet{
         /// <summary>
         /// List of all groups incliding child groups
         /// </summary>
-        public Dictionary<string, CharacterGroup> CharacterGroups { get; set; }
+        public List<CharacterGroup> CharacterGroups { get; set; }
+        public List<CharacterGroup> RootGroups { get; set; }
+        //For now these are lists, so the id is ignored at the moment.
         public Dictionary<string, string> DisplayOptions { get; set; }
         public Dictionary<string, string> TypeOptions { get; set; }
         public string DefaultDisplay { get; set; }
         public string DefaultType { get; set; }
-
-        /// <summary>
-        /// Creates a new alphabet
-        /// </summary>
-        public Alphabet(string name, Dictionary<string, CharacterGroup> characterGroups)
-        {
-            this.AlphabetName = name;
-            this.CharacterGroups = characterGroups;
-            this.DisplayOptions = new Dictionary<string, string>();
-            this.TypeOptions = new Dictionary<string, string>();
-        }
 
         /// <summary>
         /// Creates a new empty alphabet
@@ -34,7 +25,7 @@ namespace Foreign_Alphabet{
         public Alphabet()
         {
             this.AlphabetName = "";
-            this.CharacterGroups = new Dictionary<string, CharacterGroup>();
+            this.CharacterGroups = new List<CharacterGroup>();
             this.DisplayOptions = new Dictionary<string, string>();
             this.TypeOptions = new Dictionary<string, string>();
         }
@@ -52,6 +43,7 @@ namespace Foreign_Alphabet{
         /// <summary>
         /// Recursivly loops through all descendant groups of each group given, and returns all characters<br/>
         /// <remarks><br/>
+        /// <remarks><br/>
         /// NOTE: If both a parent and it's child group are given in <paramref name="groups">groups</paramref> then <br/>
         /// It will not result in duplicates however will take extra unnessesery time to compute.<br/>
         /// Therefore it is advised that you only give it the highest level group(s).
@@ -59,12 +51,12 @@ namespace Foreign_Alphabet{
         /// </summary>
         /// <param name="groups">collection of group keys</param>
         /// <returns>Returns all characters in a collection of groups without duplicates</returns>
-        public List<Character> GetCharacters(IEnumerable<string> groups)
+        public List<Character> GetCharacters(IEnumerable<CharacterGroup> groups)
         {
             HashSet<Character> characters = new HashSet<Character>();
-            foreach(string groupkey in groups)
+            foreach(CharacterGroup group in groups)
             {
-                characters.UnionWith(CharacterGroups[groupkey].GetAllCharacters());
+                characters.UnionWith(group.GetAllCharacters());
             }
 
             return characters.ToList() ;

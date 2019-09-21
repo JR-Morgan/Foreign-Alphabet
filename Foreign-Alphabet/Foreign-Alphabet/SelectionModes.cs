@@ -1,8 +1,8 @@
 ﻿namespace Foreign_Alphabet
 {
-    enum SelectionModes
+    enum SelectionMode
     {
-        random ,
-        sequential
+        Random ,
+        Sequential
     }
 }

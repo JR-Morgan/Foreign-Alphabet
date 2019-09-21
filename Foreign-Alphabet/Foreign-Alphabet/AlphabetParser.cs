@@ -28,7 +28,7 @@ namespace Foreign_Alphabet
 
             if(errors)
             {
-                throw new System.Xml.XmlException();
+                throw new System.Xml.XmlException("Loaded XML file does not follow the current XML Schema");
             }
 
 
@@ -43,6 +43,7 @@ namespace Foreign_Alphabet
                 AlphabetName = rootElement.Attribute("name") != null ? rootElement.Attribute("name").Value : "Unamed Group",
             };
 
+            //TODO simplify below code
             { // Display Options
                 XElement displayOptions = rootElement.Element("alphabet-options").Element("display-options");
                 alphabet.DefaultDisplay = displayOptions.Attribute("default").Value;
@@ -62,7 +63,8 @@ namespace Foreign_Alphabet
             }
 
             //Groups
-            Dictionary<String, CharacterGroup> groups = new Dictionary<string, CharacterGroup>();
+            Dictionary<string, CharacterGroup> groups = new Dictionary<string, CharacterGroup>();
+            
             {
                 List<CharacterGroup> rootGroups = new List<CharacterGroup>();
                 XElement alphabetClasses = rootElement.Element("alphabet-classes");
@@ -81,10 +83,12 @@ namespace Foreign_Alphabet
                     {
                         groups.Add(c.ID, c);
                     }
-                    alphabet.CharacterGroups.Add(g.ID, g);
+                    alphabet.CharacterGroups.Add(g);
                 }
+                alphabet.RootGroups = rootGroups;
             }
             
+
 
 
             // Characters

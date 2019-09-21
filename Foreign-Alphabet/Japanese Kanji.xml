@@ -5,7 +5,7 @@
 			<char>
 				<reading name="Onyomi Reading">ichi</reading>
 				<reading name="Onyomi Japanese">いち</reading>
-				<reading name="Kunyomi Reading">hito(tsu)</reading>
+				<reading name="Kunyomi Reading">hito</reading>
 				<reading name="Kunyomi Japanese">ひと・つ</reading>
 				<meaning name="Meaning">One</meaning>
 				<reading name="Kanji">一</reading>
@@ -13,7 +13,7 @@
 			<char>
 				<reading name="Onyomi Reading">ni</reading>
 				<reading name="Onyomi Japanese">に</reading>
-				<reading name="Kunyomi Reading">futa(tsu)</reading>
+				<reading name="Kunyomi Reading">futa</reading>
 				<reading name="Kunyomi Japanese">ふた・つ</reading>
 				<meaning name="Meaning">Two</meaning>
 				<reading name="Kanji">二</reading>
@@ -21,7 +21,7 @@
 			<char>
 				<reading name="Onyomi Reading">san</reading>
 				<reading name="Onyomi Japanese">さん</reading>
-				<reading name="Kunyomi Reading">mit(tsu)</reading>
+				<reading name="Kunyomi Reading">mit</reading>
 				<reading name="Kunyomi Japanese">みっ・つ</reading>
 				<meaning name="Meaning">Three</meaning>
 				<reading name="Kanji">三</reading>
@@ -29,7 +29,7 @@
 			<char>
 				<reading name="Onyomi Reading">shi,yon</reading>
 				<reading name="Onyomi Japanese">し,よん</reading>
-				<reading name="Kunyomi Reading">yon,yot(tsu)</reading>
+				<reading name="Kunyomi Reading">yon,yot</reading>
 				<reading name="Kunyomi Japanese">よんよっ・つ</reading>
 				<meaning name="Meaning">Four</meaning>
 				<reading name="Kanji">四</reading>
@@ -37,7 +37,7 @@
 			<char>
 				<reading name="Onyomi Reading">go</reading>
 				<reading name="Onyomi Japanese">ご</reading>
-				<reading name="Kunyomi Reading">itsu(tsu)</reading>
+				<reading name="Kunyomi Reading">itsu</reading>
 				<reading name="Kunyomi Japanese">いつ・つ</reading>
 				<meaning name="Meaning">Five</meaning>
 				<reading name="Kanji">五</reading>
@@ -45,7 +45,7 @@
 			<char>
 				<reading name="Onyomi Reading">roku</reading>
 				<reading name="Onyomi Japanese">ろく</reading>
-				<reading name="Kunyomi Reading">mut(tsu)</reading>
+				<reading name="Kunyomi Reading">mut</reading>
 				<reading name="Kunyomi Japanese">むっ・つ</reading>
 				<meaning name="Meaning">Six</meaning>
 				<reading name="Kanji">六</reading>
@@ -53,7 +53,7 @@
 			<char>
 				<reading name="Onyomi Reading">shichi,nana</reading>
 				<reading name="Onyomi Japanese">しち,なな</reading>
-				<reading name="Kunyomi Reading">nana(tsu)</reading>
+				<reading name="Kunyomi Reading">nana</reading>
 				<reading name="Kunyomi Japanese">なな・つ</reading>
 				<meaning name="Meaning">Seven</meaning>
 				<reading name="Kanji">七</reading>
@@ -61,7 +61,7 @@
 			<char>
 				<reading name="Onyomi Reading">hachi</reading>
 				<reading name="Onyomi Japanese">はち</reading>
-				<reading name="Kunyomi Reading">yat(tsu)</reading>
+				<reading name="Kunyomi Reading">yat</reading>
 				<reading name="Kunyomi Japanese">やっ・つ</reading>
 				<meaning name="Meaning">Eight</meaning>
 				<reading name="Kanji">八</reading>
@@ -69,7 +69,7 @@
 			<char>
 				<reading name="Onyomi Reading">ku,kyuu</reading>
 				<reading name="Onyomi Japanese">く,きゅう</reading>
-				<reading name="Kunyomi Reading">kokono(tsu)</reading>
+				<reading name="Kunyomi Reading">kokono</reading>
 				<reading name="Kunyomi Japanese">ここの・つ</reading>
 				<meaning name="Meaning">Nine</meaning>
 				<reading name="Kanji">九</reading>
