@@ -48,21 +48,19 @@ namespace Foreign_Alphabet
 
                 trvAlphabetGroups.Nodes.Clear();
                 trvAlphabetGroups.Nodes.AddRange(GetTreeNodes(this.alphabetManager.Alphabet.RootGroups).ToArray());
-            
 
                 cboSelectionMethod.Items.Clear();
+                UpdateSelectedCharacters();
+
                 foreach (SelectionMode mode in (SelectionMode[]) Enum.GetValues(typeof(SelectionMode)))
                 {
                     cboSelectionMethod.Items.Add(mode);
                 }
 
-
-                //cboTypeMode.Items.Clear();
                 cboTypeMode.DataSource = new BindingSource(alphabetManager.Alphabet.TypeOptions, null);
                 cboTypeMode.ValueMember = "Key";
                 cboTypeMode.DisplayMember = "Value";
 
-                //cboDisplayMode.Items.Clear();
                 cboDisplayMode.DataSource = new BindingSource(alphabetManager.Alphabet.DisplayOptions, null);
                 cboDisplayMode.ValueMember = "Key";
                 cboDisplayMode.DisplayMember = "Value";
@@ -70,15 +68,6 @@ namespace Foreign_Alphabet
                 lblInstructions.Text = "Select alphabet group";
 
                 cboSelectionMethod.SelectedItem = selectionMethod;
-                //FIXME - latin is default all
-                object d = cboDisplayMode.SelectedItem;
-
-
-
-
-                //string find = alphabetManager.Alphabet.DisplayOptions[alphabetManager.Alphabet.DefaultDisplay];
-                //int index = cboDisplayMode.FindStringExact(find);
-                //cboDisplayMode.SelectedIndex = index;
 
                 cboDisplayMode.SelectedIndex = cboDisplayMode.FindStringExact(
                     alphabetManager.Alphabet.DisplayOptions[alphabetManager.Alphabet.DefaultDisplay]
@@ -92,27 +81,7 @@ namespace Foreign_Alphabet
                 //btnAnalytics.Enabled = true;
             }
         }
-        private void ResetAlphabet()
-        {
-            cboTypeMode.Items.Clear();
-            cboDisplayMode.Items.Clear();
-            cboSelectionMethod.SelectedItem = selectionMethod;
-            UpdateSelectedCharacters();
-        }
-        private void UpdateSelectedCharacters()
-        {
-            btnNext.Enabled = SelectedGroups.Count > 0;
-            txtCharacterInput.Enabled = SelectedGroups.Count > 0;
-            if (SelectedGroups.Count > 0)
-            {
-                lblInstructions.Text = "";
-                NextCharacter();
-            }
-            else
-            {
-                lblInstructions.Text = "Select alphabet group";
-            }
-        }
+        
 
         private List<TreeNode> GetTreeNodes(IEnumerable<CharacterGroup> rootGroups)
         {
@@ -140,24 +109,52 @@ namespace Foreign_Alphabet
             return node;
         }
 
+        private void UpdateSelectedCharacters()
+        {
+            SelectedGroups.Clear();
 
+            foreach(TreeNode rootNode in trvAlphabetGroups.Nodes)
+            {
+                AddSelectedNodes(rootNode);
+            }
+
+
+            btnNext.Enabled = SelectedGroups.Count > 0;
+            txtCharacterInput.Enabled = SelectedGroups.Count > 0;
+            if (SelectedGroups.Count > 0)
+            {
+                lblInstructions.Text = "";
+                NextCharacter();
+            }
+            else
+            {
+                lblInstructions.Text = "Select alphabet group";
+            }
+        }
+
+        private void AddSelectedNodes(TreeNode rootNode)
+        {
+            if (rootNode.Checked)
+            {
+                SelectedGroups.Add((CharacterGroup)rootNode.Tag);
+            } else
+            {
+                foreach(TreeNode c in rootNode.Nodes)
+                {
+                    AddSelectedNodes(c);
+                }
+            }
+            
+        }
 
         private void TrvAlphabetGroups_AfterCheck(object sender, TreeViewEventArgs e)
         {
             if (e.Action != TreeViewAction.Unknown)
             {
                 SetChildrenChecked(e.Node, e.Node.Checked);
-                if (e.Node.Checked)
-                {
-                    SelectedGroups.Add((CharacterGroup) e.Node.Tag);
-                    
-                } else
+                if (!e.Node.Checked)
                 {
                     SetParentsChecked(e.Node, false);
-                    if(SelectedGroups.Contains((CharacterGroup)e.Node.Tag))
-                    {
-                        SelectedGroups.Remove((CharacterGroup)e.Node.Tag);
-                    }
                 }
                 UpdateSelectedCharacters();
             }
@@ -166,21 +163,18 @@ namespace Foreign_Alphabet
         private void SetChildrenChecked(TreeNode parentNode, bool check)
         {
             parentNode.Checked = check;
-
             foreach (TreeNode childNode in parentNode.Nodes)
             {
                 SetChildrenChecked(childNode, check);
             }
         }
-        private void SetParentsChecked(TreeNode RootNode, bool check)
+        private void SetParentsChecked(TreeNode rootNode, bool check)
         {
-            RootNode.Checked = check;
-
-            if (RootNode.Parent != null)
+            rootNode.Checked = check;
+            if (rootNode.Parent != null)
             {
-                SetParentsChecked(RootNode.Parent, check);
+                SetParentsChecked(rootNode.Parent, check);
             }
-
         }
 
         private void BtnNext_Click(object sender, EventArgs e)
@@ -190,7 +184,7 @@ namespace Foreign_Alphabet
 
         private void NextCharacter()
         {
-            Character c = alphabetManager.NewCharacter((SelectionMode)cboSelectionMethod.SelectedItem, SelectedGroups);
+            Character c = alphabetManager.NewCharacter(selectionMethod, SelectedGroups);
             DisplayCharacter(c);
 
             List<string> characterReadings = new List<String>();
@@ -225,10 +219,6 @@ namespace Foreign_Alphabet
                 NextCharacter();
             }
         }
-
-
-
-
 
         private void ChkDescription_CheckedChanged(object sender, EventArgs e)
         {

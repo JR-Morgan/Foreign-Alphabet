@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +62,8 @@
             this.fontDialog = new System.Windows.Forms.FontDialog();
             this.codBGColor = new System.Windows.Forms.ColorDialog();
             this.codTextColor = new System.Windows.Forms.ColorDialog();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.gboAlphabet.SuspendLayout();
             this.tblDescription.SuspendLayout();
@@ -140,6 +143,7 @@
             this.gboAlphabet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gboAlphabet.Controls.Add(this.label1);
             this.gboAlphabet.Controls.Add(this.txtCharacterInput);
             this.gboAlphabet.Controls.Add(this.tblDescription);
             this.gboAlphabet.Controls.Add(this.btnNext);
@@ -439,6 +443,20 @@
             this.codTextColor.FullOpen = true;
             this.codTextColor.SolidColorOnly = true;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,6 +518,8 @@
         private System.Windows.Forms.ComboBox cboTypeMode;
         private System.Windows.Forms.TextBox txtCharacterInput;
         private System.Windows.Forms.Label lblInstructions;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
