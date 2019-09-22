@@ -9,7 +9,7 @@ using System.Xml.Schema;
 
 namespace Foreign_Alphabet
 {
-    class AlphabetParser
+    public class AlphabetParser
     {
 
         public Alphabet ParseFile(string filePath)

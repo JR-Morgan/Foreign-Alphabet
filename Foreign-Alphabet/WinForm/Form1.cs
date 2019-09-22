@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
+using Foreign_Alphabet;
 
-namespace Foreign_Alphabet
+namespace WinForm
 {
     public partial class Form1 : Form
     {
         //The method of selecting characters
-        private SelectionMode selectionMethod = SelectionMode.Random;
+        private SelectionMethod selectionMethod = SelectionMethod.Random;
         //The IDs of the character groups that are selected
         private List<CharacterGroup> SelectedGroups { get; set; }
         //The reading/meaning to be displayed
@@ -52,7 +53,7 @@ namespace Foreign_Alphabet
                 cboSelectionMethod.Items.Clear();
                 UpdateSelectedCharacters();
 
-                foreach (SelectionMode mode in (SelectionMode[]) Enum.GetValues(typeof(SelectionMode)))
+                foreach (SelectionMethod mode in (SelectionMethod[]) Enum.GetValues(typeof(SelectionMethod)))
                 {
                     cboSelectionMethod.Items.Add(mode);
                 }
@@ -270,7 +271,7 @@ namespace Foreign_Alphabet
 
         private void CboSelectionMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectionMethod = (SelectionMode) cboSelectionMethod.SelectedItem;
+            selectionMethod = (SelectionMethod) cboSelectionMethod.SelectedItem;
         }
 
         

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Foreign_Alphabet{
-    class Alphabet
+    public class Alphabet
     {
         public string AlphabetName { get; set; }
         /// <summary>

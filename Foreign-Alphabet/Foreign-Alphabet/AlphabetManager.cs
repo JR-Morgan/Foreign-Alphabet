@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Foreign_Alphabet
 {
-    class AlphabetManager
+    public class AlphabetManager
     {
         public Alphabet Alphabet { get; }
         public Character CurrentCharacter { get; set; }
@@ -24,17 +24,17 @@ namespace Foreign_Alphabet
         /// <param name="mode">Selection mode - the way inwhich the character is selected</param>
         /// <returns></returns>
         /// <exception cref="System.NotImplementedException ">thrown if mode is not implemented</exception>
-        public Character NewCharacter(SelectionMode mode, IEnumerable<CharacterGroup> groups)
+        public Character NewCharacter(SelectionMethod mode, IEnumerable<CharacterGroup> groups)
         {
             
             List<Character> characters = Alphabet.GetCharacters(groups);
             Character c;
             switch (mode)
             {
-                case SelectionMode.Random:
+                case SelectionMethod.Random:
                     c = RandomCharacter(characters, CurrentCharacter);
                     break;
-                case SelectionMode.Sequential:
+                case SelectionMethod.Sequential:
                     c = SequentialCharacter(characters, CurrentCharacter);
                     break;
                 default:

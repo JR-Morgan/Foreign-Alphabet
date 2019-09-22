@@ -1,6 +1,6 @@
 ﻿namespace Foreign_Alphabet
 {
-    enum SelectionMode
+    public enum SelectionMethod
     {
         Random ,
         Sequential

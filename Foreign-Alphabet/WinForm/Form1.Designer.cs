@@ -1,4 +1,4 @@
-﻿namespace Foreign_Alphabet
+﻿namespace WinForm
 {
     partial class Form1
     {

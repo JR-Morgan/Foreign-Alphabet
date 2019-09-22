@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Foreign_Alphabet
 {
-    class CharacterGroup
+    public class CharacterGroup
     {
         /// <summary>
         /// Characters in this group (Not sub groups)
