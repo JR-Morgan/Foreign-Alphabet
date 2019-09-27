@@ -96,27 +96,37 @@ namespace Foreign_Alphabet
                 XElement alphabetCharacters = rootElement.Element("alphabet-characters");
                 foreach(XElement eCharacter in alphabetCharacters.Elements())
                 {
-                    string groupID = eCharacter.Attribute("class").Value;
+                    
                     Character character = new Character();
                     foreach (XElement eReading in eCharacter.Elements())
                     {
-                        List<string> reading = eReading.Value.Split(',').ToList();
-                        //TODO trimming  
+                        //Splitting readings by whitespace
+                        List<string> reading = eReading.Value
+                            .Split(new char[0], StringSplitOptions.RemoveEmptyEntries).ToList();
                         character.Readings.Add(eReading.Attribute("id").Value, reading);
                         
                     }
-                    if(!groups.ContainsKey(groupID))
-                    {
-                        throw new KeyNotFoundException("key \"" + groupID + "\" was not found in groups");
-                    }
-                    groups[groupID].Characters.Add(character);
 
+                    
+                    List<string> groupIDs = eCharacter.Attribute("class").Value
+                        .Split(new char[0], StringSplitOptions.RemoveEmptyEntries).ToList();
+
+                    foreach(string groupID in groupIDs)
+                    {
+                        if (!groups.ContainsKey(groupID))
+                        {
+                            throw new KeyNotFoundException("key \"" + groupID + "\" was not found in groups");
+                        }
+                        groups[groupID].Characters.Add(character);
+                    }
+                    
                 }
                 
             }
 
             return alphabet;
         }
+
         private CharacterGroup ParseGroupElement(XElement rootElement)
         {
 
@@ -132,9 +142,6 @@ namespace Foreign_Alphabet
             }
             return characterGroup;
         }
-
-
-
 
     }
 }

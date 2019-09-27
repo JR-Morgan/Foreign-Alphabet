@@ -53,7 +53,7 @@ namespace Foreign_Alphabet
         /// <exception cref="ArgumentNullException">Thrown if an argument is empty</exception>
         public Character RandomCharacter(List<Character> characters, Character currentCharacter)
         {
-            if (characters.Count == 0) throw new ArgumentException(String.Format("collection is empty", "characters"));
+            if (characters.Count == 0) throw new ArgumentException("collection is empty", "characters");
 
             Character c;
             do
@@ -72,8 +72,8 @@ namespace Foreign_Alphabet
         /// <exception cref="ArgumentException">Thrown if an argument is invalid</exception>
         private Character RandomCharacter(List<Character> characters)
         {
-            if (characters == null) throw new ArgumentNullException(String.Format("value was null", "characters"));
-            if (characters.Count == 0) throw new ArgumentException(String.Format("collection is empty", "characters"));
+            if (characters == null) throw new ArgumentNullException("value was null", "characters");
+            if (characters.Count == 0) throw new ArgumentException("collection is empty", "characters");
 
             Random rand = new Random();
 
@@ -97,8 +97,8 @@ namespace Foreign_Alphabet
         /// <exception cref="ArgumentException">Thrown if an argument is invalid</exception>
         private Character SequentialCharacter(List<Character> characters, Character currentCharacter)
         {
-            if (characters == null) throw new ArgumentNullException(String.Format("value was null", "characters"));
-            if (characters.Count == 0) throw new ArgumentException(String.Format("collection is empty", "characters"));
+            if (characters == null) throw new ArgumentNullException("value was null", "characters");
+            if (characters.Count == 0) throw new ArgumentException("collection is empty", "characters");
 
             int lastCharIndex = currentCharacter != null ? characters.IndexOf(currentCharacter) : 0;
             return characters[(lastCharIndex + 1) % (characters.Count)];
