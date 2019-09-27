@@ -1,391 +1,533 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<alphabet name="Kanji" version="1.2" defaultDisplay="Kanji" defaultType="Meaning">
-	<alphabet name="Begginers Kanji">
-		<alphabet name="Numbers">
-			<char>
-				<reading name="Onyomi Reading">ichi</reading>
-				<reading name="Onyomi Japanese">いち</reading>
-				<reading name="Kunyomi Reading">hito</reading>
-				<reading name="Kunyomi Japanese">ひと・つ</reading>
-				<meaning name="Meaning">One</meaning>
-				<reading name="Kanji">一</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Reading">ni</reading>
-				<reading name="Onyomi Japanese">に</reading>
-				<reading name="Kunyomi Reading">futa</reading>
-				<reading name="Kunyomi Japanese">ふた・つ</reading>
-				<meaning name="Meaning">Two</meaning>
-				<reading name="Kanji">二</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Reading">san</reading>
-				<reading name="Onyomi Japanese">さん</reading>
-				<reading name="Kunyomi Reading">mit</reading>
-				<reading name="Kunyomi Japanese">みっ・つ</reading>
-				<meaning name="Meaning">Three</meaning>
-				<reading name="Kanji">三</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Reading">shi,yon</reading>
-				<reading name="Onyomi Japanese">し,よん</reading>
-				<reading name="Kunyomi Reading">yon,yot</reading>
-				<reading name="Kunyomi Japanese">よんよっ・つ</reading>
-				<meaning name="Meaning">Four</meaning>
-				<reading name="Kanji">四</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Reading">go</reading>
-				<reading name="Onyomi Japanese">ご</reading>
-				<reading name="Kunyomi Reading">itsu</reading>
-				<reading name="Kunyomi Japanese">いつ・つ</reading>
-				<meaning name="Meaning">Five</meaning>
-				<reading name="Kanji">五</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Reading">roku</reading>
-				<reading name="Onyomi Japanese">ろく</reading>
-				<reading name="Kunyomi Reading">mut</reading>
-				<reading name="Kunyomi Japanese">むっ・つ</reading>
-				<meaning name="Meaning">Six</meaning>
-				<reading name="Kanji">六</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Reading">shichi,nana</reading>
-				<reading name="Onyomi Japanese">しち,なな</reading>
-				<reading name="Kunyomi Reading">nana</reading>
-				<reading name="Kunyomi Japanese">なな・つ</reading>
-				<meaning name="Meaning">Seven</meaning>
-				<reading name="Kanji">七</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Reading">hachi</reading>
-				<reading name="Onyomi Japanese">はち</reading>
-				<reading name="Kunyomi Reading">yat</reading>
-				<reading name="Kunyomi Japanese">やっ・つ</reading>
-				<meaning name="Meaning">Eight</meaning>
-				<reading name="Kanji">八</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Reading">ku,kyuu</reading>
-				<reading name="Onyomi Japanese">く,きゅう</reading>
-				<reading name="Kunyomi Reading">kokono</reading>
-				<reading name="Kunyomi Japanese">ここの・つ</reading>
-				<meaning name="Meaning">Nine</meaning>
-				<reading name="Kanji">九</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Reading">juu</reading>
-				<reading name="Onyomi Japanese">じゅう</reading>
-				<reading name="Kunyomi Reading">tō</reading>
-				<reading name="Kunyomi Japanese">とお</reading>
-				<meaning name="Meaning">Ten</meaning>
-				<reading name="Kanji">十</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Reading">rei</reading>
-				<reading name="Onyomi Japanese">れい</reading>
-				<reading name="Kunyomi Reading">zero</reading>
-				<reading name="Kunyomi Japanese">ゼロ</reading>
-				<meaning name="Meaning">Zero</meaning>
-				<reading name="Kanji">零</reading>
-			</char>
-		</alphabet>
-		<alphabet name="Begginers Kanji">
-			<char>
-				<reading name="Onyomi Japanese">じょう</reading>
-				<reading name="Kunyomi Japanese">うえ, あ, のぼ, うわ, かみ</reading>
-				<meaning name="Meaning">Above</meaning>
-				<reading name="Kanji">上</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">か, げ </reading>
-				<reading name="Kunyomi Japanese">した, さ, くだ, お </reading>
-				<meaning name="Meaning">Below</meaning>
-				<reading name="Kanji">下</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">たい, だい</reading>
-				<reading name="Kunyomi Japanese">おお</reading>
-				<meaning name="Meaning">Big</meaning>
-				<reading name="Kanji">大</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">こう, く </reading>
-				<meaning name="Meaning">Construction</meaning>
-				<reading name="Kanji">工</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">はち</reading>
-				<reading name="Kunyomi Japanese">や, よう</reading>
-				<meaning name="Meaning">Eight</meaning>
-				<reading name="Kanji">八</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">にゅう</reading>
-				<reading name="Kunyomi Japanese">はい, い</reading>
-				<meaning name="Meaning">Enter</meaning>
-				<reading name="Kanji">入</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">さん</reading>
-				<reading name="Kunyomi Japanese">やま</reading>
-				<meaning name="Meaning">Mountain</meaning>
-				<reading name="Kanji">山</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">こう, く</reading>
-				<reading name="Kunyomi Japanese">くち</reading>
-				<meaning name="Meaning">Mouth</meaning>
-				<reading name="Kanji">口</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">く, きゅう</reading>
-				<reading name="Kunyomi Japanese">ここの</reading>
-				<meaning name="Meaning">Nine</meaning>
-				<reading name="Kanji">九</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">いち, いつ</reading>
-				<reading name="Kunyomi Japanese">ひと</reading>
-				<meaning name="Meaning">One</meaning>
-				<reading name="Kanji">一</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">にん, じん</reading>
-				<reading name="Kunyomi Japanese">ひと, と</reading>
-				<meaning name="Meaning">Person</meaning>
-				<reading name="Kanji">人</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">りょく, りき</reading>
-				<reading name="Kunyomi Japanese">ちから</reading>
-				<meaning name="Meaning">Power</meaning>
-				<reading name="Kanji">力</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">せん</reading>
-				<reading name="Kunyomi Japanese">かわ</reading>
-				<meaning name="Meaning">River</meaning>
-				<reading name="Kanji">川</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">しち</reading>
-				<reading name="Kunyomi Japanese">なな, なの</reading>
-				<meaning name="Meaning">Seven</meaning>
-				<reading name="Kanji">七</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">じゅう</reading>
-				<reading name="Kunyomi Japanese">とお</reading>
-				<meaning name="Meaning">Ten</meaning>
-				<reading name="Kanji">十</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">さん</reading>
-				<reading name="Kunyomi Japanese">み</reading>
-				<meaning name="Meaning">Three</meaning>
-				<reading name="Kanji">三</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">に</reading>
-				<reading name="Kunyomi Japanese">ふた</reading>
-				<meaning name="Meaning">Two</meaning>
-				<reading name="Kanji">二</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">じょ</reading>
-				<reading name="Kunyomi Japanese">おんな, め</reading>
-				<meaning name="Meaning">Woman</meaning>
-				<reading name="Kanji">女</reading>
-			</char>
-		</alphabet>
-		<alphabet>
-			<char>
-				<reading name="Onyomi Japanese">また</reading>
-				<meaning name="Meaning">Again</meaning>
-				<reading name="Kanji">又</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">たま</reading>
-				<meaning name="Meaning">Ball</meaning>
-				<reading name="Kanji">玉</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">ほん</reading>
-				<meaning name="Meaning">Book</meaning>
-				<reading name="Kanji">本</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">し</reading>
-				<meaning name="Meaning">Child</meaning>
-				<reading name="Kanji">子</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">まる</reading>
-				<meaning name="Meaning">Circle</meaning>
-				<reading name="Kanji">丸</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">せい</reading>
-				<meaning name="Meaning">Correct</meaning>
-				<reading name="Kanji">正</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">ど</reading>
-				<meaning name="Meaning">Dirt</meaning>
-				<reading name="Kanji">土</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">いぬ</reading>
-				<meaning name="Meaning">Dog</meaning>
-				<reading name="Kanji">犬</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">ゆう</reading>
-				<meaning name="Meaning">Evening</meaning>
-				<reading name="Kanji">夕</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">しゅつ</reading>
-				<meaning name="Meaning">Exit</meaning>
-				<reading name="Kanji">出</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">め</reading>
-				<meaning name="Meaning">Eye</meaning>
-				<reading name="Kanji">目</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">りょう</reading>
-				<meaning name="Meaning">Finish</meaning>
-				<reading name="Kanji">了</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">か</reading>
-				<meaning name="Meaning">Fire</meaning>
-				<reading name="Kanji">火</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">ご</reading>
-				<meaning name="Meaning">Five</meaning>
-				<reading name="Kanji">五</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">し</reading>
-				<meaning name="Meaning">Four</meaning>
-				<reading name="Kanji">四</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">さい</reading>
-				<meaning name="Meaning">Genius</meaning>
-				<reading name="Kanji">才</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">て</reading>
-				<meaning name="Meaning">Hand</meaning>
-				<reading name="Kanji">手</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">てん</reading>
-				<meaning name="Meaning">Heaven</meaning>
-				<reading name="Kanji">天</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">おう</reading>
-				<meaning name="Meaning">King</meaning>
-				<reading name="Kanji">王</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">さ</reading>
-				<meaning name="Meaning">Left</meaning>
-				<reading name="Kanji">左</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">ちゅう</reading>
-				<meaning name="Meaning">Middle</meaning>
-				<reading name="Kanji">中</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">げつ</reading>
-				<meaning name="Meaning">Moon</meaning>
-				<reading name="Kanji">月</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">のま</reading>
-				<meaning name="Meaning">Repeater</meaning>
-				<reading name="Kanji">々</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">た</reading>
-				<meaning name="Meaning">Rice Paddy</meaning>
-				<reading name="Kanji">田</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">ゆう</reading>
-				<meaning name="Meaning">Right</meaning>
-				<reading name="Kanji">右</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">ろく</reading>
-				<meaning name="Meaning">Six</meaning>
-				<reading name="Kanji">六</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">しょう</reading>
-				<meaning name="Meaning">Small</meaning>
-				<reading name="Kanji">小</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">りつ</reading>
-				<meaning name="Meaning">Stand</meaning>
-				<reading name="Kanji">立</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">ちょう</reading>
-				<meaning name="Meaning">Street</meaning>
-				<reading name="Kanji">丁</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">にち</reading>
-				<meaning name="Meaning">Sun</meaning>
-				<reading name="Kanji">日</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">とう</reading>
-				<meaning name="Meaning">Sword</meaning>
-				<reading name="Kanji">刀</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">せん</reading>
-				<meaning name="Meaning">Thousand</meaning>
-				<reading name="Kanji">千</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">もく</reading>
-				<meaning name="Meaning">Tree</meaning>
-				<reading name="Kanji">木</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">すい</reading>
-				<meaning name="Meaning">Water</meaning>
-				<reading name="Kanji">水</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">はく</reading>
-				<meaning name="Meaning">White</meaning>
-				<reading name="Kanji">白</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">ぶん</reading>
-				<meaning name="Meaning">Writing</meaning>
-				<reading name="Kanji">文</reading>
-			</char>
-			<char>
-				<reading name="Onyomi Japanese">えん</reading>
-				<meaning name="Meaning">yen</meaning>
-				<reading name="Kanji">円</reading>
-			</char>
-		</alphabet>
-	</alphabet>
-</alphabet>
+<?xml version="1.0" encoding="UTF-8"?>
+<alphabet-file name="Kana" version="1.3">
+   <alphabet-options>
+      <display-options default="kanji">
+         <reading id="onyomi" name="On’yomi Japanese" />
+         <reading id="kunyomi" name="Kun’yomi Japanese" />
+         <reading id="meaning" name="Meaning" />
+         <reading id="kanji" name="Kanji" />
+      </display-options>
+      <type-options default="meaning">
+         <reading id="onyomi" name="On’yomi Japanese" />
+         <reading id="kunyomi" name="Kun’yomi Japanese" />
+         <reading id="meaning" name="Meaning" />
+         <reading id="kanji" name="Kanji" />
+      </type-options>
+   </alphabet-options>
+   <alphabet-classes>
+      <group id="pleasant" name="Pleasant Kanji">
+         <group id="a1" name="Group 1" />
+         <group id="a2" name="Group 2" />
+         <group id="a3" name="Group 3" />
+         <group id="a4" name="Group 4" />
+         <group id="a5" name="Group 5" />
+         <group id="a6" name="Group 6" />
+         <group id="a7" name="Group 7" />
+         <group id="a8" name="Group 8" />
+         <group id="a9" name="Group 9" />
+         <group id="a10" name="Group 10" />
+      </group>
+      <group id="Painful" name="Painful Kanji">
+         <group id="a11" name="Group 11" />
+         <group id="a12" name="Group 12" />
+         <group id="a13" name="Group 13" />
+         <group id="a14" name="Group 14" />
+         <group id="a15" name="Group 15" />
+         <group id="a16" name="Group 16" />
+         <group id="a17" name="Group 17" />
+         <group id="a18" name="Group 18" />
+         <group id="a19" name="Group 19" />
+         <group id="a20" name="Group 20" />
+      </group>
+      <group id="numbers" name="Numbers">
+         <group id="n10" name="Small Numbers" />
+         <group id="n100" name="Big Numbers" />
+      </group>
+   </alphabet-classes>
+   <alphabet-characters>
+      <character class="a1">
+         <reading id="onyomi">じょう</reading>
+         <reading id="kunyomi">うえ, あ, のぼ, うわ, かみ</reading>
+         <reading id="meaning">Above</reading>
+         <reading id="kanji">上</reading>
+      </character>
+      <character class="a1">
+         <reading id="onyomi">か, げ</reading>
+         <reading id="kunyomi">した, さ, くだ, お</reading>
+         <reading id="meaning">Below</reading>
+         <reading id="kanji">下</reading>
+      </character>
+      <character class="a1">
+         <reading id="onyomi">たい, だい</reading>
+         <reading id="kunyomi">おお</reading>
+         <reading id="meaning">Big</reading>
+         <reading id="kanji">大</reading>
+      </character>
+      <character class="a1">
+         <reading id="onyomi">こう, く</reading>
+         <reading id="meaning">Construction</reading>
+         <reading id="kanji">工</reading>
+      </character>
+      <character class="a1 n10">
+         <reading id="onyomi">はち</reading>
+         <reading id="kunyomi">や, よう</reading>
+         <reading id="meaning">Eight</reading>
+         <reading id="kanji">八</reading>
+      </character>
+      <character class="a1">
+         <reading id="onyomi">にゅう</reading>
+         <reading id="kunyomi">はい, い</reading>
+         <reading id="meaning">Enter</reading>
+         <reading id="kanji">入</reading>
+      </character>
+      <character class="a1">
+         <reading id="onyomi">さん</reading>
+         <reading id="kunyomi">やま</reading>
+         <reading id="meaning">Mountain</reading>
+         <reading id="kanji">山</reading>
+      </character>
+      <character class="a1">
+         <reading id="onyomi">こう, く</reading>
+         <reading id="kunyomi">くち</reading>
+         <reading id="meaning">Mouth</reading>
+         <reading id="kanji">口</reading>
+      </character>
+      <character class="a1 n10">
+         <reading id="onyomi">く, きゅう</reading>
+         <reading id="kunyomi">ここの</reading>
+         <reading id="meaning">Nine</reading>
+         <reading id="kanji">九</reading>
+      </character>
+      <character class="a1 n10">
+         <reading id="onyomi">いち, いつ</reading>
+         <reading id="kunyomi">ひと</reading>
+         <reading id="meaning">One</reading>
+         <reading id="kanji">一</reading>
+      </character>
+      <character class="a1">
+         <reading id="onyomi">にん, じん</reading>
+         <reading id="kunyomi">ひと, と</reading>
+         <reading id="meaning">Person</reading>
+         <reading id="kanji">人</reading>
+      </character>
+      <character class="a1">
+         <reading id="onyomi">りょく, りき</reading>
+         <reading id="kunyomi">ちから</reading>
+         <reading id="meaning">Power</reading>
+         <reading id="kanji">力</reading>
+      </character>
+      <character class="a1">
+         <reading id="onyomi">せん</reading>
+         <reading id="kunyomi">かわ</reading>
+         <reading id="meaning">River</reading>
+         <reading id="kanji">川</reading>
+      </character>
+      <character class="a1 n10">
+         <reading id="onyomi">しち</reading>
+         <reading id="kunyomi">なな, なの</reading>
+         <reading id="meaning">Seven</reading>
+         <reading id="kanji">七</reading>
+      </character>
+      <character class="a1 n10">
+         <reading id="onyomi">じゅう</reading>
+         <reading id="kunyomi">とお</reading>
+         <reading id="meaning">Ten</reading>
+         <reading id="kanji">十</reading>
+      </character>
+      <character class="a1 n10">
+         <reading id="onyomi">さん</reading>
+         <reading id="kunyomi">み</reading>
+         <reading id="meaning">Three</reading>
+         <reading id="kanji">三</reading>
+      </character>
+      <character class="a1 n10">
+         <reading id="onyomi">に</reading>
+         <reading id="kunyomi">ふた</reading>
+         <reading id="meaning">Two</reading>
+         <reading id="kanji">二</reading>
+      </character>
+      <character class="a1">
+         <reading id="onyomi">じょ</reading>
+         <reading id="kunyomi">おんな, め</reading>
+         <reading id="meaning">Woman</reading>
+         <reading id="kanji">女</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi" />
+         <reading id="kunyomi">また</reading>
+         <reading id="meaning">Again</reading>
+         <reading id="kanji">又</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">ぎょく</reading>
+         <reading id="kunyomi">たま</reading>
+         <reading id="meaning">Ball</reading>
+         <reading id="kanji">玉</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">ほん</reading>
+         <reading id="kunyomi">もと</reading>
+         <reading id="meaning">Book</reading>
+         <reading id="kanji">本</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">し, す</reading>
+         <reading id="kunyomi">こ</reading>
+         <reading id="meaning">Child</reading>
+         <reading id="kanji">子</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">がん</reading>
+         <reading id="kunyomi">まる</reading>
+         <reading id="meaning">Circle</reading>
+         <reading id="kanji">丸</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">せい,しょう</reading>
+         <reading id="kunyomi">ただ,まさ</reading>
+         <reading id="meaning">Correct</reading>
+         <reading id="kanji">正</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">ど,と</reading>
+         <reading id="kunyomi">つち</reading>
+         <reading id="meaning">Dirt</reading>
+         <reading id="kanji">土</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">けん</reading>
+         <reading id="kunyomi">いぬ</reading>
+         <reading id="meaning">Dog</reading>
+         <reading id="kanji">犬</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">せき</reading>
+         <reading id="kunyomi">ゆう</reading>
+         <reading id="meaning">Evening</reading>
+         <reading id="kanji">夕</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">しゅつ</reading>
+         <reading id="kunyomi">で,だ</reading>
+         <reading id="meaning">Exit</reading>
+         <reading id="kanji">出</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">もく</reading>
+         <reading id="kunyomi">め</reading>
+         <reading id="meaning">Eye</reading>
+         <reading id="kanji">目</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">りょう</reading>
+         <reading id="kunyomi" />
+         <reading id="meaning">Finish</reading>
+         <reading id="kanji">了</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">か</reading>
+         <reading id="kunyomi">ひ,ほ</reading>
+         <reading id="meaning">Fire</reading>
+         <reading id="kanji">火</reading>
+      </character>
+      <character class="a2 n10">
+         <reading id="onyomi">ご</reading>
+         <reading id="kunyomi">いつ</reading>
+         <reading id="meaning">Five</reading>
+         <reading id="kanji">五</reading>
+      </character>
+      <character class="a2 n10">
+         <reading id="onyomi">し</reading>
+         <reading id="kunyomi">よん,よ</reading>
+         <reading id="meaning">Four</reading>
+         <reading id="kanji">四</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">さい</reading>
+         <reading id="kunyomi" />
+         <reading id="meaning">Genius</reading>
+         <reading id="kanji">才</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">しゅ, ず</reading>
+         <reading id="kunyomi">て</reading>
+         <reading id="meaning">Hand</reading>
+         <reading id="kanji">手</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">てん</reading>
+         <reading id="kunyomi">あま</reading>
+         <reading id="meaning">Heaven</reading>
+         <reading id="kanji">天</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">おう</reading>
+         <reading id="kunyomi" />
+         <reading id="meaning">King</reading>
+         <reading id="kanji">王</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">さ</reading>
+         <reading id="kunyomi">ひだり</reading>
+         <reading id="meaning">Left</reading>
+         <reading id="kanji">左</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">ちゅう</reading>
+         <reading id="kunyomi">なか</reading>
+         <reading id="meaning">Middle</reading>
+         <reading id="kanji">中</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">げつ,がつ</reading>
+         <reading id="kunyomi">つき</reading>
+         <reading id="meaning">Moon</reading>
+         <reading id="kanji">月</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi" />
+         <reading id="kunyomi">のま</reading>
+         <reading id="meaning">Repeater, Repeates the previous Kanji</reading>
+         <reading id="kanji">々</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">でん</reading>
+         <reading id="kunyomi">た</reading>
+         <reading id="meaning">Rice Paddy</reading>
+         <reading id="kanji">田</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">ゆう,う</reading>
+         <reading id="kunyomi">みぎ</reading>
+         <reading id="meaning">Right</reading>
+         <reading id="kanji">右</reading>
+      </character>
+      <character class="a2 n10">
+         <reading id="onyomi">ろく</reading>
+         <reading id="kunyomi">む</reading>
+         <reading id="meaning">Six</reading>
+         <reading id="kanji">六</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">しょう</reading>
+         <reading id="kunyomi">ちい,こ,お</reading>
+         <reading id="meaning">Small</reading>
+         <reading id="kanji">小</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">りつ,りゅう</reading>
+         <reading id="kunyomi">た</reading>
+         <reading id="meaning">Stand</reading>
+         <reading id="kanji">立</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">ちょう,てい</reading>
+         <reading id="kunyomi" />
+         <reading id="meaning">Street</reading>
+         <reading id="kanji">丁</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">にち,じつ</reading>
+         <reading id="kunyomi">ひ,か,び</reading>
+         <reading id="meaning">Sun</reading>
+         <reading id="kanji">日</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">とう</reading>
+         <reading id="kunyomi">かたな</reading>
+         <reading id="meaning">Sword</reading>
+         <reading id="kanji">刀</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">せん</reading>
+         <reading id="kunyomi">ち</reading>
+         <reading id="meaning">Thousand</reading>
+         <reading id="kanji">千</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">もく,ぼく</reading>
+         <reading id="kunyomi">き,こ</reading>
+         <reading id="meaning">Tree</reading>
+         <reading id="kanji">木</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">すい</reading>
+         <reading id="kunyomi">みず</reading>
+         <reading id="meaning">Water</reading>
+         <reading id="kanji">水</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">はく</reading>
+         <reading id="kunyomi">しろ,しら</reading>
+         <reading id="meaning">White</reading>
+         <reading id="kanji">白</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">ぶん,もん</reading>
+         <reading id="kunyomi" />
+         <reading id="meaning">Writing</reading>
+         <reading id="kanji">文</reading>
+      </character>
+      <character class="a2">
+         <reading id="onyomi">えん</reading>
+         <reading id="kunyomi">まる</reading>
+         <reading id="meaning">yen</reading>
+         <reading id="kanji">円</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">矢</reading>
+         <reading id="onyomi">や</reading>
+         <reading id="meaning">Arrow</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">市</reading>
+         <reading id="onyomi">し</reading>
+         <reading id="meaning">City</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">牛</reading>
+         <reading id="onyomi">ぎゅう</reading>
+         <reading id="meaning">Cow</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">切</reading>
+         <reading id="onyomi">せつ</reading>
+         <reading id="meaning">Cut</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">方</reading>
+         <reading id="onyomi">ほう</reading>
+         <reading id="meaning">Direction</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">戸</reading>
+         <reading id="onyomi">と</reading>
+         <reading id="meaning">Door</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">太</reading>
+         <reading id="onyomi">たい</reading>
+         <reading id="meaning">Fat</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">父</reading>
+         <reading id="onyomi">ちち</reading>
+         <reading id="meaning">Father</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">少</reading>
+         <reading id="onyomi">しょう</reading>
+         <reading id="meaning">Few</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">友</reading>
+         <reading id="onyomi">ゆう</reading>
+         <reading id="meaning">Friend</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">毛</reading>
+         <reading id="onyomi">もう</reading>
+         <reading id="meaning">Fur</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">半</reading>
+         <reading id="onyomi">はん</reading>
+         <reading id="meaning">Half</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">心</reading>
+         <reading id="onyomi">しん</reading>
+         <reading id="meaning">Heart</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">内</reading>
+         <reading id="onyomi">ない</reading>
+         <reading id="meaning">Inside</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">生</reading>
+         <reading id="onyomi">せい</reading>
+         <reading id="meaning">Life</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">台</reading>
+         <reading id="onyomi">だい</reading>
+         <reading id="meaning">Machine</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">母</reading>
+         <reading id="onyomi">はは</reading>
+         <reading id="meaning">Mother</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">午</reading>
+         <reading id="onyomi">ご</reading>
+         <reading id="meaning">Noon</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">北</reading>
+         <reading id="onyomi">ほく</reading>
+         <reading id="meaning">North</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">今</reading>
+         <reading id="onyomi">こん</reading>
+         <reading id="meaning">Now</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">古</reading>
+         <reading id="onyomi">こ</reading>
+         <reading id="meaning">Old</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">元</reading>
+         <reading id="onyomi">げん</reading>
+         <reading id="meaning">Origin</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">外</reading>
+         <reading id="onyomi">がい</reading>
+         <reading id="meaning">Outside</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">分</reading>
+         <reading id="onyomi">ぶん</reading>
+         <reading id="meaning">Part</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">公</reading>
+         <reading id="onyomi">こう</reading>
+         <reading id="meaning">Public</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">引</reading>
+         <reading id="onyomi">ひ</reading>
+         <reading id="meaning">Pull</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">止</reading>
+         <reading id="onyomi">し</reading>
+         <reading id="meaning">Stop</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">用</reading>
+         <reading id="onyomi">よう</reading>
+         <reading id="meaning">Task</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">万</reading>
+         <reading id="onyomi">まん</reading>
+         <reading id="meaning">Ten Thousand</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">広</reading>
+         <reading id="onyomi">ひろ</reading>
+         <reading id="meaning">Wide</reading>
+      </character>
+      <character class="a3">
+         <reading id="kanji">冬</reading>
+         <reading id="onyomi">ふゆ</reading>
+         <reading id="meaning">Winter</reading>
+      </character>
+   </alphabet-characters>
+</alphabet-file>

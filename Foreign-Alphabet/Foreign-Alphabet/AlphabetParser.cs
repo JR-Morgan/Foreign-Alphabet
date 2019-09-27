@@ -9,6 +9,13 @@ using System.Xml.Schema;
 
 namespace Foreign_Alphabet
 {
+    /*
+     * This code is temporary until I finalise the structure of the XML files which at this stage of development are constantly changing
+     * and are still not final, there are many things that they cannot do by definition, or can only do badly
+     * Therefore, this whole class is a bit of a mess which will be my top priority once I finalise the program
+     * 
+     * Appologies for below.
+     */
     public class AlphabetParser
     {
 

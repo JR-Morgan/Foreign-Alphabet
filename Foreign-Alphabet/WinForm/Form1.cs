@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
 using Foreign_Alphabet;
+using System.Drawing;
 
 namespace WinForm
 {
@@ -17,12 +18,19 @@ namespace WinForm
         private string displayMode;
         //The reading/meaning to be typed
         private string typeMode;
+        //The default color of the text box
+        private Color txtDefaultColor;
+        //The errored color of the text box
+        private Color txtWarningColor;
+
 
         private AlphabetManager alphabetManager;
         public Form1()
         {
             InitializeComponent();
             this.SelectedGroups = new List<CharacterGroup>();
+            txtDefaultColor = Color.FromName("Window");
+            txtWarningColor = Color.FromName("NavajoWhite");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -186,38 +194,52 @@ namespace WinForm
         private void NextCharacter()
         {
             Character c = alphabetManager.NewCharacter(selectionMethod, SelectedGroups);
-            DisplayCharacter(c);
-
-            List<string> characterReadings = new List<String>();
-            foreach (KeyValuePair<string, List<string>> kv in c.Readings)
+            try
             {
-                characterReadings.Add(kv.Key + ":\t " + String.Join(",", kv.Value));
+                DisplayCharacter(c);
+            }
+            catch (CharacterMetaModeException e)
+            {
+                MessageBox.Show(e.Message);
+                return;
             }
 
-            chkReading.Enabled = characterReadings.Count != 0;
-            lboReading.Visible = characterReadings.Count != 0 && lboReading.Visible;
+            CheckTypeValid(c);
+
+            List<string> formattedCharacterReadings = new List<String>();
+            foreach (KeyValuePair<string, List<string>> kv in c.Readings)
+            {
+                formattedCharacterReadings.Add(kv.Key + ":\t " + String.Join(",", kv.Value));
+            }
+
+            chkReading.Enabled = formattedCharacterReadings.Count != 0;
+            lboReading.Visible = formattedCharacterReadings.Count != 0 && lboReading.Visible;
 
             lboReading.Items.Clear();
-            lboReading.Items.AddRange(characterReadings.ToArray());
+            lboReading.Items.AddRange(formattedCharacterReadings.ToArray());
 
-            btnNext.Enabled = SelectedGroups.Count != 0;
-            txtCharacterInput.Enabled = SelectedGroups.Count != 0;
+            
+
+
         }
 
         private void TxtCharacterInput_TextChanged(object sender, EventArgs e)
         {
             bool correct = false;
-            foreach (String s in alphabetManager.CurrentCharacter.Readings[typeMode])
+            if (alphabetManager.CurrentCharacter.Readings.ContainsKey(typeMode))
             {
-                if (txtCharacterInput.Text.ToLower().Trim() == s.ToLower().Trim())
+                foreach (string s in alphabetManager.CurrentCharacter.Readings[typeMode])
                 {
-                    correct = true;
+                    if (txtCharacterInput.Text.ToLower().Trim() == s.ToLower().Trim())
+                    {
+                        correct = true;
+                    }
                 }
-            }
-            if (correct)
-            {
-                txtCharacterInput.Text = "";
-                NextCharacter();
+                if (correct)
+                {
+                    txtCharacterInput.Text = "";
+                    NextCharacter();
+                }
             }
         }
 
@@ -277,13 +299,23 @@ namespace WinForm
         
         private void DisplayCharacter(Character character)
         {
-            rtbCharacterDisplay.Text = string.Join(",", character.Readings[displayMode]);
-            rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+            if (character.Readings.ContainsKey(displayMode)) {
+                rtbCharacterDisplay.Text = string.Join(",", character.Readings[displayMode]);
+                rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+            } else
+            {
+                throw new CharacterMetaModeException(character, displayMode, "displayMode");
+            }
         }
 
         private void CboTypeMode_SelectedIndexChanged(object sender, EventArgs e)
         {
             typeMode = ((KeyValuePair<string,string>) cboTypeMode.SelectedItem).Key;
+            if(alphabetManager.CurrentCharacter != null)
+            {
+                CheckTypeValid(alphabetManager.CurrentCharacter);
+            }
+            
         }
         private void CboDisplayMode_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -291,6 +323,16 @@ namespace WinForm
             displayMode = ((KeyValuePair<string, string>) cboDisplayMode.SelectedItem).Key;
             if (SelectedGroups.Count > 0)
                 NextCharacter();
+        }
+
+        private void CheckTypeValid(Character c)
+        {
+            bool valid = c.Readings.ContainsKey(typeMode);
+
+            txtCharacterInput.Text = !valid ? $"Character does have a {typeMode} reading " : "";
+            txtCharacterInput.BackColor = valid ? txtDefaultColor : txtWarningColor;
+
+            txtCharacterInput.Enabled = valid && SelectedGroups.Count > 0;
         }
 
     }

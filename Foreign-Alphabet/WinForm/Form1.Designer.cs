@@ -39,6 +39,11 @@
             this.rtbCharacterDisplay = new System.Windows.Forms.RichTextBox();
             this.gboAlphabet = new System.Windows.Forms.GroupBox();
             this.txtCharacterInput = new System.Windows.Forms.TextBox();
+            this.tblDescription = new System.Windows.Forms.TableLayoutPanel();
+            this.chkReading = new System.Windows.Forms.CheckBox();
+            this.chkMeaning = new System.Windows.Forms.CheckBox();
+            this.lboReading = new System.Windows.Forms.ListBox();
+            this.lboMeaning = new System.Windows.Forms.ListBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.gboConfig = new System.Windows.Forms.GroupBox();
             this.lblInstructions = new System.Windows.Forms.Label();
@@ -58,15 +63,10 @@
             this.codBGColor = new System.Windows.Forms.ColorDialog();
             this.codTextColor = new System.Windows.Forms.ColorDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.lboReading = new System.Windows.Forms.ListBox();
-            this.chkReading = new System.Windows.Forms.CheckBox();
-            this.tblDescription = new System.Windows.Forms.TableLayoutPanel();
-            this.chkMeaning = new System.Windows.Forms.CheckBox();
-            this.lboMeaning = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.gboAlphabet.SuspendLayout();
-            this.gboConfig.SuspendLayout();
             this.tblDescription.SuspendLayout();
+            this.gboConfig.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -156,6 +156,7 @@
             // 
             this.txtCharacterInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCharacterInput.BackColor = System.Drawing.SystemColors.Window;
             this.txtCharacterInput.Enabled = false;
             this.txtCharacterInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCharacterInput.Location = new System.Drawing.Point(9, 509);
@@ -163,6 +164,84 @@
             this.txtCharacterInput.Size = new System.Drawing.Size(275, 38);
             this.txtCharacterInput.TabIndex = 4;
             this.txtCharacterInput.TextChanged += new System.EventHandler(this.TxtCharacterInput_TextChanged);
+            // 
+            // tblDescription
+            // 
+            this.tblDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblDescription.ColumnCount = 2;
+            this.tblDescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.84874F));
+            this.tblDescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.15126F));
+            this.tblDescription.Controls.Add(this.chkReading, 0, 0);
+            this.tblDescription.Controls.Add(this.chkMeaning, 0, 1);
+            this.tblDescription.Controls.Add(this.lboReading, 1, 0);
+            this.tblDescription.Controls.Add(this.lboMeaning, 1, 1);
+            this.tblDescription.Location = new System.Drawing.Point(6, 242);
+            this.tblDescription.Name = "tblDescription";
+            this.tblDescription.RowCount = 2;
+            this.tblDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblDescription.Size = new System.Drawing.Size(380, 261);
+            this.tblDescription.TabIndex = 6;
+            // 
+            // chkReading
+            // 
+            this.chkReading.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkReading.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkReading.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chkReading.Enabled = false;
+            this.chkReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkReading.Location = new System.Drawing.Point(3, 3);
+            this.chkReading.Name = "chkReading";
+            this.chkReading.Size = new System.Drawing.Size(77, 50);
+            this.chkReading.TabIndex = 1;
+            this.chkReading.Text = "Show Reading";
+            this.chkReading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkReading.UseVisualStyleBackColor = true;
+            this.chkReading.CheckedChanged += new System.EventHandler(this.ChkDescription_CheckedChanged);
+            // 
+            // chkMeaning
+            // 
+            this.chkMeaning.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkMeaning.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkMeaning.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chkMeaning.Enabled = false;
+            this.chkMeaning.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMeaning.Location = new System.Drawing.Point(3, 133);
+            this.chkMeaning.Name = "chkMeaning";
+            this.chkMeaning.Size = new System.Drawing.Size(77, 50);
+            this.chkMeaning.TabIndex = 6;
+            this.chkMeaning.Text = "Show Meaning";
+            this.chkMeaning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkMeaning.UseVisualStyleBackColor = true;
+            this.chkMeaning.CheckedChanged += new System.EventHandler(this.ChkReading_CheckedChanged);
+            // 
+            // lboReading
+            // 
+            this.lboReading.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lboReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lboReading.FormattingEnabled = true;
+            this.lboReading.ItemHeight = 24;
+            this.lboReading.Location = new System.Drawing.Point(86, 3);
+            this.lboReading.Name = "lboReading";
+            this.lboReading.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lboReading.Size = new System.Drawing.Size(291, 124);
+            this.lboReading.TabIndex = 2;
+            this.lboReading.Visible = false;
+            // 
+            // lboMeaning
+            // 
+            this.lboMeaning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lboMeaning.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lboMeaning.FormattingEnabled = true;
+            this.lboMeaning.ItemHeight = 24;
+            this.lboMeaning.Location = new System.Drawing.Point(86, 133);
+            this.lboMeaning.Name = "lboMeaning";
+            this.lboMeaning.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lboMeaning.Size = new System.Drawing.Size(291, 125);
+            this.lboMeaning.TabIndex = 5;
+            this.lboMeaning.Visible = false;
             // 
             // btnNext
             // 
@@ -368,84 +447,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // lboReading
-            // 
-            this.lboReading.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lboReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lboReading.FormattingEnabled = true;
-            this.lboReading.ItemHeight = 24;
-            this.lboReading.Location = new System.Drawing.Point(86, 3);
-            this.lboReading.Name = "lboReading";
-            this.lboReading.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lboReading.Size = new System.Drawing.Size(291, 124);
-            this.lboReading.TabIndex = 2;
-            this.lboReading.Visible = false;
-            // 
-            // chkReading
-            // 
-            this.chkReading.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkReading.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkReading.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chkReading.Enabled = false;
-            this.chkReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkReading.Location = new System.Drawing.Point(3, 3);
-            this.chkReading.Name = "chkReading";
-            this.chkReading.Size = new System.Drawing.Size(77, 50);
-            this.chkReading.TabIndex = 1;
-            this.chkReading.Text = "Show Reading";
-            this.chkReading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkReading.UseVisualStyleBackColor = true;
-            this.chkReading.CheckedChanged += new System.EventHandler(this.ChkDescription_CheckedChanged);
-            // 
-            // tblDescription
-            // 
-            this.tblDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblDescription.ColumnCount = 2;
-            this.tblDescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.84874F));
-            this.tblDescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.15126F));
-            this.tblDescription.Controls.Add(this.chkReading, 0, 0);
-            this.tblDescription.Controls.Add(this.chkMeaning, 0, 1);
-            this.tblDescription.Controls.Add(this.lboReading, 1, 0);
-            this.tblDescription.Controls.Add(this.lboMeaning, 1, 1);
-            this.tblDescription.Location = new System.Drawing.Point(6, 242);
-            this.tblDescription.Name = "tblDescription";
-            this.tblDescription.RowCount = 2;
-            this.tblDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblDescription.Size = new System.Drawing.Size(380, 261);
-            this.tblDescription.TabIndex = 6;
-            // 
-            // chkMeaning
-            // 
-            this.chkMeaning.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkMeaning.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkMeaning.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chkMeaning.Enabled = false;
-            this.chkMeaning.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMeaning.Location = new System.Drawing.Point(3, 133);
-            this.chkMeaning.Name = "chkMeaning";
-            this.chkMeaning.Size = new System.Drawing.Size(77, 50);
-            this.chkMeaning.TabIndex = 6;
-            this.chkMeaning.Text = "Show Meaning";
-            this.chkMeaning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkMeaning.UseVisualStyleBackColor = true;
-            this.chkMeaning.CheckedChanged += new System.EventHandler(this.ChkReading_CheckedChanged);
-            // 
-            // lboMeaning
-            // 
-            this.lboMeaning.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lboMeaning.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lboMeaning.FormattingEnabled = true;
-            this.lboMeaning.ItemHeight = 24;
-            this.lboMeaning.Location = new System.Drawing.Point(86, 133);
-            this.lboMeaning.Name = "lboMeaning";
-            this.lboMeaning.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lboMeaning.Size = new System.Drawing.Size(291, 125);
-            this.lboMeaning.TabIndex = 5;
-            this.lboMeaning.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,9 +465,9 @@
             this.menuStrip1.PerformLayout();
             this.gboAlphabet.ResumeLayout(false);
             this.gboAlphabet.PerformLayout();
+            this.tblDescription.ResumeLayout(false);
             this.gboConfig.ResumeLayout(false);
             this.gboConfig.PerformLayout();
-            this.tblDescription.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
