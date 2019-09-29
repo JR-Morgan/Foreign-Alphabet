@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<alphabet-file name="Kana" version="1.3">
-   <alphabet-options>
-      <display-options default="kanji">
-         <reading id="onyomi" name="On’yomi Japanese" />
-         <reading id="kunyomi" name="Kun’yomi Japanese" />
-         <reading id="meaning" name="Meaning" />
-         <reading id="kanji" name="Kanji" />
-      </display-options>
-      <type-options default="meaning">
-         <reading id="onyomi" name="On’yomi Japanese" />
-         <reading id="kunyomi" name="Kun’yomi Japanese" />
-         <reading id="meaning" name="Meaning" />
-         <reading id="kanji" name="Kanji" />
-      </type-options>
-   </alphabet-options>
+<alphabet-file name="Kana" version="1.4">
+	<alphabet-characters-meta>
+		<meta-type-group id="reading" 	name="Reading">
+			<meta-type id="onyomi" 	 	name="On’yomi Japanese"  	display="true" input="true"/>
+			<meta-type id="kunyomi" 	name="Kun’yomi Japanese" 	display="true" input="true"/>
+			<meta-type id="meaning" 	name="Meaning" 		  		display="true" input="true"/>
+			<meta-type id="kanji" 	 	name="Kanji" 			  	display="true" input="false"/>
+		</meta-type-group>
+		<meta-type-group id="meaning" 	name="Meaning">
+			<meta-type id="meaning" 	name="Meaning" 	display="true" input="true"/>
+		</meta-type-group>
+	</alphabet-characters-meta>
+   <ui-options>
+      <display-options 	defaultMeta="kanji"/>
+      <input-options 	defaultMeta="meaning"/>
+   </ui-options>
    <alphabet-classes>
       <group id="pleasant" name="Pleasant Kanji">
          <group id="a1" name="Group 1" />
@@ -46,488 +47,488 @@
    </alphabet-classes>
    <alphabet-characters>
       <character class="a1">
-         <reading id="onyomi">じょう</reading>
-         <reading id="kunyomi">うえ, あ, のぼ, うわ, かみ</reading>
-         <reading id="meaning">Above</reading>
-         <reading id="kanji">上</reading>
+         <meta id="onyomi">じょう</meta>
+         <meta id="kunyomi">うえ, あ, のぼ, うわ, かみ</meta>
+         <meta id="meaning">Above</meta>
+         <meta id="kanji">上</meta>
       </character>
       <character class="a1">
-         <reading id="onyomi">か, げ</reading>
-         <reading id="kunyomi">した, さ, くだ, お</reading>
-         <reading id="meaning">Below</reading>
-         <reading id="kanji">下</reading>
+         <meta id="onyomi">か, げ</meta>
+         <meta id="kunyomi">した, さ, くだ, お</meta>
+         <meta id="meaning">Below</meta>
+         <meta id="kanji">下</meta>
       </character>
       <character class="a1">
-         <reading id="onyomi">たい, だい</reading>
-         <reading id="kunyomi">おお</reading>
-         <reading id="meaning">Big</reading>
-         <reading id="kanji">大</reading>
+         <meta id="onyomi">たい, だい</meta>
+         <meta id="kunyomi">おお</meta>
+         <meta id="meaning">Big</meta>
+         <meta id="kanji">大</meta>
       </character>
       <character class="a1">
-         <reading id="onyomi">こう, く</reading>
-         <reading id="meaning">Construction</reading>
-         <reading id="kanji">工</reading>
+         <meta id="onyomi">こう, く</meta>
+         <meta id="meaning">Construction</meta>
+         <meta id="kanji">工</meta>
       </character>
       <character class="a1 n10">
-         <reading id="onyomi">はち</reading>
-         <reading id="kunyomi">や, よう</reading>
-         <reading id="meaning">Eight</reading>
-         <reading id="kanji">八</reading>
+         <meta id="onyomi">はち</meta>
+         <meta id="kunyomi">や, よう</meta>
+         <meta id="meaning">Eight</meta>
+         <meta id="kanji">八</meta>
       </character>
       <character class="a1">
-         <reading id="onyomi">にゅう</reading>
-         <reading id="kunyomi">はい, い</reading>
-         <reading id="meaning">Enter</reading>
-         <reading id="kanji">入</reading>
+         <meta id="onyomi">にゅう</meta>
+         <meta id="kunyomi">はい, い</meta>
+         <meta id="meaning">Enter</meta>
+         <meta id="kanji">入</meta>
       </character>
       <character class="a1">
-         <reading id="onyomi">さん</reading>
-         <reading id="kunyomi">やま</reading>
-         <reading id="meaning">Mountain</reading>
-         <reading id="kanji">山</reading>
+         <meta id="onyomi">さん</meta>
+         <meta id="kunyomi">やま</meta>
+         <meta id="meaning">Mountain</meta>
+         <meta id="kanji">山</meta>
       </character>
       <character class="a1">
-         <reading id="onyomi">こう, く</reading>
-         <reading id="kunyomi">くち</reading>
-         <reading id="meaning">Mouth</reading>
-         <reading id="kanji">口</reading>
+         <meta id="onyomi">こう, く</meta>
+         <meta id="kunyomi">くち</meta>
+         <meta id="meaning">Mouth</meta>
+         <meta id="kanji">口</meta>
       </character>
       <character class="a1 n10">
-         <reading id="onyomi">く, きゅう</reading>
-         <reading id="kunyomi">ここの</reading>
-         <reading id="meaning">Nine</reading>
-         <reading id="kanji">九</reading>
+         <meta id="onyomi">く, きゅう</meta>
+         <meta id="kunyomi">ここの</meta>
+         <meta id="meaning">Nine</meta>
+         <meta id="kanji">九</meta>
       </character>
       <character class="a1 n10">
-         <reading id="onyomi">いち, いつ</reading>
-         <reading id="kunyomi">ひと</reading>
-         <reading id="meaning">One</reading>
-         <reading id="kanji">一</reading>
+         <meta id="onyomi">いち, いつ</meta>
+         <meta id="kunyomi">ひと</meta>
+         <meta id="meaning">One</meta>
+         <meta id="kanji">一</meta>
       </character>
       <character class="a1">
-         <reading id="onyomi">にん, じん</reading>
-         <reading id="kunyomi">ひと, と</reading>
-         <reading id="meaning">Person</reading>
-         <reading id="kanji">人</reading>
+         <meta id="onyomi">にん, じん</meta>
+         <meta id="kunyomi">ひと, と</meta>
+         <meta id="meaning">Person</meta>
+         <meta id="kanji">人</meta>
       </character>
       <character class="a1">
-         <reading id="onyomi">りょく, りき</reading>
-         <reading id="kunyomi">ちから</reading>
-         <reading id="meaning">Power</reading>
-         <reading id="kanji">力</reading>
+         <meta id="onyomi">りょく, りき</meta>
+         <meta id="kunyomi">ちから</meta>
+         <meta id="meaning">Power</meta>
+         <meta id="kanji">力</meta>
       </character>
       <character class="a1">
-         <reading id="onyomi">せん</reading>
-         <reading id="kunyomi">かわ</reading>
-         <reading id="meaning">River</reading>
-         <reading id="kanji">川</reading>
+         <meta id="onyomi">せん</meta>
+         <meta id="kunyomi">かわ</meta>
+         <meta id="meaning">River</meta>
+         <meta id="kanji">川</meta>
       </character>
       <character class="a1 n10">
-         <reading id="onyomi">しち</reading>
-         <reading id="kunyomi">なな, なの</reading>
-         <reading id="meaning">Seven</reading>
-         <reading id="kanji">七</reading>
+         <meta id="onyomi">しち</meta>
+         <meta id="kunyomi">なな, なの</meta>
+         <meta id="meaning">Seven</meta>
+         <meta id="kanji">七</meta>
       </character>
       <character class="a1 n10">
-         <reading id="onyomi">じゅう</reading>
-         <reading id="kunyomi">とお</reading>
-         <reading id="meaning">Ten</reading>
-         <reading id="kanji">十</reading>
+         <meta id="onyomi">じゅう</meta>
+         <meta id="kunyomi">とお</meta>
+         <meta id="meaning">Ten</meta>
+         <meta id="kanji">十</meta>
       </character>
       <character class="a1 n10">
-         <reading id="onyomi">さん</reading>
-         <reading id="kunyomi">み</reading>
-         <reading id="meaning">Three</reading>
-         <reading id="kanji">三</reading>
+         <meta id="onyomi">さん</meta>
+         <meta id="kunyomi">み</meta>
+         <meta id="meaning">Three</meta>
+         <meta id="kanji">三</meta>
       </character>
       <character class="a1 n10">
-         <reading id="onyomi">に</reading>
-         <reading id="kunyomi">ふた</reading>
-         <reading id="meaning">Two</reading>
-         <reading id="kanji">二</reading>
+         <meta id="onyomi">に</meta>
+         <meta id="kunyomi">ふた</meta>
+         <meta id="meaning">Two</meta>
+         <meta id="kanji">二</meta>
       </character>
       <character class="a1">
-         <reading id="onyomi">じょ</reading>
-         <reading id="kunyomi">おんな, め</reading>
-         <reading id="meaning">Woman</reading>
-         <reading id="kanji">女</reading>
+         <meta id="onyomi">じょ</meta>
+         <meta id="kunyomi">おんな, め</meta>
+         <meta id="meaning">Woman</meta>
+         <meta id="kanji">女</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi" />
-         <reading id="kunyomi">また</reading>
-         <reading id="meaning">Again</reading>
-         <reading id="kanji">又</reading>
+         <meta id="onyomi" />
+         <meta id="kunyomi">また</meta>
+         <meta id="meaning">Again</meta>
+         <meta id="kanji">又</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">ぎょく</reading>
-         <reading id="kunyomi">たま</reading>
-         <reading id="meaning">Ball</reading>
-         <reading id="kanji">玉</reading>
+         <meta id="onyomi">ぎょく</meta>
+         <meta id="kunyomi">たま</meta>
+         <meta id="meaning">Ball</meta>
+         <meta id="kanji">玉</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">ほん</reading>
-         <reading id="kunyomi">もと</reading>
-         <reading id="meaning">Book</reading>
-         <reading id="kanji">本</reading>
+         <meta id="onyomi">ほん</meta>
+         <meta id="kunyomi">もと</meta>
+         <meta id="meaning">Book</meta>
+         <meta id="kanji">本</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">し, す</reading>
-         <reading id="kunyomi">こ</reading>
-         <reading id="meaning">Child</reading>
-         <reading id="kanji">子</reading>
+         <meta id="onyomi">し, す</meta>
+         <meta id="kunyomi">こ</meta>
+         <meta id="meaning">Child</meta>
+         <meta id="kanji">子</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">がん</reading>
-         <reading id="kunyomi">まる</reading>
-         <reading id="meaning">Circle</reading>
-         <reading id="kanji">丸</reading>
+         <meta id="onyomi">がん</meta>
+         <meta id="kunyomi">まる</meta>
+         <meta id="meaning">Circle</meta>
+         <meta id="kanji">丸</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">せい,しょう</reading>
-         <reading id="kunyomi">ただ,まさ</reading>
-         <reading id="meaning">Correct</reading>
-         <reading id="kanji">正</reading>
+         <meta id="onyomi">せい,しょう</meta>
+         <meta id="kunyomi">ただ,まさ</meta>
+         <meta id="meaning">Correct</meta>
+         <meta id="kanji">正</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">ど,と</reading>
-         <reading id="kunyomi">つち</reading>
-         <reading id="meaning">Dirt</reading>
-         <reading id="kanji">土</reading>
+         <meta id="onyomi">ど,と</meta>
+         <meta id="kunyomi">つち</meta>
+         <meta id="meaning">Dirt</meta>
+         <meta id="kanji">土</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">けん</reading>
-         <reading id="kunyomi">いぬ</reading>
-         <reading id="meaning">Dog</reading>
-         <reading id="kanji">犬</reading>
+         <meta id="onyomi">けん</meta>
+         <meta id="kunyomi">いぬ</meta>
+         <meta id="meaning">Dog</meta>
+         <meta id="kanji">犬</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">せき</reading>
-         <reading id="kunyomi">ゆう</reading>
-         <reading id="meaning">Evening</reading>
-         <reading id="kanji">夕</reading>
+         <meta id="onyomi">せき</meta>
+         <meta id="kunyomi">ゆう</meta>
+         <meta id="meaning">Evening</meta>
+         <meta id="kanji">夕</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">しゅつ</reading>
-         <reading id="kunyomi">で,だ</reading>
-         <reading id="meaning">Exit</reading>
-         <reading id="kanji">出</reading>
+         <meta id="onyomi">しゅつ</meta>
+         <meta id="kunyomi">で,だ</meta>
+         <meta id="meaning">Exit</meta>
+         <meta id="kanji">出</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">もく</reading>
-         <reading id="kunyomi">め</reading>
-         <reading id="meaning">Eye</reading>
-         <reading id="kanji">目</reading>
+         <meta id="onyomi">もく</meta>
+         <meta id="kunyomi">め</meta>
+         <meta id="meaning">Eye</meta>
+         <meta id="kanji">目</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">りょう</reading>
-         <reading id="kunyomi" />
-         <reading id="meaning">Finish</reading>
-         <reading id="kanji">了</reading>
+         <meta id="onyomi">りょう</meta>
+         <meta id="kunyomi" />
+         <meta id="meaning">Finish</meta>
+         <meta id="kanji">了</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">か</reading>
-         <reading id="kunyomi">ひ,ほ</reading>
-         <reading id="meaning">Fire</reading>
-         <reading id="kanji">火</reading>
+         <meta id="onyomi">か</meta>
+         <meta id="kunyomi">ひ,ほ</meta>
+         <meta id="meaning">Fire</meta>
+         <meta id="kanji">火</meta>
       </character>
       <character class="a2 n10">
-         <reading id="onyomi">ご</reading>
-         <reading id="kunyomi">いつ</reading>
-         <reading id="meaning">Five</reading>
-         <reading id="kanji">五</reading>
+         <meta id="onyomi">ご</meta>
+         <meta id="kunyomi">いつ</meta>
+         <meta id="meaning">Five</meta>
+         <meta id="kanji">五</meta>
       </character>
       <character class="a2 n10">
-         <reading id="onyomi">し</reading>
-         <reading id="kunyomi">よん,よ</reading>
-         <reading id="meaning">Four</reading>
-         <reading id="kanji">四</reading>
+         <meta id="onyomi">し</meta>
+         <meta id="kunyomi">よん,よ</meta>
+         <meta id="meaning">Four</meta>
+         <meta id="kanji">四</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">さい</reading>
-         <reading id="kunyomi" />
-         <reading id="meaning">Genius</reading>
-         <reading id="kanji">才</reading>
+         <meta id="onyomi">さい</meta>
+         <meta id="kunyomi" />
+         <meta id="meaning">Genius</meta>
+         <meta id="kanji">才</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">しゅ, ず</reading>
-         <reading id="kunyomi">て</reading>
-         <reading id="meaning">Hand</reading>
-         <reading id="kanji">手</reading>
+         <meta id="onyomi">しゅ, ず</meta>
+         <meta id="kunyomi">て</meta>
+         <meta id="meaning">Hand</meta>
+         <meta id="kanji">手</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">てん</reading>
-         <reading id="kunyomi">あま</reading>
-         <reading id="meaning">Heaven</reading>
-         <reading id="kanji">天</reading>
+         <meta id="onyomi">てん</meta>
+         <meta id="kunyomi">あま</meta>
+         <meta id="meaning">Heaven</meta>
+         <meta id="kanji">天</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">おう</reading>
-         <reading id="kunyomi" />
-         <reading id="meaning">King</reading>
-         <reading id="kanji">王</reading>
+         <meta id="onyomi">おう</meta>
+         <meta id="kunyomi" />
+         <meta id="meaning">King</meta>
+         <meta id="kanji">王</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">さ</reading>
-         <reading id="kunyomi">ひだり</reading>
-         <reading id="meaning">Left</reading>
-         <reading id="kanji">左</reading>
+         <meta id="onyomi">さ</meta>
+         <meta id="kunyomi">ひだり</meta>
+         <meta id="meaning">Left</meta>
+         <meta id="kanji">左</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">ちゅう</reading>
-         <reading id="kunyomi">なか</reading>
-         <reading id="meaning">Middle</reading>
-         <reading id="kanji">中</reading>
+         <meta id="onyomi">ちゅう</meta>
+         <meta id="kunyomi">なか</meta>
+         <meta id="meaning">Middle</meta>
+         <meta id="kanji">中</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">げつ,がつ</reading>
-         <reading id="kunyomi">つき</reading>
-         <reading id="meaning">Moon</reading>
-         <reading id="kanji">月</reading>
+         <meta id="onyomi">げつ,がつ</meta>
+         <meta id="kunyomi">つき</meta>
+         <meta id="meaning">Moon</meta>
+         <meta id="kanji">月</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi" />
-         <reading id="kunyomi">のま</reading>
-         <reading id="meaning">Repeater, Repeates the previous Kanji</reading>
-         <reading id="kanji">々</reading>
+         <meta id="onyomi" />
+         <meta id="kunyomi">のま</meta>
+         <meta id="meaning">Repeater, Repeates the previous Kanji</meta>
+         <meta id="kanji">々</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">でん</reading>
-         <reading id="kunyomi">た</reading>
-         <reading id="meaning">Rice Paddy</reading>
-         <reading id="kanji">田</reading>
+         <meta id="onyomi">でん</meta>
+         <meta id="kunyomi">た</meta>
+         <meta id="meaning">Rice Paddy</meta>
+         <meta id="kanji">田</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">ゆう,う</reading>
-         <reading id="kunyomi">みぎ</reading>
-         <reading id="meaning">Right</reading>
-         <reading id="kanji">右</reading>
+         <meta id="onyomi">ゆう,う</meta>
+         <meta id="kunyomi">みぎ</meta>
+         <meta id="meaning">Right</meta>
+         <meta id="kanji">右</meta>
       </character>
       <character class="a2 n10">
-         <reading id="onyomi">ろく</reading>
-         <reading id="kunyomi">む</reading>
-         <reading id="meaning">Six</reading>
-         <reading id="kanji">六</reading>
+         <meta id="onyomi">ろく</meta>
+         <meta id="kunyomi">む</meta>
+         <meta id="meaning">Six</meta>
+         <meta id="kanji">六</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">しょう</reading>
-         <reading id="kunyomi">ちい,こ,お</reading>
-         <reading id="meaning">Small</reading>
-         <reading id="kanji">小</reading>
+         <meta id="onyomi">しょう</meta>
+         <meta id="kunyomi">ちい,こ,お</meta>
+         <meta id="meaning">Small</meta>
+         <meta id="kanji">小</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">りつ,りゅう</reading>
-         <reading id="kunyomi">た</reading>
-         <reading id="meaning">Stand</reading>
-         <reading id="kanji">立</reading>
+         <meta id="onyomi">りつ,りゅう</meta>
+         <meta id="kunyomi">た</meta>
+         <meta id="meaning">Stand</meta>
+         <meta id="kanji">立</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">ちょう,てい</reading>
-         <reading id="kunyomi" />
-         <reading id="meaning">Street</reading>
-         <reading id="kanji">丁</reading>
+         <meta id="onyomi">ちょう,てい</meta>
+         <meta id="kunyomi" />
+         <meta id="meaning">Street</meta>
+         <meta id="kanji">丁</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">にち,じつ</reading>
-         <reading id="kunyomi">ひ,か,び</reading>
-         <reading id="meaning">Sun</reading>
-         <reading id="kanji">日</reading>
+         <meta id="onyomi">にち,じつ</meta>
+         <meta id="kunyomi">ひ,か,び</meta>
+         <meta id="meaning">Sun</meta>
+         <meta id="kanji">日</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">とう</reading>
-         <reading id="kunyomi">かたな</reading>
-         <reading id="meaning">Sword</reading>
-         <reading id="kanji">刀</reading>
+         <meta id="onyomi">とう</meta>
+         <meta id="kunyomi">かたな</meta>
+         <meta id="meaning">Sword</meta>
+         <meta id="kanji">刀</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">せん</reading>
-         <reading id="kunyomi">ち</reading>
-         <reading id="meaning">Thousand</reading>
-         <reading id="kanji">千</reading>
+         <meta id="onyomi">せん</meta>
+         <meta id="kunyomi">ち</meta>
+         <meta id="meaning">Thousand</meta>
+         <meta id="kanji">千</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">もく,ぼく</reading>
-         <reading id="kunyomi">き,こ</reading>
-         <reading id="meaning">Tree</reading>
-         <reading id="kanji">木</reading>
+         <meta id="onyomi">もく,ぼく</meta>
+         <meta id="kunyomi">き,こ</meta>
+         <meta id="meaning">Tree</meta>
+         <meta id="kanji">木</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">すい</reading>
-         <reading id="kunyomi">みず</reading>
-         <reading id="meaning">Water</reading>
-         <reading id="kanji">水</reading>
+         <meta id="onyomi">すい</meta>
+         <meta id="kunyomi">みず</meta>
+         <meta id="meaning">Water</meta>
+         <meta id="kanji">水</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">はく</reading>
-         <reading id="kunyomi">しろ,しら</reading>
-         <reading id="meaning">White</reading>
-         <reading id="kanji">白</reading>
+         <meta id="onyomi">はく</meta>
+         <meta id="kunyomi">しろ,しら</meta>
+         <meta id="meaning">White</meta>
+         <meta id="kanji">白</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">ぶん,もん</reading>
-         <reading id="kunyomi" />
-         <reading id="meaning">Writing</reading>
-         <reading id="kanji">文</reading>
+         <meta id="onyomi">ぶん,もん</meta>
+         <meta id="kunyomi" />
+         <meta id="meaning">Writing</meta>
+         <meta id="kanji">文</meta>
       </character>
       <character class="a2">
-         <reading id="onyomi">えん</reading>
-         <reading id="kunyomi">まる</reading>
-         <reading id="meaning">yen</reading>
-         <reading id="kanji">円</reading>
+         <meta id="onyomi">えん</meta>
+         <meta id="kunyomi">まる</meta>
+         <meta id="meaning">yen</meta>
+         <meta id="kanji">円</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">矢</reading>
-         <reading id="onyomi">や</reading>
-         <reading id="meaning">Arrow</reading>
+         <meta id="kanji">矢</meta>
+         <meta id="onyomi">や</meta>
+         <meta id="meaning">Arrow</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">市</reading>
-         <reading id="onyomi">し</reading>
-         <reading id="meaning">City</reading>
+         <meta id="kanji">市</meta>
+         <meta id="onyomi">し</meta>
+         <meta id="meaning">City</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">牛</reading>
-         <reading id="onyomi">ぎゅう</reading>
-         <reading id="meaning">Cow</reading>
+         <meta id="kanji">牛</meta>
+         <meta id="onyomi">ぎゅう</meta>
+         <meta id="meaning">Cow</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">切</reading>
-         <reading id="onyomi">せつ</reading>
-         <reading id="meaning">Cut</reading>
+         <meta id="kanji">切</meta>
+         <meta id="onyomi">せつ</meta>
+         <meta id="meaning">Cut</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">方</reading>
-         <reading id="onyomi">ほう</reading>
-         <reading id="meaning">Direction</reading>
+         <meta id="kanji">方</meta>
+         <meta id="onyomi">ほう</meta>
+         <meta id="meaning">Direction</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">戸</reading>
-         <reading id="onyomi">と</reading>
-         <reading id="meaning">Door</reading>
+         <meta id="kanji">戸</meta>
+         <meta id="onyomi">と</meta>
+         <meta id="meaning">Door</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">太</reading>
-         <reading id="onyomi">たい</reading>
-         <reading id="meaning">Fat</reading>
+         <meta id="kanji">太</meta>
+         <meta id="onyomi">たい</meta>
+         <meta id="meaning">Fat</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">父</reading>
-         <reading id="onyomi">ちち</reading>
-         <reading id="meaning">Father</reading>
+         <meta id="kanji">父</meta>
+         <meta id="onyomi">ちち</meta>
+         <meta id="meaning">Father</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">少</reading>
-         <reading id="onyomi">しょう</reading>
-         <reading id="meaning">Few</reading>
+         <meta id="kanji">少</meta>
+         <meta id="onyomi">しょう</meta>
+         <meta id="meaning">Few</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">友</reading>
-         <reading id="onyomi">ゆう</reading>
-         <reading id="meaning">Friend</reading>
+         <meta id="kanji">友</meta>
+         <meta id="onyomi">ゆう</meta>
+         <meta id="meaning">Friend</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">毛</reading>
-         <reading id="onyomi">もう</reading>
-         <reading id="meaning">Fur</reading>
+         <meta id="kanji">毛</meta>
+         <meta id="onyomi">もう</meta>
+         <meta id="meaning">Fur</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">半</reading>
-         <reading id="onyomi">はん</reading>
-         <reading id="meaning">Half</reading>
+         <meta id="kanji">半</meta>
+         <meta id="onyomi">はん</meta>
+         <meta id="meaning">Half</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">心</reading>
-         <reading id="onyomi">しん</reading>
-         <reading id="meaning">Heart</reading>
+         <meta id="kanji">心</meta>
+         <meta id="onyomi">しん</meta>
+         <meta id="meaning">Heart</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">内</reading>
-         <reading id="onyomi">ない</reading>
-         <reading id="meaning">Inside</reading>
+         <meta id="kanji">内</meta>
+         <meta id="onyomi">ない</meta>
+         <meta id="meaning">Inside</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">生</reading>
-         <reading id="onyomi">せい</reading>
-         <reading id="meaning">Life</reading>
+         <meta id="kanji">生</meta>
+         <meta id="onyomi">せい</meta>
+         <meta id="meaning">Life</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">台</reading>
-         <reading id="onyomi">だい</reading>
-         <reading id="meaning">Machine</reading>
+         <meta id="kanji">台</meta>
+         <meta id="onyomi">だい</meta>
+         <meta id="meaning">Machine</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">母</reading>
-         <reading id="onyomi">はは</reading>
-         <reading id="meaning">Mother</reading>
+         <meta id="kanji">母</meta>
+         <meta id="onyomi">はは</meta>
+         <meta id="meaning">Mother</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">午</reading>
-         <reading id="onyomi">ご</reading>
-         <reading id="meaning">Noon</reading>
+         <meta id="kanji">午</meta>
+         <meta id="onyomi">ご</meta>
+         <meta id="meaning">Noon</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">北</reading>
-         <reading id="onyomi">ほく</reading>
-         <reading id="meaning">North</reading>
+         <meta id="kanji">北</meta>
+         <meta id="onyomi">ほく</meta>
+         <meta id="meaning">North</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">今</reading>
-         <reading id="onyomi">こん</reading>
-         <reading id="meaning">Now</reading>
+         <meta id="kanji">今</meta>
+         <meta id="onyomi">こん</meta>
+         <meta id="meaning">Now</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">古</reading>
-         <reading id="onyomi">こ</reading>
-         <reading id="meaning">Old</reading>
+         <meta id="kanji">古</meta>
+         <meta id="onyomi">こ</meta>
+         <meta id="meaning">Old</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">元</reading>
-         <reading id="onyomi">げん</reading>
-         <reading id="meaning">Origin</reading>
+         <meta id="kanji">元</meta>
+         <meta id="onyomi">げん</meta>
+         <meta id="meaning">Origin</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">外</reading>
-         <reading id="onyomi">がい</reading>
-         <reading id="meaning">Outside</reading>
+         <meta id="kanji">外</meta>
+         <meta id="onyomi">がい</meta>
+         <meta id="meaning">Outside</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">分</reading>
-         <reading id="onyomi">ぶん</reading>
-         <reading id="meaning">Part</reading>
+         <meta id="kanji">分</meta>
+         <meta id="onyomi">ぶん</meta>
+         <meta id="meaning">Part</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">公</reading>
-         <reading id="onyomi">こう</reading>
-         <reading id="meaning">Public</reading>
+         <meta id="kanji">公</meta>
+         <meta id="onyomi">こう</meta>
+         <meta id="meaning">Public</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">引</reading>
-         <reading id="onyomi">ひ</reading>
-         <reading id="meaning">Pull</reading>
+         <meta id="kanji">引</meta>
+         <meta id="onyomi">ひ</meta>
+         <meta id="meaning">Pull</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">止</reading>
-         <reading id="onyomi">し</reading>
-         <reading id="meaning">Stop</reading>
+         <meta id="kanji">止</meta>
+         <meta id="onyomi">し</meta>
+         <meta id="meaning">Stop</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">用</reading>
-         <reading id="onyomi">よう</reading>
-         <reading id="meaning">Task</reading>
+         <meta id="kanji">用</meta>
+         <meta id="onyomi">よう</meta>
+         <meta id="meaning">Task</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">万</reading>
-         <reading id="onyomi">まん</reading>
-         <reading id="meaning">Ten Thousand</reading>
+         <meta id="kanji">万</meta>
+         <meta id="onyomi">まん</meta>
+         <meta id="meaning">Ten Thousand</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">広</reading>
-         <reading id="onyomi">ひろ</reading>
-         <reading id="meaning">Wide</reading>
+         <meta id="kanji">広</meta>
+         <meta id="onyomi">ひろ</meta>
+         <meta id="meaning">Wide</meta>
       </character>
       <character class="a3">
-         <reading id="kanji">冬</reading>
-         <reading id="onyomi">ふゆ</reading>
-         <reading id="meaning">Winter</reading>
+         <meta id="kanji">冬</meta>
+         <meta id="onyomi">ふゆ</meta>
+         <meta id="meaning">Winter</meta>
       </character>
    </alphabet-characters>
 </alphabet-file>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Foreign_Alphabet
+namespace Foreign_Alphabet.Characters
 {
     public class CharacterGroup
     {

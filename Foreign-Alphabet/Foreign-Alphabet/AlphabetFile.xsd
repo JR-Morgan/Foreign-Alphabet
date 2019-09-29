@@ -3,33 +3,51 @@
   <xs:element name="alphabet-file">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="alphabet-options">
+        <xs:element name="alphabet-characters-meta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="meta-type-group" maxOccurs="unbounded" minOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="meta-type" maxOccurs="unbounded" minOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="id" use="required"/>
+                            <xs:attribute type="xs:string" name="name" use="required"/>
+                            <xs:attribute type="xs:string" name="display" use="optional"/>
+                            <xs:attribute type="xs:string" name="input" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="id" use="required"/>
+                  <xs:attribute type="xs:string" name="name" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ui-options">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="display-options">
                 <xs:complexType>
-                  <xs:sequence>
-                    <xs:element maxOccurs="unbounded" name="reading">
-                      <xs:complexType>
-                        <xs:attribute name="id" type="xs:string" use="required" />
-                        <xs:attribute name="name" type="xs:string" use="required" />
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                  <xs:attribute name="default" type="xs:string" use="required" />
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="defaultMeta" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
                 </xs:complexType>
               </xs:element>
-              <xs:element name="type-options">
+              <xs:element name="input-options">
                 <xs:complexType>
-                  <xs:sequence>
-                    <xs:element maxOccurs="unbounded" name="reading">
-                      <xs:complexType>
-                        <xs:attribute name="id" type="xs:string" use="required" />
-                        <xs:attribute name="name" type="xs:string" use="required" />
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                  <xs:attribute name="default" type="xs:string" use="required" />
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="defaultMeta" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
@@ -48,7 +66,7 @@
               <xs:element maxOccurs="unbounded" name="character">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element maxOccurs="unbounded" name="reading">
+                    <xs:element maxOccurs="unbounded" name="meta">
                       <xs:complexType>
                         <xs:simpleContent>
                           <xs:extension base="xs:string" >

@@ -67,9 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alphabet.cs" />
-    <Compile Include="Character.cs" />
+    <Compile Include="Characters\Character.cs" />
     <Compile Include="AlphabetParser.cs" />
-    <Compile Include="CharacterGroup.cs" />
+    <Compile Include="Characters\CharacterGroup.cs" />
+    <Compile Include="Characters\CharacterMetaType.cs" />
     <Compile Include="SelectionMethod.cs" />
     <Compile Include="AlphabetManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

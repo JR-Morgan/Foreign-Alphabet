@@ -1,9 +1,7 @@
-﻿using System;
+﻿using Foreign_Alphabet.Characters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
 using System.Xml.Linq;
 using System.Xml.Schema;
 
@@ -27,15 +25,17 @@ namespace Foreign_Alphabet
 
             XDocument doc = XDocument.Load(filePath);
             bool errors = false;
+            string lastError = "";
             doc.Validate(schemas, (o, e) =>
             {
+                lastError = e.Message;
                 Console.WriteLine("{0}", e.Message);
                 errors = true;
             });
 
             if(errors)
             {
-                throw new System.Xml.XmlException("Loaded XML file does not follow the current XML Schema");
+                throw new System.Xml.XmlException("Loaded XML file does not follow the current XML Schema" + lastError);
             }
 
 
@@ -50,6 +50,46 @@ namespace Foreign_Alphabet
                 AlphabetName = rootElement.Attribute("name") != null ? rootElement.Attribute("name").Value : "Unamed Group",
             };
 
+
+
+            //META GROUPS
+            Dictionary<string, CharacterMetaType> metaTypes = new Dictionary<string, CharacterMetaType>();
+            {
+                XElement AlphabetCharacters = rootElement.Element("alphabet-characters-meta");
+
+                foreach (XElement metaGroup in AlphabetCharacters.Elements())
+                {
+                    CharacterMetaType type = new CharacterMetaType( metaGroup.Attribute("id").Value,
+                                                                    metaGroup.Attribute("name").Value,
+                                                                    metaGroup.Attribute("display") != null ? metaGroup.Attribute("display").Value.ToLower() == "true" : false,
+                                                                    metaGroup.Attribute("input") != null ? metaGroup.Attribute("input").Value.ToLower() == "true" : false
+                                                                    );
+                    metaTypes.Add(metaGroup.Attribute("id").Value, type);
+
+                }
+                
+            }
+
+
+
+            //UI OPTIONS
+            {
+                XElement options = rootElement.Element("ui-options");
+                foreach(CharacterMetaType MetaType in metaTypes.Values)
+                {
+                    if(MetaType.id == options.Element("display-options").Attribute("defaultMeta").Value)
+                    {
+                        alphabet.DefaultDisplay = MetaType;
+                    }
+                    if (MetaType.id == options.Element("display-options").Attribute("defaultMeta").Value)
+                    {
+                        alphabet.DefaultType = MetaType;
+                    }
+                }
+            }
+
+
+            /*
             //TODO simplify below code
             { // Display Options
                 XElement displayOptions = rootElement.Element("alphabet-options").Element("display-options");
@@ -67,7 +107,7 @@ namespace Foreign_Alphabet
                 {
                     alphabet.TypeOptions.Add(element.Attribute("id").Value, element.Attribute("name").Value);
                 }
-            }
+            }*/
 
             //Groups
             Dictionary<string, CharacterGroup> groups = new Dictionary<string, CharacterGroup>();
@@ -105,13 +145,26 @@ namespace Foreign_Alphabet
                 {
                     
                     Character character = new Character();
-                    foreach (XElement eReading in eCharacter.Elements())
+                    foreach (XElement eMeta in eCharacter.Elements())
                     {
-                        //Splitting readings by whitespace
-                        List<string> reading = eReading.Value
-                            .Split(new char[0], StringSplitOptions.RemoveEmptyEntries).ToList();
-                        character.Readings.Add(eReading.Attribute("id").Value, reading);
+                        List<string> value = eMeta.Value.Split(new char[0], StringSplitOptions.RemoveEmptyEntries).ToList();
+
+                        CharacterMetaType type = new CharacterMetaType();
+                        //TODO optimise this loop (use extra dictionary?)
+                        foreach (CharacterMetaType metaType in metaTypes.Values)
+                        {
+                            if (metaType.id == eMeta.Attribute("id").Value)
+                            {
+                                type = metaType;
+                            }
+                        }
+                        if(type.id != null)
+                        {
+                            character.AddMetaData(eMeta.Name.ToString(), type, value);
+                        }
+
                         
+
                     }
 
                     
@@ -149,6 +202,8 @@ namespace Foreign_Alphabet
             }
             return characterGroup;
         }
+
+
 
     }
 }

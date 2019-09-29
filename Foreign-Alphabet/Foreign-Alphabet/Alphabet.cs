@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Foreign_Alphabet.Characters;
 
-namespace Foreign_Alphabet{
+namespace Foreign_Alphabet {
     public class Alphabet
     {
         public string AlphabetName { get; set; }
-        /// <summary>
-        /// List of all groups incliding child groups
-        /// </summary>
+        /// <summary>List of all groups incliding child groups</summary>
         public List<CharacterGroup> CharacterGroups { get; set; }
         public List<CharacterGroup> RootGroups { get; set; }
-        //For now these are lists, so the id is ignored at the moment.
-        public Dictionary<string, string> DisplayOptions { get; set; }
-        public Dictionary<string, string> TypeOptions { get; set; }
-        public string DefaultDisplay { get; set; }
-        public string DefaultType { get; set; }
+        public Dictionary<string, List<CharacterMetaType>> MetaTypeGroups { get; set; }
+        public CharacterMetaType DefaultDisplay { get; set; }
+        public CharacterMetaType DefaultType { get; set; }
+        public List<CharacterMetaType> TypeOptions { get; set; }
+        public List<CharacterMetaType> DisplayOptions { get; set; }
 
         /// <summary>
         /// Creates a new empty alphabet
@@ -26,19 +25,11 @@ namespace Foreign_Alphabet{
         {
             this.AlphabetName = "";
             this.CharacterGroups = new List<CharacterGroup>();
-            this.DisplayOptions = new Dictionary<string, string>();
-            this.TypeOptions = new Dictionary<string, string>();
+            this.MetaTypeGroups = new Dictionary<string, List<CharacterMetaType>>();
+            this.TypeOptions = new List<CharacterMetaType>();
+            this.DisplayOptions = new List<CharacterMetaType>();
         }
 
-        /// <summary>
-        /// returns all characters in the alphabet
-        /// </summary>
-        /// <returns></returns>
-        public List<Character> GetAllCharacters()
-        {
-            //TODO
-            return null;
-        }
 
         /// <summary>
         /// Recursivly loops through all descendant groups of each group given, and returns all characters<br/>
@@ -62,52 +53,4 @@ namespace Foreign_Alphabet{
             return characters.ToList() ;
         }
     }
-
-
-
-
-
-
-
-    /*public class Alphabet
-    {
-        public string Name { get; set; }
-        public string Description { get; set; }
-
-        public bool Enabled { get; set; } = false;
-
-        public string DefaultDisplay { get; set; }
-        public string DefaultType { get; set; }
-
-        public List<Alphabet> subGroup;
-        public List<Character> characters;
-
-        public Alphabet()
-        {
-            subGroup = new List<Alphabet>();
-            characters = new List<Character>();
-        }
-        public List<Character> GetAllEnabledCharacters()
-        {
-            
-            List<Character> characters = this.characters;
-
-            if(!Enabled)
-            {
-                characters = new List<Character>();
-            }
-
-            foreach(Alphabet a in subGroup)
-            {
-                foreach(Character c in a.GetAllEnabledCharacters())
-                {
-                    characters.Add(c);
-                }
-                
-            }
-
-            return characters;
-        }
-    }
-    */
 }
