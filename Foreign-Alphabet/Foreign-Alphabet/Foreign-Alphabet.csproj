@@ -70,7 +70,7 @@
     <Compile Include="Characters\Character.cs" />
     <Compile Include="AlphabetParser.cs" />
     <Compile Include="Characters\CharacterGroup.cs" />
-    <Compile Include="Characters\CharacterMetaType.cs" />
+    <Compile Include="Characters\CharacterMetaData.cs" />
     <Compile Include="SelectionMethod.cs" />
     <Compile Include="AlphabetManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

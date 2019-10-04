@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 
 namespace Foreign_Alphabet.Characters
 {
-    public struct CharacterMetaType
+    public class CharacterMetaData
     {
         public readonly string id;
+        public readonly string groupID;
+        public readonly string groupName;
         public readonly string name;
         public readonly bool display;
         public readonly bool type;
 
-        public CharacterMetaType(string id, string name, bool display, bool type)
+        public CharacterMetaData(string id, string groupID, string groupName, string name, bool display, bool type)
         {
             this.id = id;
+            this.groupID = groupID;
+            this.groupName = groupName;
             this.name = name;
             this.display = display;
             this.type = type;

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
 using Foreign_Alphabet;
+using Foreign_Alphabet.Characters;
 using System.Drawing;
 
 namespace WinForm
@@ -15,9 +16,9 @@ namespace WinForm
         //The IDs of the character groups that are selected
         private List<CharacterGroup> SelectedGroups { get; set; }
         //The reading/meaning to be displayed
-        private string displayMode;
+        private CharacterMetaData displayMode;
         //The reading/meaning to be typed
-        private string typeMode;
+        private CharacterMetaData typeMode;
         //The default color of the text box
         private Color txtDefaultColor;
         //The errored color of the text box
@@ -61,28 +62,30 @@ namespace WinForm
                 cboSelectionMethod.Items.Clear();
                 UpdateSelectedCharacters();
 
-                foreach (SelectionMethod mode in (SelectionMethod[]) Enum.GetValues(typeof(SelectionMethod)))
+                foreach (SelectionMethod mode in (SelectionMethod[])Enum.GetValues(typeof(SelectionMethod)))
                 {
                     cboSelectionMethod.Items.Add(mode);
                 }
 
-                cboTypeMode.DataSource = new BindingSource(alphabetManager.Alphabet.TypeOptions, null);
-                cboTypeMode.ValueMember = "Key";
-                cboTypeMode.DisplayMember = "Value";
+                
+                cboTypeMode.ValueMember = "ID";
+                cboTypeMode.DisplayMember = "Name";
+                cboTypeMode.DataSource = alphabetManager.Alphabet.TypeOptions;
 
-                cboDisplayMode.DataSource = new BindingSource(alphabetManager.Alphabet.DisplayOptions, null);
-                cboDisplayMode.ValueMember = "Key";
-                cboDisplayMode.DisplayMember = "Value";
+                
+                cboDisplayMode.ValueMember = "ID";
+                cboDisplayMode.DisplayMember = "Name";
+                cboDisplayMode.DataSource = alphabetManager.Alphabet.DisplayOptions;
 
                 lblInstructions.Text = "Select alphabet group";
 
                 cboSelectionMethod.SelectedItem = selectionMethod;
 
                 cboDisplayMode.SelectedIndex = cboDisplayMode.FindStringExact(
-                    alphabetManager.Alphabet.DisplayOptions[alphabetManager.Alphabet.DefaultDisplay]
+                    alphabetManager.Alphabet.DefaultDisplay.id
                     );
                 cboTypeMode.SelectedIndex = cboTypeMode.FindStringExact(
-                    alphabetManager.Alphabet.TypeOptions[alphabetManager.Alphabet.DefaultType]
+                    alphabetManager.Alphabet.DefaultType.id
                     );
 
 
@@ -90,12 +93,12 @@ namespace WinForm
                 //btnAnalytics.Enabled = true;
             }
         }
-        
+
 
         private List<TreeNode> GetTreeNodes(IEnumerable<CharacterGroup> rootGroups)
         {
             List<TreeNode> rootNodes = new List<TreeNode>();
-            foreach(CharacterGroup rootGroup in rootGroups)
+            foreach (CharacterGroup rootGroup in rootGroups)
             {
                 rootNodes.Add(ProcessTreeNode(rootGroup));
             }
@@ -122,7 +125,7 @@ namespace WinForm
         {
             SelectedGroups.Clear();
 
-            foreach(TreeNode rootNode in trvAlphabetGroups.Nodes)
+            foreach (TreeNode rootNode in trvAlphabetGroups.Nodes)
             {
                 AddSelectedNodes(rootNode);
             }
@@ -146,14 +149,15 @@ namespace WinForm
             if (rootNode.Checked)
             {
                 SelectedGroups.Add((CharacterGroup)rootNode.Tag);
-            } else
+            }
+            else
             {
-                foreach(TreeNode c in rootNode.Nodes)
+                foreach (TreeNode c in rootNode.Nodes)
                 {
                     AddSelectedNodes(c);
                 }
             }
-            
+
         }
 
         private void TrvAlphabetGroups_AfterCheck(object sender, TreeViewEventArgs e)
@@ -206,8 +210,9 @@ namespace WinForm
 
             CheckTypeValid(c);
 
+            //TODO readings and meanings
             List<string> formattedCharacterReadings = new List<String>();
-            foreach (KeyValuePair<string, List<string>> kv in c.Readings)
+            foreach (KeyValuePair<CharacterMetaData, List<string>> kv in c.GetFromGroup("reading"))
             {
                 formattedCharacterReadings.Add(kv.Key + ":\t " + String.Join(",", kv.Value));
             }
@@ -218,7 +223,7 @@ namespace WinForm
             lboReading.Items.Clear();
             lboReading.Items.AddRange(formattedCharacterReadings.ToArray());
 
-            
+
 
 
         }
@@ -226,21 +231,21 @@ namespace WinForm
         private void TxtCharacterInput_TextChanged(object sender, EventArgs e)
         {
             bool correct = false;
-            if (alphabetManager.CurrentCharacter.Readings.ContainsKey(typeMode))
-            {
-                foreach (string s in alphabetManager.CurrentCharacter.Readings[typeMode])
-                {
-                    if (txtCharacterInput.Text.ToLower().Trim() == s.ToLower().Trim())
-                    {
-                        correct = true;
-                    }
-                }
-                if (correct)
-                {
-                    txtCharacterInput.Text = "";
-                    NextCharacter();
-                }
-            }
+            ////if (alphabetManager.CurrentCharacter.Readings.ContainsKey(typeMode))
+            ////{
+            ////    foreach (string s in alphabetManager.CurrentCharacter.Readings[typeMode])
+            ////    {
+            ////        if (txtCharacterInput.Text.ToLower().Trim() == s.ToLower().Trim())
+            ////        {
+            ////            correct = true;
+            ////        }
+            ////    }
+            ////    if (correct)
+            ////    {
+            ////        txtCharacterInput.Text = "";
+            ////        NextCharacter();
+            ////    }
+            ////}
         }
 
         private void ChkDescription_CheckedChanged(object sender, EventArgs e)
@@ -293,46 +298,48 @@ namespace WinForm
 
         private void CboSelectionMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectionMethod = (SelectionMethod) cboSelectionMethod.SelectedItem;
+            selectionMethod = (SelectionMethod)cboSelectionMethod.SelectedItem;
         }
 
-        
+
         private void DisplayCharacter(Character character)
         {
-            if (character.Readings.ContainsKey(displayMode)) {
-                rtbCharacterDisplay.Text = string.Join(",", character.Readings[displayMode]);
-                rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
-            } else
-            {
-                throw new CharacterMetaModeException(character, displayMode, "displayMode");
-            }
+            ////if (character.Readings.ContainsKey(displayMode))
+            ////{
+            ////    rtbCharacterDisplay.Text = string.Join(",", character.Readings[displayMode]);
+            ////    rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+            ////}
+            ////else
+            ////{
+            ////    throw new CharacterMetaModeException(character, displayMode, "displayMode");
+            ////}
         }
 
         private void CboTypeMode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            typeMode = ((KeyValuePair<string,string>) cboTypeMode.SelectedItem).Key;
-            if(alphabetManager.CurrentCharacter != null)
-            {
-                CheckTypeValid(alphabetManager.CurrentCharacter);
-            }
-            
+            ////typeMode = ((KeyValuePair<string, string>)cboTypeMode.SelectedItem).Key;
+            ////if (alphabetManager.CurrentCharacter != null)
+            ////{
+            ////    CheckTypeValid(alphabetManager.CurrentCharacter);
+            ////}
+
         }
         private void CboDisplayMode_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            displayMode = ((KeyValuePair<string, string>) cboDisplayMode.SelectedItem).Key;
-            if (SelectedGroups.Count > 0)
-                NextCharacter();
+            ////displayMode = ((KeyValuePair<string, string>)cboDisplayMode.SelectedItem).Key;
+            ////if (SelectedGroups.Count > 0)
+            ////    NextCharacter();
         }
 
         private void CheckTypeValid(Character c)
         {
-            bool valid = c.Readings.ContainsKey(typeMode);
+            ////bool valid = c.Readings.ContainsKey(typeMode);
 
-            txtCharacterInput.Text = !valid ? $"Character does have a {typeMode} reading " : "";
-            txtCharacterInput.BackColor = valid ? txtDefaultColor : txtWarningColor;
+            ////txtCharacterInput.Text = !valid ? $"Character does have a {typeMode} reading " : "";
+            ////txtCharacterInput.BackColor = valid ? txtDefaultColor : txtWarningColor;
 
-            txtCharacterInput.Enabled = valid && SelectedGroups.Count > 0;
+            ////txtCharacterInput.Enabled = valid && SelectedGroups.Count > 0;
         }
 
     }

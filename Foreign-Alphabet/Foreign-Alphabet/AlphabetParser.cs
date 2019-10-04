@@ -52,20 +52,25 @@ namespace Foreign_Alphabet
 
 
 
-            //META GROUPS
-            Dictionary<string, CharacterMetaType> metaTypes = new Dictionary<string, CharacterMetaType>();
+            //META DATA
+            List<CharacterMetaData> metaDatas = new List<CharacterMetaData>();
             {
-                XElement AlphabetCharacters = rootElement.Element("alphabet-characters-meta");
+                XElement AlphabetCharacters = rootElement.Element("alphabet-characters-meta-data");
 
-                foreach (XElement metaGroup in AlphabetCharacters.Elements())
+                foreach (XElement eMetaGroup in AlphabetCharacters.Elements())
                 {
-                    CharacterMetaType type = new CharacterMetaType( metaGroup.Attribute("id").Value,
-                                                                    metaGroup.Attribute("name").Value,
-                                                                    metaGroup.Attribute("display") != null ? metaGroup.Attribute("display").Value.ToLower() == "true" : false,
-                                                                    metaGroup.Attribute("input") != null ? metaGroup.Attribute("input").Value.ToLower() == "true" : false
+                    foreach(XElement eMetaData in eMetaGroup.Elements())
+                    {
+                        CharacterMetaData meta = new CharacterMetaData(eMetaData.Attribute("id").Value,
+                                                                    eMetaGroup.Attribute("id").Value,
+                                                                    eMetaGroup.Attribute("name").Value,
+                                                                    eMetaData.Attribute("name").Value,
+                                                                    eMetaData.Attribute("display") != null ? eMetaData.Attribute("display").Value.ToLower() == "true" : false,
+                                                                    eMetaData.Attribute("input") != null ? eMetaData.Attribute("input").Value.ToLower() == "true" : false
                                                                     );
-                    metaTypes.Add(metaGroup.Attribute("id").Value, type);
-
+                        metaDatas.Add(meta);
+                    }
+                        
                 }
                 
             }
@@ -75,39 +80,18 @@ namespace Foreign_Alphabet
             //UI OPTIONS
             {
                 XElement options = rootElement.Element("ui-options");
-                foreach(CharacterMetaType MetaType in metaTypes.Values)
+                foreach(CharacterMetaData meta in metaDatas)
                 {
-                    if(MetaType.id == options.Element("display-options").Attribute("defaultMeta").Value)
+                    if(meta.id == options.Element("display-options").Attribute("defaultMeta").Value)
                     {
-                        alphabet.DefaultDisplay = MetaType;
+                        alphabet.DefaultDisplay = meta;
                     }
-                    if (MetaType.id == options.Element("display-options").Attribute("defaultMeta").Value)
+                    if (meta.id == options.Element("display-options").Attribute("defaultMeta").Value)
                     {
-                        alphabet.DefaultType = MetaType;
+                        alphabet.DefaultType = meta;
                     }
                 }
             }
-
-
-            /*
-            //TODO simplify below code
-            { // Display Options
-                XElement displayOptions = rootElement.Element("alphabet-options").Element("display-options");
-                alphabet.DefaultDisplay = displayOptions.Attribute("default").Value;
-                foreach (XElement element in displayOptions.Elements())
-                {
-                    alphabet.DisplayOptions.Add(element.Attribute("id").Value, element.Attribute("name").Value);
-                }
-            }
-
-            { // Type Options
-                XElement typeOptions = rootElement.Element("alphabet-options").Element("type-options");
-                alphabet.DefaultType = typeOptions.Attribute("default").Value;
-                foreach (XElement element in typeOptions.Elements())
-                {
-                    alphabet.TypeOptions.Add(element.Attribute("id").Value, element.Attribute("name").Value);
-                }
-            }*/
 
             //Groups
             Dictionary<string, CharacterGroup> groups = new Dictionary<string, CharacterGroup>();
@@ -149,21 +133,24 @@ namespace Foreign_Alphabet
                     {
                         List<string> value = eMeta.Value.Split(new char[0], StringSplitOptions.RemoveEmptyEntries).ToList();
 
-                        CharacterMetaType type = new CharacterMetaType();
-                        //TODO optimise this loop (use extra dictionary?)
-                        foreach (CharacterMetaType metaType in metaTypes.Values)
+                        CharacterMetaData metaData = null;
+                        //TODO optimise this loop (use dictionary?)
+                        foreach (CharacterMetaData meta in metaDatas)
                         {
-                            if (metaType.id == eMeta.Attribute("id").Value)
+                            if (meta.id == eMeta.Attribute("id").Value)
                             {
-                                type = metaType;
+                                metaData = meta;
+                                break;
                             }
                         }
-                        if(type.id != null)
+                        if(metaData != null)
                         {
-                            character.AddMetaData(eMeta.Name.ToString(), type, value);
+                            character.Data.Add(metaData, value);
+                        } else
+                        {
+                            //TODO proper exception
+                            throw new Exception("Meta Data ID Invalid");
                         }
-
-                        
 
                     }
 
