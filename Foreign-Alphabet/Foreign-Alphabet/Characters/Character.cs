@@ -24,7 +24,7 @@ namespace Foreign_Alphabet.Characters
             Dictionary<CharacterMetaData, List<string>> Data = new Dictionary<CharacterMetaData, List<string>>();
             foreach (CharacterMetaData meta in this.Data.Keys)
             {
-                if(meta.groupID == groupID)
+                if(meta.GroupID == groupID)
                 {
                     Data.Add(meta, this.Data[meta]);
                 }

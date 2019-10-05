@@ -68,6 +68,16 @@ namespace Foreign_Alphabet
                                                                     eMetaData.Attribute("display") != null ? eMetaData.Attribute("display").Value.ToLower() == "true" : false,
                                                                     eMetaData.Attribute("input") != null ? eMetaData.Attribute("input").Value.ToLower() == "true" : false
                                                                     );
+
+                        if(meta.Display)
+                        {
+                            alphabet.DisplayOptions.Add(meta);
+                        }
+                        if (meta.Input)
+                        {
+                            alphabet.InputOptions.Add(meta);
+                        }
+
                         metaDatas.Add(meta);
                     }
                         
@@ -82,13 +92,13 @@ namespace Foreign_Alphabet
                 XElement options = rootElement.Element("ui-options");
                 foreach(CharacterMetaData meta in metaDatas)
                 {
-                    if(meta.id == options.Element("display-options").Attribute("defaultMeta").Value)
+                    if(meta.ID == options.Element("display-options").Attribute("defaultMeta").Value)
                     {
                         alphabet.DefaultDisplay = meta;
                     }
-                    if (meta.id == options.Element("display-options").Attribute("defaultMeta").Value)
+                    if (meta.ID == options.Element("input-options").Attribute("defaultMeta").Value)
                     {
-                        alphabet.DefaultType = meta;
+                        alphabet.DefaultInput = meta;
                     }
                 }
             }
@@ -137,7 +147,7 @@ namespace Foreign_Alphabet
                         //TODO optimise this loop (use dictionary?)
                         foreach (CharacterMetaData meta in metaDatas)
                         {
-                            if (meta.id == eMeta.Attribute("id").Value)
+                            if (meta.ID == eMeta.Attribute("id").Value)
                             {
                                 metaData = meta;
                                 break;

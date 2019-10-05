@@ -8,21 +8,21 @@ namespace Foreign_Alphabet.Characters
 {
     public class CharacterMetaData
     {
-        public readonly string id;
-        public readonly string groupID;
-        public readonly string groupName;
-        public readonly string name;
-        public readonly bool display;
-        public readonly bool type;
+        public string ID { get; }
+        public string GroupID { get; }
+        public string GroupName { get; }
+        public string Name { get; }
+        public bool Display { get; }
+        public bool Input { get; }
 
-        public CharacterMetaData(string id, string groupID, string groupName, string name, bool display, bool type)
+        public CharacterMetaData(string id, string groupID, string groupName, string name, bool display, bool input)
         {
-            this.id = id;
-            this.groupID = groupID;
-            this.groupName = groupName;
-            this.name = name;
-            this.display = display;
-            this.type = type;
+            ID = id;
+            GroupID = groupID;
+            GroupName = groupName;
+            Name = name;
+            Display = display;
+            Input = input;
         }
     }
 }

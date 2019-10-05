@@ -18,7 +18,7 @@ namespace WinForm
         //The reading/meaning to be displayed
         private CharacterMetaData displayMode;
         //The reading/meaning to be typed
-        private CharacterMetaData typeMode;
+        private CharacterMetaData inputMode;
         //The default color of the text box
         private Color txtDefaultColor;
         //The errored color of the text box
@@ -70,22 +70,24 @@ namespace WinForm
                 
                 cboTypeMode.ValueMember = "ID";
                 cboTypeMode.DisplayMember = "Name";
-                cboTypeMode.DataSource = alphabetManager.Alphabet.TypeOptions;
+                cboTypeMode.DataSource = new BindingSource(alphabetManager.Alphabet.InputOptions, null);
 
-                
+
+
                 cboDisplayMode.ValueMember = "ID";
                 cboDisplayMode.DisplayMember = "Name";
-                cboDisplayMode.DataSource = alphabetManager.Alphabet.DisplayOptions;
+                cboDisplayMode.DataSource = new BindingSource(alphabetManager.Alphabet.DisplayOptions, null);
+                
 
                 lblInstructions.Text = "Select alphabet group";
 
                 cboSelectionMethod.SelectedItem = selectionMethod;
 
                 cboDisplayMode.SelectedIndex = cboDisplayMode.FindStringExact(
-                    alphabetManager.Alphabet.DefaultDisplay.id
+                    alphabetManager.Alphabet.DefaultDisplay.ID
                     );
                 cboTypeMode.SelectedIndex = cboTypeMode.FindStringExact(
-                    alphabetManager.Alphabet.DefaultType.id
+                    alphabetManager.Alphabet.DefaultInput.ID
                     );
 
 
@@ -214,7 +216,7 @@ namespace WinForm
             List<string> formattedCharacterReadings = new List<String>();
             foreach (KeyValuePair<CharacterMetaData, List<string>> kv in c.GetFromGroup("reading"))
             {
-                formattedCharacterReadings.Add(kv.Key + ":\t " + String.Join(",", kv.Value));
+                formattedCharacterReadings.Add(kv.Key.Name + ":\t " + String.Join(",", kv.Value));
             }
 
             chkReading.Enabled = formattedCharacterReadings.Count != 0;
@@ -231,21 +233,21 @@ namespace WinForm
         private void TxtCharacterInput_TextChanged(object sender, EventArgs e)
         {
             bool correct = false;
-            ////if (alphabetManager.CurrentCharacter.Readings.ContainsKey(typeMode))
-            ////{
-            ////    foreach (string s in alphabetManager.CurrentCharacter.Readings[typeMode])
-            ////    {
-            ////        if (txtCharacterInput.Text.ToLower().Trim() == s.ToLower().Trim())
-            ////        {
-            ////            correct = true;
-            ////        }
-            ////    }
-            ////    if (correct)
-            ////    {
-            ////        txtCharacterInput.Text = "";
-            ////        NextCharacter();
-            ////    }
-            ////}
+            if (alphabetManager.CurrentCharacter.Data.ContainsKey(inputMode))
+            {
+                foreach (string s in alphabetManager.CurrentCharacter.Data[inputMode])
+                {
+                    if (txtCharacterInput.Text.ToLower().Trim() == s.ToLower().Trim())
+                    {
+                        correct = true;
+                    }
+                }
+                if (correct)
+                {
+                    txtCharacterInput.Text = "";
+                    NextCharacter();
+                }
+            }
         }
 
         private void ChkDescription_CheckedChanged(object sender, EventArgs e)
@@ -304,42 +306,42 @@ namespace WinForm
 
         private void DisplayCharacter(Character character)
         {
-            ////if (character.Readings.ContainsKey(displayMode))
-            ////{
-            ////    rtbCharacterDisplay.Text = string.Join(",", character.Readings[displayMode]);
-            ////    rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
-            ////}
-            ////else
-            ////{
-            ////    throw new CharacterMetaModeException(character, displayMode, "displayMode");
-            ////}
+            if (character.Data.ContainsKey(displayMode))
+            {
+                rtbCharacterDisplay.Text = string.Join(",", character.Data[displayMode]);
+                rtbCharacterDisplay.SelectionAlignment = HorizontalAlignment.Center;
+            }
+            else
+            {
+                throw new CharacterMetaModeException(character, displayMode, "displayMode");
+            }
         }
 
         private void CboTypeMode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ////typeMode = ((KeyValuePair<string, string>)cboTypeMode.SelectedItem).Key;
-            ////if (alphabetManager.CurrentCharacter != null)
-            ////{
-            ////    CheckTypeValid(alphabetManager.CurrentCharacter);
-            ////}
+            inputMode = (CharacterMetaData) cboTypeMode.SelectedItem;
+            if (alphabetManager.CurrentCharacter != null)
+            {
+                CheckTypeValid(alphabetManager.CurrentCharacter);
+            }
 
         }
         private void CboDisplayMode_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            ////displayMode = ((KeyValuePair<string, string>)cboDisplayMode.SelectedItem).Key;
-            ////if (SelectedGroups.Count > 0)
-            ////    NextCharacter();
+            displayMode = (CharacterMetaData)cboDisplayMode.SelectedItem;
+            if (SelectedGroups.Count > 0)
+                NextCharacter();
         }
 
         private void CheckTypeValid(Character c)
         {
-            ////bool valid = c.Readings.ContainsKey(typeMode);
+            bool valid = c.Data.ContainsKey(inputMode);
 
-            ////txtCharacterInput.Text = !valid ? $"Character does have a {typeMode} reading " : "";
-            ////txtCharacterInput.BackColor = valid ? txtDefaultColor : txtWarningColor;
+            txtCharacterInput.Text = !valid ? $"Character does have a {inputMode} reading " : "";
+            txtCharacterInput.BackColor = valid ? txtDefaultColor : txtWarningColor;
 
-            ////txtCharacterInput.Enabled = valid && SelectedGroups.Count > 0;
+            txtCharacterInput.Enabled = valid && SelectedGroups.Count > 0;
         }
 
     }

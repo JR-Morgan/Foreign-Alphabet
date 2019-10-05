@@ -14,8 +14,8 @@ namespace Foreign_Alphabet {
         public List<CharacterGroup> RootGroups { get; set; }
         public Dictionary<string, List<CharacterMetaData>> MetaTypeGroups { get; set; }
         public CharacterMetaData DefaultDisplay { get; set; }
-        public CharacterMetaData DefaultType { get; set; }
-        public List<CharacterMetaData> TypeOptions { get; set; }
+        public CharacterMetaData DefaultInput { get; set; }
+        public List<CharacterMetaData> InputOptions { get; set; }
         public List<CharacterMetaData> DisplayOptions { get; set; }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace Foreign_Alphabet {
             this.AlphabetName = "";
             this.CharacterGroups = new List<CharacterGroup>();
             this.MetaTypeGroups = new Dictionary<string, List<CharacterMetaData>>();
-            this.TypeOptions = new List<CharacterMetaData>();
+            this.InputOptions = new List<CharacterMetaData>();
             this.DisplayOptions = new List<CharacterMetaData>();
         }
 

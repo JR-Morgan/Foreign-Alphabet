@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Foreign_Alphabet.Characters
 {
-    public class CharacterGroup
+    public class CharacterGroup 
     {
-        /// <summary>
-        /// Characters in this group (Not sub groups)
-        /// </summary>
+        /// <summary>Characters in this group (Not sub groups)</summary>
         public List<Character> Characters { get; set; }
         public List<CharacterGroup> ChildGroups { get; set; }
         public string Name { get; set; }
