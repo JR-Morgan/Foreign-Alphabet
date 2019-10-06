@@ -4,7 +4,6 @@
 		<meta-data-group id="reading" 	name="Reading">
 			<meta-data id="onyomi" 	 	name="On’yomi Japanese"  	display="true" input="true"/>
 			<meta-data id="kunyomi" 	name="Kun’yomi Japanese" 	display="true" input="true"/>
-			<meta-data id="meaning" 	name="Meaning" 		  		display="true" input="true"/>
 			<meta-data id="kanji" 	 	name="Kanji" 			  	display="true" input="false"/>
 		</meta-data-group>
 		<meta-data-group id="meaning" 	name="Meaning">

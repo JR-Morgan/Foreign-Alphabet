@@ -141,7 +141,7 @@ namespace Foreign_Alphabet
                     Character character = new Character();
                     foreach (XElement eMeta in eCharacter.Elements())
                     {
-                        List<string> value = eMeta.Value.Split(new char[0], StringSplitOptions.RemoveEmptyEntries).ToList();
+                        List<string> value = eMeta.Value.Split(',').ToList();
 
                         CharacterMetaData metaData = null;
                         //TODO optimise this loop (use dictionary?)

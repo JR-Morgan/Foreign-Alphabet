@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using System.IO;
-using Foreign_Alphabet;
+﻿using Foreign_Alphabet;
 using Foreign_Alphabet.Characters;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 
 namespace WinForm
 {
@@ -213,20 +212,52 @@ namespace WinForm
             CheckTypeValid(c);
 
             //TODO readings and meanings
-            List<string> formattedCharacterReadings = new List<String>();
-            foreach (KeyValuePair<CharacterMetaData, List<string>> kv in c.GetFromGroup("reading"))
+            foreach (TabPage existingPage in tabDataDisplayer.TabPages)
             {
-                formattedCharacterReadings.Add(kv.Key.Name + ":\t " + String.Join(",", kv.Value));
+                if(existingPage.Name != "tabHideAll")
+                {
+                    existingPage.Controls.Clear();
+                }
             }
+            foreach (KeyValuePair<CharacterMetaData, List<string>> kv in c.Data)
+            {
+                TabPage tabPage;
+                string tabDataKey = $"tabData{ kv.Key.GroupID}";
+                string listDataKey = $"lstData{ kv.Key.GroupID}";
+                if (!tabDataDisplayer.TabPages.ContainsKey(tabDataKey))
+                {
+                    tabPage = new TabPage()
+                    {
+                        Name = tabDataKey,
+                        Text = kv.Key.GroupName
+                    };
+                    tabDataDisplayer.TabPages.Add(tabPage);
+                }
+                else
+                {
+                    tabPage = tabDataDisplayer.TabPages[tabDataKey];
+                }
 
-            chkReading.Enabled = formattedCharacterReadings.Count != 0;
-            lboReading.Visible = formattedCharacterReadings.Count != 0 && lboReading.Visible;
+                if(!tabPage.Controls.ContainsKey(listDataKey))
+                {
+                    tabPage.Controls.Add(new ListBox()
+                    {
+                        Name = listDataKey,
+                        Dock = DockStyle.Fill,
+                        Font = new Font("Arial", 14f)
+                    });
+                }
 
-            lboReading.Items.Clear();
-            lboReading.Items.AddRange(formattedCharacterReadings.ToArray());
+                ((ListBox)tabPage.Controls[listDataKey]).Items.Add(kv.Key.Name + ":\t " + String.Join(",", kv.Value) + "\n");
 
+            }
+            
 
+            //chkReading.Enabled = formattedCharacterReadings.Count != 0;
+            //lboReading.Visible = formattedCharacterReadings.Count != 0 && lboReading.Visible;
 
+            //lboReading.Items.Clear();
+            //lboReading.Items.AddRange(formattedCharacterReadings.ToArray());
 
         }
 
@@ -252,11 +283,11 @@ namespace WinForm
 
         private void ChkDescription_CheckedChanged(object sender, EventArgs e)
         {
-            lboReading.Visible = chkReading.Checked;
+            //lboReading.Visible = chkReading.Checked;
         }
         private void ChkReading_CheckedChanged(object sender, EventArgs e)
         {
-            lboMeaning.Visible = chkMeaning.Checked;
+            //lboMeaning.Visible = chkMeaning.Checked;
         }
 
         private void FontToolStripMenuItem_Click(object sender, EventArgs e)
@@ -338,11 +369,48 @@ namespace WinForm
         {
             bool valid = c.Data.ContainsKey(inputMode);
 
-            txtCharacterInput.Text = !valid ? $"Character does have a {inputMode} reading " : "";
+            txtCharacterInput.Text = !valid ? $"Character does have {inputMode.Name} data " : "";
             txtCharacterInput.BackColor = valid ? txtDefaultColor : txtWarningColor;
 
             txtCharacterInput.Enabled = valid && SelectedGroups.Count > 0;
         }
 
+        
+        private void TabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            //CODE FROM MICROSOFT DOCS
+
+            Graphics g = e.Graphics;
+            Brush _textBrush;
+            Font _tabFont;
+
+            // Get the item from the collection.
+            TabPage _tabPage = tabDataDisplayer.TabPages[e.Index];
+
+            // Get the real bounds for the tab rectangle.
+            Rectangle _tabBounds = tabDataDisplayer.GetTabRect(e.Index);
+
+            if (e.State == DrawItemState.Selected)
+            {
+
+                // Draw a different background color, and don't paint a focus rectangle.
+                _textBrush = new SolidBrush(e.BackColor);
+                g.FillRectangle(Brushes.LightGray, e.Bounds);
+                _tabFont = new Font("Arial", 14.0f, FontStyle.Bold, GraphicsUnit.Pixel);
+            }
+            else
+            {
+                _textBrush = new SolidBrush(e.ForeColor);
+                e.DrawBackground();
+                _tabFont = new Font("Arial", 14.0f, FontStyle.Regular, GraphicsUnit.Pixel);
+            }
+             
+
+            // Draw string. Center the text.
+            StringFormat _stringFlags = new StringFormat();
+            _stringFlags.Alignment = StringAlignment.Center;
+            _stringFlags.LineAlignment = StringAlignment.Center;
+            g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
+        }
     }
 }

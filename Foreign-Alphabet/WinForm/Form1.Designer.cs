@@ -38,12 +38,8 @@
             this.backgroundColourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rtbCharacterDisplay = new System.Windows.Forms.RichTextBox();
             this.gboAlphabet = new System.Windows.Forms.GroupBox();
+            this.tabDataDisplayer = new System.Windows.Forms.TabControl();
             this.txtCharacterInput = new System.Windows.Forms.TextBox();
-            this.tblDescription = new System.Windows.Forms.TableLayoutPanel();
-            this.chkReading = new System.Windows.Forms.CheckBox();
-            this.chkMeaning = new System.Windows.Forms.CheckBox();
-            this.lboReading = new System.Windows.Forms.ListBox();
-            this.lboMeaning = new System.Windows.Forms.ListBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.gboConfig = new System.Windows.Forms.GroupBox();
             this.lblInstructions = new System.Windows.Forms.Label();
@@ -63,9 +59,10 @@
             this.codBGColor = new System.Windows.Forms.ColorDialog();
             this.codTextColor = new System.Windows.Forms.ColorDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tabHideAll = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.gboAlphabet.SuspendLayout();
-            this.tblDescription.SuspendLayout();
+            this.tabDataDisplayer.SuspendLayout();
             this.gboConfig.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,15 +139,33 @@
             this.gboAlphabet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gboAlphabet.Controls.Add(this.tabDataDisplayer);
             this.gboAlphabet.Controls.Add(this.txtCharacterInput);
-            this.gboAlphabet.Controls.Add(this.tblDescription);
             this.gboAlphabet.Controls.Add(this.btnNext);
             this.gboAlphabet.Controls.Add(this.rtbCharacterDisplay);
             this.gboAlphabet.Location = new System.Drawing.Point(12, 27);
             this.gboAlphabet.Name = "gboAlphabet";
-            this.gboAlphabet.Size = new System.Drawing.Size(392, 554);
+            this.gboAlphabet.Size = new System.Drawing.Size(392, 553);
             this.gboAlphabet.TabIndex = 0;
             this.gboAlphabet.TabStop = false;
+            // 
+            // tabDataDisplayer
+            // 
+            this.tabDataDisplayer.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabDataDisplayer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabDataDisplayer.Controls.Add(this.tabHideAll);
+            this.tabDataDisplayer.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabDataDisplayer.ItemSize = new System.Drawing.Size(35, 100);
+            this.tabDataDisplayer.Location = new System.Drawing.Point(6, 241);
+            this.tabDataDisplayer.Multiline = true;
+            this.tabDataDisplayer.Name = "tabDataDisplayer";
+            this.tabDataDisplayer.SelectedIndex = 0;
+            this.tabDataDisplayer.Size = new System.Drawing.Size(377, 256);
+            this.tabDataDisplayer.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabDataDisplayer.TabIndex = 5;
+            this.tabDataDisplayer.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TabControl1_DrawItem);
             // 
             // txtCharacterInput
             // 
@@ -159,96 +174,18 @@
             this.txtCharacterInput.BackColor = System.Drawing.SystemColors.Window;
             this.txtCharacterInput.Enabled = false;
             this.txtCharacterInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCharacterInput.Location = new System.Drawing.Point(9, 509);
+            this.txtCharacterInput.Location = new System.Drawing.Point(6, 504);
             this.txtCharacterInput.Name = "txtCharacterInput";
             this.txtCharacterInput.Size = new System.Drawing.Size(275, 38);
             this.txtCharacterInput.TabIndex = 4;
             this.txtCharacterInput.TextChanged += new System.EventHandler(this.TxtCharacterInput_TextChanged);
-            // 
-            // tblDescription
-            // 
-            this.tblDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblDescription.ColumnCount = 2;
-            this.tblDescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.84874F));
-            this.tblDescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.15126F));
-            this.tblDescription.Controls.Add(this.chkReading, 0, 0);
-            this.tblDescription.Controls.Add(this.chkMeaning, 0, 1);
-            this.tblDescription.Controls.Add(this.lboReading, 1, 0);
-            this.tblDescription.Controls.Add(this.lboMeaning, 1, 1);
-            this.tblDescription.Location = new System.Drawing.Point(6, 242);
-            this.tblDescription.Name = "tblDescription";
-            this.tblDescription.RowCount = 2;
-            this.tblDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblDescription.Size = new System.Drawing.Size(380, 261);
-            this.tblDescription.TabIndex = 6;
-            // 
-            // chkReading
-            // 
-            this.chkReading.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkReading.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkReading.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chkReading.Enabled = false;
-            this.chkReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkReading.Location = new System.Drawing.Point(3, 3);
-            this.chkReading.Name = "chkReading";
-            this.chkReading.Size = new System.Drawing.Size(77, 50);
-            this.chkReading.TabIndex = 1;
-            this.chkReading.Text = "Show Reading";
-            this.chkReading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkReading.UseVisualStyleBackColor = true;
-            this.chkReading.CheckedChanged += new System.EventHandler(this.ChkDescription_CheckedChanged);
-            // 
-            // chkMeaning
-            // 
-            this.chkMeaning.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkMeaning.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkMeaning.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chkMeaning.Enabled = false;
-            this.chkMeaning.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMeaning.Location = new System.Drawing.Point(3, 133);
-            this.chkMeaning.Name = "chkMeaning";
-            this.chkMeaning.Size = new System.Drawing.Size(77, 50);
-            this.chkMeaning.TabIndex = 6;
-            this.chkMeaning.Text = "Show Meaning";
-            this.chkMeaning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkMeaning.UseVisualStyleBackColor = true;
-            this.chkMeaning.CheckedChanged += new System.EventHandler(this.ChkReading_CheckedChanged);
-            // 
-            // lboReading
-            // 
-            this.lboReading.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lboReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lboReading.FormattingEnabled = true;
-            this.lboReading.ItemHeight = 24;
-            this.lboReading.Location = new System.Drawing.Point(86, 3);
-            this.lboReading.Name = "lboReading";
-            this.lboReading.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lboReading.Size = new System.Drawing.Size(291, 124);
-            this.lboReading.TabIndex = 2;
-            this.lboReading.Visible = false;
-            // 
-            // lboMeaning
-            // 
-            this.lboMeaning.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lboMeaning.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lboMeaning.FormattingEnabled = true;
-            this.lboMeaning.ItemHeight = 24;
-            this.lboMeaning.Location = new System.Drawing.Point(86, 133);
-            this.lboMeaning.Name = "lboMeaning";
-            this.lboMeaning.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lboMeaning.Size = new System.Drawing.Size(291, 125);
-            this.lboMeaning.TabIndex = 5;
-            this.lboMeaning.Visible = false;
             // 
             // btnNext
             // 
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNext.Enabled = false;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(290, 509);
+            this.btnNext.Location = new System.Drawing.Point(287, 503);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(96, 39);
             this.btnNext.TabIndex = 4;
@@ -273,7 +210,7 @@
             this.gboConfig.Controls.Add(this.cboTypeMode);
             this.gboConfig.Location = new System.Drawing.Point(410, 27);
             this.gboConfig.Name = "gboConfig";
-            this.gboConfig.Size = new System.Drawing.Size(265, 503);
+            this.gboConfig.Size = new System.Drawing.Size(265, 502);
             this.gboConfig.TabIndex = 1;
             this.gboConfig.TabStop = false;
             this.gboConfig.Text = "Configuration";
@@ -295,7 +232,7 @@
             this.lblSelectionMethod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblSelectionMethod.AutoSize = true;
             this.lblSelectionMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectionMethod.Location = new System.Drawing.Point(17, 416);
+            this.lblSelectionMethod.Location = new System.Drawing.Point(17, 284);
             this.lblSelectionMethod.Name = "lblSelectionMethod";
             this.lblSelectionMethod.Size = new System.Drawing.Size(64, 16);
             this.lblSelectionMethod.TabIndex = 8;
@@ -319,7 +256,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboSelectionMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSelectionMethod.FormattingEnabled = true;
-            this.cboSelectionMethod.Location = new System.Drawing.Point(87, 413);
+            this.cboSelectionMethod.Location = new System.Drawing.Point(87, 281);
             this.cboSelectionMethod.Name = "cboSelectionMethod";
             this.cboSelectionMethod.Size = new System.Drawing.Size(172, 24);
             this.cboSelectionMethod.TabIndex = 4;
@@ -330,7 +267,7 @@
             this.lblTypeMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTypeMode.AutoSize = true;
             this.lblTypeMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTypeMode.Location = new System.Drawing.Point(3, 476);
+            this.lblTypeMode.Location = new System.Drawing.Point(3, 344);
             this.lblTypeMode.Name = "lblTypeMode";
             this.lblTypeMode.Size = new System.Drawing.Size(78, 16);
             this.lblTypeMode.TabIndex = 7;
@@ -345,7 +282,7 @@
             this.trvAlphabetGroups.CheckBoxes = true;
             this.trvAlphabetGroups.Location = new System.Drawing.Point(6, 77);
             this.trvAlphabetGroups.Name = "trvAlphabetGroups";
-            this.trvAlphabetGroups.Size = new System.Drawing.Size(253, 321);
+            this.trvAlphabetGroups.Size = new System.Drawing.Size(253, 189);
             this.trvAlphabetGroups.TabIndex = 2;
             this.trvAlphabetGroups.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.TrvAlphabetGroups_AfterCheck);
             // 
@@ -354,7 +291,7 @@
             this.lblDisplayMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDisplayMode.AutoSize = true;
             this.lblDisplayMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplayMode.Location = new System.Drawing.Point(27, 446);
+            this.lblDisplayMode.Location = new System.Drawing.Point(27, 314);
             this.lblDisplayMode.Name = "lblDisplayMode";
             this.lblDisplayMode.Size = new System.Drawing.Size(54, 16);
             this.lblDisplayMode.TabIndex = 6;
@@ -378,7 +315,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboDisplayMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDisplayMode.FormattingEnabled = true;
-            this.cboDisplayMode.Location = new System.Drawing.Point(87, 443);
+            this.cboDisplayMode.Location = new System.Drawing.Point(87, 311);
             this.cboDisplayMode.Name = "cboDisplayMode";
             this.cboDisplayMode.Size = new System.Drawing.Size(173, 24);
             this.cboDisplayMode.TabIndex = 5;
@@ -400,7 +337,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboTypeMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTypeMode.FormattingEnabled = true;
-            this.cboTypeMode.Location = new System.Drawing.Point(87, 473);
+            this.cboTypeMode.Location = new System.Drawing.Point(87, 341);
             this.cboTypeMode.Name = "cboTypeMode";
             this.cboTypeMode.Size = new System.Drawing.Size(172, 24);
             this.cboTypeMode.TabIndex = 4;
@@ -417,7 +354,7 @@
             this.btnAnalytics.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAnalytics.Enabled = false;
             this.btnAnalytics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalytics.Location = new System.Drawing.Point(555, 536);
+            this.btnAnalytics.Location = new System.Drawing.Point(555, 535);
             this.btnAnalytics.Name = "btnAnalytics";
             this.btnAnalytics.Size = new System.Drawing.Size(120, 39);
             this.btnAnalytics.TabIndex = 3;
@@ -447,11 +384,20 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // tabHideAll
+            // 
+            this.tabHideAll.Location = new System.Drawing.Point(104, 4);
+            this.tabHideAll.Name = "tabHideAll";
+            this.tabHideAll.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHideAll.Size = new System.Drawing.Size(269, 248);
+            this.tabHideAll.TabIndex = 0;
+            this.tabHideAll.Text = "Hide All";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 593);
+            this.ClientSize = new System.Drawing.Size(687, 592);
             this.Controls.Add(this.btnAnalytics);
             this.Controls.Add(this.gboConfig);
             this.Controls.Add(this.gboAlphabet);
@@ -465,7 +411,7 @@
             this.menuStrip1.PerformLayout();
             this.gboAlphabet.ResumeLayout(false);
             this.gboAlphabet.PerformLayout();
-            this.tblDescription.ResumeLayout(false);
+            this.tabDataDisplayer.ResumeLayout(false);
             this.gboConfig.ResumeLayout(false);
             this.gboConfig.PerformLayout();
             this.ResumeLayout(false);
@@ -504,11 +450,8 @@
         private System.Windows.Forms.TextBox txtCharacterInput;
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TableLayoutPanel tblDescription;
-        private System.Windows.Forms.CheckBox chkReading;
-        private System.Windows.Forms.ListBox lboReading;
-        private System.Windows.Forms.CheckBox chkMeaning;
-        private System.Windows.Forms.ListBox lboMeaning;
+        private System.Windows.Forms.TabControl tabDataDisplayer;
+        private System.Windows.Forms.TabPage tabHideAll;
     }
 }
 
