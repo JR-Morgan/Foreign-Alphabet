@@ -232,7 +232,7 @@
             this.lblSelectionMethod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblSelectionMethod.AutoSize = true;
             this.lblSelectionMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectionMethod.Location = new System.Drawing.Point(17, 284);
+            this.lblSelectionMethod.Location = new System.Drawing.Point(17, 412);
             this.lblSelectionMethod.Name = "lblSelectionMethod";
             this.lblSelectionMethod.Size = new System.Drawing.Size(64, 16);
             this.lblSelectionMethod.TabIndex = 8;
@@ -256,7 +256,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboSelectionMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSelectionMethod.FormattingEnabled = true;
-            this.cboSelectionMethod.Location = new System.Drawing.Point(87, 281);
+            this.cboSelectionMethod.Location = new System.Drawing.Point(87, 409);
             this.cboSelectionMethod.Name = "cboSelectionMethod";
             this.cboSelectionMethod.Size = new System.Drawing.Size(172, 24);
             this.cboSelectionMethod.TabIndex = 4;
@@ -267,7 +267,7 @@
             this.lblTypeMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTypeMode.AutoSize = true;
             this.lblTypeMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTypeMode.Location = new System.Drawing.Point(3, 344);
+            this.lblTypeMode.Location = new System.Drawing.Point(3, 472);
             this.lblTypeMode.Name = "lblTypeMode";
             this.lblTypeMode.Size = new System.Drawing.Size(78, 16);
             this.lblTypeMode.TabIndex = 7;
@@ -282,7 +282,7 @@
             this.trvAlphabetGroups.CheckBoxes = true;
             this.trvAlphabetGroups.Location = new System.Drawing.Point(6, 77);
             this.trvAlphabetGroups.Name = "trvAlphabetGroups";
-            this.trvAlphabetGroups.Size = new System.Drawing.Size(253, 189);
+            this.trvAlphabetGroups.Size = new System.Drawing.Size(253, 326);
             this.trvAlphabetGroups.TabIndex = 2;
             this.trvAlphabetGroups.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.TrvAlphabetGroups_AfterCheck);
             // 
@@ -291,7 +291,7 @@
             this.lblDisplayMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDisplayMode.AutoSize = true;
             this.lblDisplayMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplayMode.Location = new System.Drawing.Point(27, 314);
+            this.lblDisplayMode.Location = new System.Drawing.Point(27, 442);
             this.lblDisplayMode.Name = "lblDisplayMode";
             this.lblDisplayMode.Size = new System.Drawing.Size(54, 16);
             this.lblDisplayMode.TabIndex = 6;
@@ -315,7 +315,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboDisplayMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDisplayMode.FormattingEnabled = true;
-            this.cboDisplayMode.Location = new System.Drawing.Point(87, 311);
+            this.cboDisplayMode.Location = new System.Drawing.Point(87, 439);
             this.cboDisplayMode.Name = "cboDisplayMode";
             this.cboDisplayMode.Size = new System.Drawing.Size(173, 24);
             this.cboDisplayMode.TabIndex = 5;
@@ -337,7 +337,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboTypeMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTypeMode.FormattingEnabled = true;
-            this.cboTypeMode.Location = new System.Drawing.Point(87, 341);
+            this.cboTypeMode.Location = new System.Drawing.Point(87, 469);
             this.cboTypeMode.Name = "cboTypeMode";
             this.cboTypeMode.Size = new System.Drawing.Size(172, 24);
             this.cboTypeMode.TabIndex = 4;
