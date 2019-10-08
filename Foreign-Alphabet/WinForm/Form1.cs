@@ -244,7 +244,7 @@ namespace WinForm
                     {
                         Name = listDataKey,
                         Dock = DockStyle.Fill,
-                        Font = new Font("Arial", 14f)
+                        Font = new Font("Meiryo", 14f)
                     });
                 }
 
