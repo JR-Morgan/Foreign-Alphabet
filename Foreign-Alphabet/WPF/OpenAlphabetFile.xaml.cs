@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for OpenAlphabetFile.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class OpenAlphabetFile : Window
     {
-        public MainWindow()
+        public OpenAlphabetFile()
         {
             InitializeComponent();
         }
