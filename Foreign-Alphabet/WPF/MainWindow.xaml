@@ -9,18 +9,70 @@
         FontSize="18">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="350" />
+            <ColumnDefinition Width="10" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="10" />
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="20" />
-        </Grid.RowDefinitions>
 
-        
+        <!--Left Menu-->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+
+            <TreeView x:Name="trvCharacterGroups" Grid.Column="1" Grid.Row="1" Margin="0,0,0,10" />
+            <!--Mode Menu-->
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <TextBlock  Grid.Column="0" Grid.Row="0" Text="Selection Mode" TextAlignment="right" Margin="5"/>
+                <ComboBox   Grid.Column="1" Grid.Row="0" x:Name="cboSelectionMode" Margin="5"/>
+                <TextBlock  Grid.Column="0" Grid.Row="1"  Text="Display Mode" TextAlignment="right" Margin="5"/>
+                <ComboBox   Grid.Column="1" Grid.Row="1" x:Name="cboDisplayMode" Margin="5"/>
+                <TextBlock  Grid.Column="0" Grid.Row="2" Text="Input Mode" TextAlignment="right" Margin="5"/>
+                <ComboBox   Grid.Column="1" Grid.Row="2" x:Name="cboInputMode" Margin="5"/>
+            </Grid>
+        </Grid>
+        <!--Display Section-->
+        <Grid Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <RichTextBox x:Name="rtbDisplay" Grid.Row="1" Grid.RowSpan="2" MinHeight="300" MinWidth="400" />
+            
+            <!--Input Section-->
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <TextBox x:Name="txtInput"      Grid.Column="1" Grid.ColumnSpan="3"/>
+                <Button x:Name="btnInputSkip"   Grid.Column="4" Height="50"/>
+            </Grid>
+
+        </Grid>
     </Grid>
 </Window>
