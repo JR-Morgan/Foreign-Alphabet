@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace WinForm
@@ -22,7 +23,6 @@ namespace WinForm
         private Color txtDefaultColor;
         //The errored color of the text box
         private Color txtWarningColor;
-
 
         private AlphabetManager alphabetManager;
         public Form1()
@@ -163,8 +163,10 @@ namespace WinForm
 
         private void TrvAlphabetGroups_AfterCheck(object sender, TreeViewEventArgs e)
         {
+           
             if (e.Action != TreeViewAction.Unknown)
             {
+                //label1.Text = (Int32.Parse(label1.Text) + 1).ToString();
                 SetChildrenChecked(e.Node, e.Node.Checked);
                 if (!e.Node.Checked)
                 {
@@ -198,7 +200,17 @@ namespace WinForm
 
         private void NextCharacter()
         {
-            Character c = alphabetManager.NewCharacter(selectionMethod, SelectedGroups);
+
+            Character c;
+            try
+            {
+                c = alphabetManager.NewCharacter(selectionMethod, SelectedGroups);
+            }
+            catch (ArgumentException)
+            {
+                return;
+            }
+            
             try
             {
                 DisplayCharacter(c);
@@ -208,6 +220,8 @@ namespace WinForm
                 MessageBox.Show(e.Message);
                 return;
             }
+                
+
 
             CheckTypeValid(c);
 
@@ -251,7 +265,6 @@ namespace WinForm
                 ((ListBox)tabPage.Controls[listDataKey]).Items.Add(kv.Key.Name + ":\t " + String.Join(",", kv.Value) + "\n");
 
             }
-            
 
             //chkReading.Enabled = formattedCharacterReadings.Count != 0;
             //lboReading.Visible = formattedCharacterReadings.Count != 0 && lboReading.Visible;
@@ -375,7 +388,6 @@ namespace WinForm
             txtCharacterInput.Enabled = valid && SelectedGroups.Count > 0;
         }
 
-        
         private void TabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
             //CODE FROM MICROSOFT DOCS
@@ -412,5 +424,6 @@ namespace WinForm
             _stringFlags.LineAlignment = StringAlignment.Center;
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
         }
+
     }
 }
