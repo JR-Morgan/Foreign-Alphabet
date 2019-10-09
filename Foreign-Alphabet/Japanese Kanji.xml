@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alphabet-file name="Kana" version="1.4">
-	<alphabet-characters-meta>
-		<meta-type-group id="reading" 	name="Reading">
-			<meta-type id="onyomi" 	 	name="On’yomi Japanese"  	display="true" input="true"/>
-			<meta-type id="kunyomi" 	name="Kun’yomi Japanese" 	display="true" input="true"/>
-			<meta-type id="meaning" 	name="Meaning" 		  		display="true" input="true"/>
-			<meta-type id="kanji" 	 	name="Kanji" 			  	display="true" input="false"/>
-		</meta-type-group>
-		<meta-type-group id="meaning" 	name="Meaning">
-			<meta-type id="meaning" 	name="Meaning" 	display="true" input="true"/>
-		</meta-type-group>
-	</alphabet-characters-meta>
+	<alphabet-characters-meta-data>
+		<meta-data-group id="reading" 	name="Reading">
+			<meta-data id="onyomi" 	 	name="On’yomi Japanese"  	display="true" input="true"/>
+			<meta-data id="kunyomi" 	name="Kun’yomi Japanese" 	display="true" input="true"/>
+			<meta-data id="kanji" 	 	name="Kanji" 			  	display="true" input="false"/>
+		</meta-data-group>
+		<meta-data-group id="meaning" 	name="Meaning">
+			<meta-data id="meaning" 	name="Meaning" 	display="true" input="true"/>
+		</meta-data-group>
+	</alphabet-characters-meta-data>
    <ui-options>
       <display-options 	defaultMeta="kanji"/>
       <input-options 	defaultMeta="meaning"/>
@@ -47,488 +46,488 @@
    </alphabet-classes>
    <alphabet-characters>
       <character class="a1">
-         <meta id="onyomi">じょう</meta>
-         <meta id="kunyomi">うえ, あ, のぼ, うわ, かみ</meta>
-         <meta id="meaning">Above</meta>
-         <meta id="kanji">上</meta>
+         <data id="onyomi">じょう</data>
+         <data id="kunyomi">うえ, あ, のぼ, うわ, かみ</data>
+         <data id="meaning">Above</data>
+         <data id="kanji">上</data>
       </character>
       <character class="a1">
-         <meta id="onyomi">か, げ</meta>
-         <meta id="kunyomi">した, さ, くだ, お</meta>
-         <meta id="meaning">Below</meta>
-         <meta id="kanji">下</meta>
+         <data id="onyomi">か, げ</data>
+         <data id="kunyomi">した, さ, くだ, お</data>
+         <data id="meaning">Below</data>
+         <data id="kanji">下</data>
       </character>
       <character class="a1">
-         <meta id="onyomi">たい, だい</meta>
-         <meta id="kunyomi">おお</meta>
-         <meta id="meaning">Big</meta>
-         <meta id="kanji">大</meta>
+         <data id="onyomi">たい, だい</data>
+         <data id="kunyomi">おお</data>
+         <data id="meaning">Big</data>
+         <data id="kanji">大</data>
       </character>
       <character class="a1">
-         <meta id="onyomi">こう, く</meta>
-         <meta id="meaning">Construction</meta>
-         <meta id="kanji">工</meta>
+         <data id="onyomi">こう, く</data>
+         <data id="meaning">Construction</data>
+         <data id="kanji">工</data>
       </character>
       <character class="a1 n10">
-         <meta id="onyomi">はち</meta>
-         <meta id="kunyomi">や, よう</meta>
-         <meta id="meaning">Eight</meta>
-         <meta id="kanji">八</meta>
+         <data id="onyomi">はち</data>
+         <data id="kunyomi">や, よう</data>
+         <data id="meaning">Eight</data>
+         <data id="kanji">八</data>
       </character>
       <character class="a1">
-         <meta id="onyomi">にゅう</meta>
-         <meta id="kunyomi">はい, い</meta>
-         <meta id="meaning">Enter</meta>
-         <meta id="kanji">入</meta>
+         <data id="onyomi">にゅう</data>
+         <data id="kunyomi">はい, い</data>
+         <data id="meaning">Enter</data>
+         <data id="kanji">入</data>
       </character>
       <character class="a1">
-         <meta id="onyomi">さん</meta>
-         <meta id="kunyomi">やま</meta>
-         <meta id="meaning">Mountain</meta>
-         <meta id="kanji">山</meta>
+         <data id="onyomi">さん</data>
+         <data id="kunyomi">やま</data>
+         <data id="meaning">Mountain</data>
+         <data id="kanji">山</data>
       </character>
       <character class="a1">
-         <meta id="onyomi">こう, く</meta>
-         <meta id="kunyomi">くち</meta>
-         <meta id="meaning">Mouth</meta>
-         <meta id="kanji">口</meta>
+         <data id="onyomi">こう, く</data>
+         <data id="kunyomi">くち</data>
+         <data id="meaning">Mouth</data>
+         <data id="kanji">口</data>
       </character>
       <character class="a1 n10">
-         <meta id="onyomi">く, きゅう</meta>
-         <meta id="kunyomi">ここの</meta>
-         <meta id="meaning">Nine</meta>
-         <meta id="kanji">九</meta>
+         <data id="onyomi">く, きゅう</data>
+         <data id="kunyomi">ここの</data>
+         <data id="meaning">Nine</data>
+         <data id="kanji">九</data>
       </character>
       <character class="a1 n10">
-         <meta id="onyomi">いち, いつ</meta>
-         <meta id="kunyomi">ひと</meta>
-         <meta id="meaning">One</meta>
-         <meta id="kanji">一</meta>
+         <data id="onyomi">いち, いつ</data>
+         <data id="kunyomi">ひと</data>
+         <data id="meaning">One</data>
+         <data id="kanji">一</data>
       </character>
       <character class="a1">
-         <meta id="onyomi">にん, じん</meta>
-         <meta id="kunyomi">ひと, と</meta>
-         <meta id="meaning">Person</meta>
-         <meta id="kanji">人</meta>
+         <data id="onyomi">にん, じん</data>
+         <data id="kunyomi">ひと, と</data>
+         <data id="meaning">Person</data>
+         <data id="kanji">人</data>
       </character>
       <character class="a1">
-         <meta id="onyomi">りょく, りき</meta>
-         <meta id="kunyomi">ちから</meta>
-         <meta id="meaning">Power</meta>
-         <meta id="kanji">力</meta>
+         <data id="onyomi">りょく, りき</data>
+         <data id="kunyomi">ちから</data>
+         <data id="meaning">Power</data>
+         <data id="kanji">力</data>
       </character>
       <character class="a1">
-         <meta id="onyomi">せん</meta>
-         <meta id="kunyomi">かわ</meta>
-         <meta id="meaning">River</meta>
-         <meta id="kanji">川</meta>
+         <data id="onyomi">せん</data>
+         <data id="kunyomi">かわ</data>
+         <data id="meaning">River</data>
+         <data id="kanji">川</data>
       </character>
       <character class="a1 n10">
-         <meta id="onyomi">しち</meta>
-         <meta id="kunyomi">なな, なの</meta>
-         <meta id="meaning">Seven</meta>
-         <meta id="kanji">七</meta>
+         <data id="onyomi">しち</data>
+         <data id="kunyomi">なな, なの</data>
+         <data id="meaning">Seven</data>
+         <data id="kanji">七</data>
       </character>
       <character class="a1 n10">
-         <meta id="onyomi">じゅう</meta>
-         <meta id="kunyomi">とお</meta>
-         <meta id="meaning">Ten</meta>
-         <meta id="kanji">十</meta>
+         <data id="onyomi">じゅう</data>
+         <data id="kunyomi">とお</data>
+         <data id="meaning">Ten</data>
+         <data id="kanji">十</data>
       </character>
       <character class="a1 n10">
-         <meta id="onyomi">さん</meta>
-         <meta id="kunyomi">み</meta>
-         <meta id="meaning">Three</meta>
-         <meta id="kanji">三</meta>
+         <data id="onyomi">さん</data>
+         <data id="kunyomi">み</data>
+         <data id="meaning">Three</data>
+         <data id="kanji">三</data>
       </character>
       <character class="a1 n10">
-         <meta id="onyomi">に</meta>
-         <meta id="kunyomi">ふた</meta>
-         <meta id="meaning">Two</meta>
-         <meta id="kanji">二</meta>
+         <data id="onyomi">に</data>
+         <data id="kunyomi">ふた</data>
+         <data id="meaning">Two</data>
+         <data id="kanji">二</data>
       </character>
       <character class="a1">
-         <meta id="onyomi">じょ</meta>
-         <meta id="kunyomi">おんな, め</meta>
-         <meta id="meaning">Woman</meta>
-         <meta id="kanji">女</meta>
+         <data id="onyomi">じょ</data>
+         <data id="kunyomi">おんな, め</data>
+         <data id="meaning">Woman</data>
+         <data id="kanji">女</data>
       </character>
       <character class="a2">
-         <meta id="onyomi" />
-         <meta id="kunyomi">また</meta>
-         <meta id="meaning">Again</meta>
-         <meta id="kanji">又</meta>
+         <data id="onyomi" />
+         <data id="kunyomi">また</data>
+         <data id="meaning">Again</data>
+         <data id="kanji">又</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">ぎょく</meta>
-         <meta id="kunyomi">たま</meta>
-         <meta id="meaning">Ball</meta>
-         <meta id="kanji">玉</meta>
+         <data id="onyomi">ぎょく</data>
+         <data id="kunyomi">たま</data>
+         <data id="meaning">Ball</data>
+         <data id="kanji">玉</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">ほん</meta>
-         <meta id="kunyomi">もと</meta>
-         <meta id="meaning">Book</meta>
-         <meta id="kanji">本</meta>
+         <data id="onyomi">ほん</data>
+         <data id="kunyomi">もと</data>
+         <data id="meaning">Book</data>
+         <data id="kanji">本</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">し, す</meta>
-         <meta id="kunyomi">こ</meta>
-         <meta id="meaning">Child</meta>
-         <meta id="kanji">子</meta>
+         <data id="onyomi">し, す</data>
+         <data id="kunyomi">こ</data>
+         <data id="meaning">Child</data>
+         <data id="kanji">子</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">がん</meta>
-         <meta id="kunyomi">まる</meta>
-         <meta id="meaning">Circle</meta>
-         <meta id="kanji">丸</meta>
+         <data id="onyomi">がん</data>
+         <data id="kunyomi">まる</data>
+         <data id="meaning">Circle</data>
+         <data id="kanji">丸</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">せい,しょう</meta>
-         <meta id="kunyomi">ただ,まさ</meta>
-         <meta id="meaning">Correct</meta>
-         <meta id="kanji">正</meta>
+         <data id="onyomi">せい,しょう</data>
+         <data id="kunyomi">ただ,まさ</data>
+         <data id="meaning">Correct</data>
+         <data id="kanji">正</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">ど,と</meta>
-         <meta id="kunyomi">つち</meta>
-         <meta id="meaning">Dirt</meta>
-         <meta id="kanji">土</meta>
+         <data id="onyomi">ど,と</data>
+         <data id="kunyomi">つち</data>
+         <data id="meaning">Dirt</data>
+         <data id="kanji">土</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">けん</meta>
-         <meta id="kunyomi">いぬ</meta>
-         <meta id="meaning">Dog</meta>
-         <meta id="kanji">犬</meta>
+         <data id="onyomi">けん</data>
+         <data id="kunyomi">いぬ</data>
+         <data id="meaning">Dog</data>
+         <data id="kanji">犬</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">せき</meta>
-         <meta id="kunyomi">ゆう</meta>
-         <meta id="meaning">Evening</meta>
-         <meta id="kanji">夕</meta>
+         <data id="onyomi">せき</data>
+         <data id="kunyomi">ゆう</data>
+         <data id="meaning">Evening</data>
+         <data id="kanji">夕</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">しゅつ</meta>
-         <meta id="kunyomi">で,だ</meta>
-         <meta id="meaning">Exit</meta>
-         <meta id="kanji">出</meta>
+         <data id="onyomi">しゅつ</data>
+         <data id="kunyomi">で,だ</data>
+         <data id="meaning">Exit</data>
+         <data id="kanji">出</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">もく</meta>
-         <meta id="kunyomi">め</meta>
-         <meta id="meaning">Eye</meta>
-         <meta id="kanji">目</meta>
+         <data id="onyomi">もく</data>
+         <data id="kunyomi">め</data>
+         <data id="meaning">Eye</data>
+         <data id="kanji">目</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">りょう</meta>
-         <meta id="kunyomi" />
-         <meta id="meaning">Finish</meta>
-         <meta id="kanji">了</meta>
+         <data id="onyomi">りょう</data>
+         <data id="kunyomi" />
+         <data id="meaning">Finish</data>
+         <data id="kanji">了</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">か</meta>
-         <meta id="kunyomi">ひ,ほ</meta>
-         <meta id="meaning">Fire</meta>
-         <meta id="kanji">火</meta>
+         <data id="onyomi">か</data>
+         <data id="kunyomi">ひ,ほ</data>
+         <data id="meaning">Fire</data>
+         <data id="kanji">火</data>
       </character>
       <character class="a2 n10">
-         <meta id="onyomi">ご</meta>
-         <meta id="kunyomi">いつ</meta>
-         <meta id="meaning">Five</meta>
-         <meta id="kanji">五</meta>
+         <data id="onyomi">ご</data>
+         <data id="kunyomi">いつ</data>
+         <data id="meaning">Five</data>
+         <data id="kanji">五</data>
       </character>
       <character class="a2 n10">
-         <meta id="onyomi">し</meta>
-         <meta id="kunyomi">よん,よ</meta>
-         <meta id="meaning">Four</meta>
-         <meta id="kanji">四</meta>
+         <data id="onyomi">し</data>
+         <data id="kunyomi">よん,よ</data>
+         <data id="meaning">Four</data>
+         <data id="kanji">四</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">さい</meta>
-         <meta id="kunyomi" />
-         <meta id="meaning">Genius</meta>
-         <meta id="kanji">才</meta>
+         <data id="onyomi">さい</data>
+         <data id="kunyomi" />
+         <data id="meaning">Genius</data>
+         <data id="kanji">才</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">しゅ, ず</meta>
-         <meta id="kunyomi">て</meta>
-         <meta id="meaning">Hand</meta>
-         <meta id="kanji">手</meta>
+         <data id="onyomi">しゅ, ず</data>
+         <data id="kunyomi">て</data>
+         <data id="meaning">Hand</data>
+         <data id="kanji">手</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">てん</meta>
-         <meta id="kunyomi">あま</meta>
-         <meta id="meaning">Heaven</meta>
-         <meta id="kanji">天</meta>
+         <data id="onyomi">てん</data>
+         <data id="kunyomi">あま</data>
+         <data id="meaning">Heaven</data>
+         <data id="kanji">天</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">おう</meta>
-         <meta id="kunyomi" />
-         <meta id="meaning">King</meta>
-         <meta id="kanji">王</meta>
+         <data id="onyomi">おう</data>
+         <data id="kunyomi" />
+         <data id="meaning">King</data>
+         <data id="kanji">王</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">さ</meta>
-         <meta id="kunyomi">ひだり</meta>
-         <meta id="meaning">Left</meta>
-         <meta id="kanji">左</meta>
+         <data id="onyomi">さ</data>
+         <data id="kunyomi">ひだり</data>
+         <data id="meaning">Left</data>
+         <data id="kanji">左</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">ちゅう</meta>
-         <meta id="kunyomi">なか</meta>
-         <meta id="meaning">Middle</meta>
-         <meta id="kanji">中</meta>
+         <data id="onyomi">ちゅう</data>
+         <data id="kunyomi">なか</data>
+         <data id="meaning">Middle</data>
+         <data id="kanji">中</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">げつ,がつ</meta>
-         <meta id="kunyomi">つき</meta>
-         <meta id="meaning">Moon</meta>
-         <meta id="kanji">月</meta>
+         <data id="onyomi">げつ,がつ</data>
+         <data id="kunyomi">つき</data>
+         <data id="meaning">Moon</data>
+         <data id="kanji">月</data>
       </character>
       <character class="a2">
-         <meta id="onyomi" />
-         <meta id="kunyomi">のま</meta>
-         <meta id="meaning">Repeater, Repeates the previous Kanji</meta>
-         <meta id="kanji">々</meta>
+         <data id="onyomi" />
+         <data id="kunyomi">のま</data>
+         <data id="meaning">Repeater, Repeates the previous Kanji</data>
+         <data id="kanji">々</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">でん</meta>
-         <meta id="kunyomi">た</meta>
-         <meta id="meaning">Rice Paddy</meta>
-         <meta id="kanji">田</meta>
+         <data id="onyomi">でん</data>
+         <data id="kunyomi">た</data>
+         <data id="meaning">Rice Paddy</data>
+         <data id="kanji">田</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">ゆう,う</meta>
-         <meta id="kunyomi">みぎ</meta>
-         <meta id="meaning">Right</meta>
-         <meta id="kanji">右</meta>
+         <data id="onyomi">ゆう,う</data>
+         <data id="kunyomi">みぎ</data>
+         <data id="meaning">Right</data>
+         <data id="kanji">右</data>
       </character>
       <character class="a2 n10">
-         <meta id="onyomi">ろく</meta>
-         <meta id="kunyomi">む</meta>
-         <meta id="meaning">Six</meta>
-         <meta id="kanji">六</meta>
+         <data id="onyomi">ろく</data>
+         <data id="kunyomi">む</data>
+         <data id="meaning">Six</data>
+         <data id="kanji">六</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">しょう</meta>
-         <meta id="kunyomi">ちい,こ,お</meta>
-         <meta id="meaning">Small</meta>
-         <meta id="kanji">小</meta>
+         <data id="onyomi">しょう</data>
+         <data id="kunyomi">ちい,こ,お</data>
+         <data id="meaning">Small</data>
+         <data id="kanji">小</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">りつ,りゅう</meta>
-         <meta id="kunyomi">た</meta>
-         <meta id="meaning">Stand</meta>
-         <meta id="kanji">立</meta>
+         <data id="onyomi">りつ,りゅう</data>
+         <data id="kunyomi">た</data>
+         <data id="meaning">Stand</data>
+         <data id="kanji">立</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">ちょう,てい</meta>
-         <meta id="kunyomi" />
-         <meta id="meaning">Street</meta>
-         <meta id="kanji">丁</meta>
+         <data id="onyomi">ちょう,てい</data>
+         <data id="kunyomi" />
+         <data id="meaning">Street</data>
+         <data id="kanji">丁</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">にち,じつ</meta>
-         <meta id="kunyomi">ひ,か,び</meta>
-         <meta id="meaning">Sun</meta>
-         <meta id="kanji">日</meta>
+         <data id="onyomi">にち,じつ</data>
+         <data id="kunyomi">ひ,か,び</data>
+         <data id="meaning">Sun</data>
+         <data id="kanji">日</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">とう</meta>
-         <meta id="kunyomi">かたな</meta>
-         <meta id="meaning">Sword</meta>
-         <meta id="kanji">刀</meta>
+         <data id="onyomi">とう</data>
+         <data id="kunyomi">かたな</data>
+         <data id="meaning">Sword</data>
+         <data id="kanji">刀</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">せん</meta>
-         <meta id="kunyomi">ち</meta>
-         <meta id="meaning">Thousand</meta>
-         <meta id="kanji">千</meta>
+         <data id="onyomi">せん</data>
+         <data id="kunyomi">ち</data>
+         <data id="meaning">Thousand</data>
+         <data id="kanji">千</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">もく,ぼく</meta>
-         <meta id="kunyomi">き,こ</meta>
-         <meta id="meaning">Tree</meta>
-         <meta id="kanji">木</meta>
+         <data id="onyomi">もく,ぼく</data>
+         <data id="kunyomi">き,こ</data>
+         <data id="meaning">Tree</data>
+         <data id="kanji">木</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">すい</meta>
-         <meta id="kunyomi">みず</meta>
-         <meta id="meaning">Water</meta>
-         <meta id="kanji">水</meta>
+         <data id="onyomi">すい</data>
+         <data id="kunyomi">みず</data>
+         <data id="meaning">Water</data>
+         <data id="kanji">水</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">はく</meta>
-         <meta id="kunyomi">しろ,しら</meta>
-         <meta id="meaning">White</meta>
-         <meta id="kanji">白</meta>
+         <data id="onyomi">はく</data>
+         <data id="kunyomi">しろ,しら</data>
+         <data id="meaning">White</data>
+         <data id="kanji">白</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">ぶん,もん</meta>
-         <meta id="kunyomi" />
-         <meta id="meaning">Writing</meta>
-         <meta id="kanji">文</meta>
+         <data id="onyomi">ぶん,もん</data>
+         <data id="kunyomi" />
+         <data id="meaning">Writing</data>
+         <data id="kanji">文</data>
       </character>
       <character class="a2">
-         <meta id="onyomi">えん</meta>
-         <meta id="kunyomi">まる</meta>
-         <meta id="meaning">yen</meta>
-         <meta id="kanji">円</meta>
+         <data id="onyomi">えん</data>
+         <data id="kunyomi">まる</data>
+         <data id="meaning">yen</data>
+         <data id="kanji">円</data>
       </character>
       <character class="a3">
-         <meta id="kanji">矢</meta>
-         <meta id="onyomi">や</meta>
-         <meta id="meaning">Arrow</meta>
+         <data id="kanji">矢</data>
+         <data id="onyomi">や</data>
+         <data id="meaning">Arrow</data>
       </character>
       <character class="a3">
-         <meta id="kanji">市</meta>
-         <meta id="onyomi">し</meta>
-         <meta id="meaning">City</meta>
+         <data id="kanji">市</data>
+         <data id="onyomi">し</data>
+         <data id="meaning">City</data>
       </character>
       <character class="a3">
-         <meta id="kanji">牛</meta>
-         <meta id="onyomi">ぎゅう</meta>
-         <meta id="meaning">Cow</meta>
+         <data id="kanji">牛</data>
+         <data id="onyomi">ぎゅう</data>
+         <data id="meaning">Cow</data>
       </character>
       <character class="a3">
-         <meta id="kanji">切</meta>
-         <meta id="onyomi">せつ</meta>
-         <meta id="meaning">Cut</meta>
+         <data id="kanji">切</data>
+         <data id="onyomi">せつ</data>
+         <data id="meaning">Cut</data>
       </character>
       <character class="a3">
-         <meta id="kanji">方</meta>
-         <meta id="onyomi">ほう</meta>
-         <meta id="meaning">Direction</meta>
+         <data id="kanji">方</data>
+         <data id="onyomi">ほう</data>
+         <data id="meaning">Direction</data>
       </character>
       <character class="a3">
-         <meta id="kanji">戸</meta>
-         <meta id="onyomi">と</meta>
-         <meta id="meaning">Door</meta>
+         <data id="kanji">戸</data>
+         <data id="onyomi">と</data>
+         <data id="meaning">Door</data>
       </character>
       <character class="a3">
-         <meta id="kanji">太</meta>
-         <meta id="onyomi">たい</meta>
-         <meta id="meaning">Fat</meta>
+         <data id="kanji">太</data>
+         <data id="onyomi">たい</data>
+         <data id="meaning">Fat</data>
       </character>
       <character class="a3">
-         <meta id="kanji">父</meta>
-         <meta id="onyomi">ちち</meta>
-         <meta id="meaning">Father</meta>
+         <data id="kanji">父</data>
+         <data id="onyomi">ちち</data>
+         <data id="meaning">Father</data>
       </character>
       <character class="a3">
-         <meta id="kanji">少</meta>
-         <meta id="onyomi">しょう</meta>
-         <meta id="meaning">Few</meta>
+         <data id="kanji">少</data>
+         <data id="onyomi">しょう</data>
+         <data id="meaning">Few</data>
       </character>
       <character class="a3">
-         <meta id="kanji">友</meta>
-         <meta id="onyomi">ゆう</meta>
-         <meta id="meaning">Friend</meta>
+         <data id="kanji">友</data>
+         <data id="onyomi">ゆう</data>
+         <data id="meaning">Friend</data>
       </character>
       <character class="a3">
-         <meta id="kanji">毛</meta>
-         <meta id="onyomi">もう</meta>
-         <meta id="meaning">Fur</meta>
+         <data id="kanji">毛</data>
+         <data id="onyomi">もう</data>
+         <data id="meaning">Fur</data>
       </character>
       <character class="a3">
-         <meta id="kanji">半</meta>
-         <meta id="onyomi">はん</meta>
-         <meta id="meaning">Half</meta>
+         <data id="kanji">半</data>
+         <data id="onyomi">はん</data>
+         <data id="meaning">Half</data>
       </character>
       <character class="a3">
-         <meta id="kanji">心</meta>
-         <meta id="onyomi">しん</meta>
-         <meta id="meaning">Heart</meta>
+         <data id="kanji">心</data>
+         <data id="onyomi">しん</data>
+         <data id="meaning">Heart</data>
       </character>
       <character class="a3">
-         <meta id="kanji">内</meta>
-         <meta id="onyomi">ない</meta>
-         <meta id="meaning">Inside</meta>
+         <data id="kanji">内</data>
+         <data id="onyomi">ない</data>
+         <data id="meaning">Inside</data>
       </character>
       <character class="a3">
-         <meta id="kanji">生</meta>
-         <meta id="onyomi">せい</meta>
-         <meta id="meaning">Life</meta>
+         <data id="kanji">生</data>
+         <data id="onyomi">せい</data>
+         <data id="meaning">Life</data>
       </character>
       <character class="a3">
-         <meta id="kanji">台</meta>
-         <meta id="onyomi">だい</meta>
-         <meta id="meaning">Machine</meta>
+         <data id="kanji">台</data>
+         <data id="onyomi">だい</data>
+         <data id="meaning">Machine</data>
       </character>
       <character class="a3">
-         <meta id="kanji">母</meta>
-         <meta id="onyomi">はは</meta>
-         <meta id="meaning">Mother</meta>
+         <data id="kanji">母</data>
+         <data id="onyomi">はは</data>
+         <data id="meaning">Mother</data>
       </character>
       <character class="a3">
-         <meta id="kanji">午</meta>
-         <meta id="onyomi">ご</meta>
-         <meta id="meaning">Noon</meta>
+         <data id="kanji">午</data>
+         <data id="onyomi">ご</data>
+         <data id="meaning">Noon</data>
       </character>
       <character class="a3">
-         <meta id="kanji">北</meta>
-         <meta id="onyomi">ほく</meta>
-         <meta id="meaning">North</meta>
+         <data id="kanji">北</data>
+         <data id="onyomi">ほく</data>
+         <data id="meaning">North</data>
       </character>
       <character class="a3">
-         <meta id="kanji">今</meta>
-         <meta id="onyomi">こん</meta>
-         <meta id="meaning">Now</meta>
+         <data id="kanji">今</data>
+         <data id="onyomi">こん</data>
+         <data id="meaning">Now</data>
       </character>
       <character class="a3">
-         <meta id="kanji">古</meta>
-         <meta id="onyomi">こ</meta>
-         <meta id="meaning">Old</meta>
+         <data id="kanji">古</data>
+         <data id="onyomi">こ</data>
+         <data id="meaning">Old</data>
       </character>
       <character class="a3">
-         <meta id="kanji">元</meta>
-         <meta id="onyomi">げん</meta>
-         <meta id="meaning">Origin</meta>
+         <data id="kanji">元</data>
+         <data id="onyomi">げん</data>
+         <data id="meaning">Origin</data>
       </character>
       <character class="a3">
-         <meta id="kanji">外</meta>
-         <meta id="onyomi">がい</meta>
-         <meta id="meaning">Outside</meta>
+         <data id="kanji">外</data>
+         <data id="onyomi">がい</data>
+         <data id="meaning">Outside</data>
       </character>
       <character class="a3">
-         <meta id="kanji">分</meta>
-         <meta id="onyomi">ぶん</meta>
-         <meta id="meaning">Part</meta>
+         <data id="kanji">分</data>
+         <data id="onyomi">ぶん</data>
+         <data id="meaning">Part</data>
       </character>
       <character class="a3">
-         <meta id="kanji">公</meta>
-         <meta id="onyomi">こう</meta>
-         <meta id="meaning">Public</meta>
+         <data id="kanji">公</data>
+         <data id="onyomi">こう</data>
+         <data id="meaning">Public</data>
       </character>
       <character class="a3">
-         <meta id="kanji">引</meta>
-         <meta id="onyomi">ひ</meta>
-         <meta id="meaning">Pull</meta>
+         <data id="kanji">引</data>
+         <data id="onyomi">ひ</data>
+         <data id="meaning">Pull</data>
       </character>
       <character class="a3">
-         <meta id="kanji">止</meta>
-         <meta id="onyomi">し</meta>
-         <meta id="meaning">Stop</meta>
+         <data id="kanji">止</data>
+         <data id="onyomi">し</data>
+         <data id="meaning">Stop</data>
       </character>
       <character class="a3">
-         <meta id="kanji">用</meta>
-         <meta id="onyomi">よう</meta>
-         <meta id="meaning">Task</meta>
+         <data id="kanji">用</data>
+         <data id="onyomi">よう</data>
+         <data id="meaning">Task</data>
       </character>
       <character class="a3">
-         <meta id="kanji">万</meta>
-         <meta id="onyomi">まん</meta>
-         <meta id="meaning">Ten Thousand</meta>
+         <data id="kanji">万</data>
+         <data id="onyomi">まん</data>
+         <data id="meaning">Ten Thousand</data>
       </character>
       <character class="a3">
-         <meta id="kanji">広</meta>
-         <meta id="onyomi">ひろ</meta>
-         <meta id="meaning">Wide</meta>
+         <data id="kanji">広</data>
+         <data id="onyomi">ひろ</data>
+         <data id="meaning">Wide</data>
       </character>
       <character class="a3">
-         <meta id="kanji">冬</meta>
-         <meta id="onyomi">ふゆ</meta>
-         <meta id="meaning">Winter</meta>
+         <data id="kanji">冬</data>
+         <data id="onyomi">ふゆ</data>
+         <data id="meaning">Winter</data>
       </character>
    </alphabet-characters>
 </alphabet-file>

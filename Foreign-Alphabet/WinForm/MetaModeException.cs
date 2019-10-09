@@ -1,6 +1,7 @@
-﻿using Foreign_Alphabet;
-using System;
+﻿using System;
 using System.Runtime.Serialization;
+using Foreign_Alphabet;
+using Foreign_Alphabet.Characters;
 
 namespace WinForm
 {
@@ -9,22 +10,15 @@ namespace WinForm
     {
 
         public Character character { get; set; }
-        public string MetaMode { get; set; }
+        public CharacterMetaData MetaData { get; set; }
 
 
-        public CharacterMetaModeException(Character character, string metaMode, string metaModeName, string message)
-            : base($"Character {character} does not contain a {metaModeName} of type: {metaMode}\n" + message)
+        public CharacterMetaModeException(Character character, CharacterMetaData MetaData, string message)
+            : base($"Character \"{character}\" does not contain meta data for: \"{MetaData.Name}\" in group: \"{MetaData.GroupID}\"\n" + message)
         {
             this.character = character;
-            this.MetaMode = metaMode;
+            this.MetaData = MetaData;
         }
-        public CharacterMetaModeException(Character character, string MetaMode, string metaModeName)
-            : base($"Character {character} does not contain a {metaModeName} mode of type: {MetaMode}")
-        {
-            this.character = character;
-            this.MetaMode = MetaMode;
-        }
-
 
     }
 }

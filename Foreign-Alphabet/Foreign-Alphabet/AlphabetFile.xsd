@@ -3,13 +3,13 @@
   <xs:element name="alphabet-file">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="alphabet-characters-meta">
+        <xs:element name="alphabet-characters-meta-data">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="meta-type-group" maxOccurs="unbounded" minOccurs="1">
+              <xs:element name="meta-data-group" maxOccurs="unbounded" minOccurs="1">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="meta-type" maxOccurs="unbounded" minOccurs="1">
+                    <xs:element name="meta-data" maxOccurs="unbounded" minOccurs="1">
                       <xs:complexType>
                         <xs:simpleContent>
                           <xs:extension base="xs:string">
@@ -66,7 +66,7 @@
               <xs:element maxOccurs="unbounded" name="character">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element maxOccurs="unbounded" name="meta">
+                    <xs:element name="data" maxOccurs="unbounded">
                       <xs:complexType>
                         <xs:simpleContent>
                           <xs:extension base="xs:string" >

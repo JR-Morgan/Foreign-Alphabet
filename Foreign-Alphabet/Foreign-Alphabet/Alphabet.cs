@@ -12,11 +12,11 @@ namespace Foreign_Alphabet {
         /// <summary>List of all groups incliding child groups</summary>
         public List<CharacterGroup> CharacterGroups { get; set; }
         public List<CharacterGroup> RootGroups { get; set; }
-        public Dictionary<string, List<CharacterMetaType>> MetaTypeGroups { get; set; }
-        public CharacterMetaType DefaultDisplay { get; set; }
-        public CharacterMetaType DefaultType { get; set; }
-        public List<CharacterMetaType> TypeOptions { get; set; }
-        public List<CharacterMetaType> DisplayOptions { get; set; }
+        public Dictionary<string, List<CharacterMetaData>> MetaTypeGroups { get; set; }
+        public CharacterMetaData DefaultDisplay { get; set; }
+        public CharacterMetaData DefaultInput { get; set; }
+        public List<CharacterMetaData> InputOptions { get; set; }
+        public List<CharacterMetaData> DisplayOptions { get; set; }
 
         /// <summary>
         /// Creates a new empty alphabet
@@ -25,9 +25,9 @@ namespace Foreign_Alphabet {
         {
             this.AlphabetName = "";
             this.CharacterGroups = new List<CharacterGroup>();
-            this.MetaTypeGroups = new Dictionary<string, List<CharacterMetaType>>();
-            this.TypeOptions = new List<CharacterMetaType>();
-            this.DisplayOptions = new List<CharacterMetaType>();
+            this.MetaTypeGroups = new Dictionary<string, List<CharacterMetaData>>();
+            this.InputOptions = new List<CharacterMetaData>();
+            this.DisplayOptions = new List<CharacterMetaData>();
         }
 
 

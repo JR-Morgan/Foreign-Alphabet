@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <alphabet-file name="Kana" version="1.4">
-	<alphabet-characters-meta>
-		<meta-type-group id="reading" name="Reading">
-			<meta-type id="latin" 	name="Latin" 	display="true" input="true" />
-			<meta-type id="ipa" 		name="IPA" 		display="true" input="false" />
-			<meta-type id="hiragana" name="Hiragana" display="true" input="true" />
-			<meta-type id="katakana" name="Katakana" display="true" input="true" />
-		</meta-type-group>
-	</alphabet-characters-meta>
+	<alphabet-characters-meta-data>
+		<meta-data-group id="reading" name="Reading">
+			<meta-data id="latin" 	name="Latin" 	display="true" input="true" />
+			<meta-data id="ipa" 		name="IPA" 		display="true" input="false" />
+			<meta-data id="hiragana" name="Hiragana" display="true" input="true" />
+			<meta-data id="katakana" name="Katakana" display="true" input="true" />
+		</meta-data-group>
+	</alphabet-characters-meta-data>
 	<ui-options>
 		<display-options defaultMeta="hiragana" />
 		<input-options defaultMeta="latin" />
@@ -36,430 +36,430 @@
 	</alphabet-classes>
 	<alphabet-characters>
 		<character class="vowels">
-			<meta id="latin">a</meta>
-			<meta id="ipa">a</meta>
-			<meta id="hiragana">あ</meta>
-			<meta id="katakana">ア</meta>
+			<data id="latin">a</data>
+			<data id="ipa">a</data>
+			<data id="hiragana">あ</data>
+			<data id="katakana">ア</data>
 		</character>
 		<character class="vowels">
-			<meta id="latin">i</meta>
-			<meta id="ipa">i</meta>
-			<meta id="hiragana">い</meta>
-			<meta id="katakana">イ</meta>
+			<data id="latin">i</data>
+			<data id="ipa">i</data>
+			<data id="hiragana">い</data>
+			<data id="katakana">イ</data>
 		</character>
 		<character class="vowels">
-			<meta id="latin">u</meta>
-			<meta id="ipa">ɯ</meta>
-			<meta id="hiragana">う</meta>
-			<meta id="katakana">ウ</meta>
+			<data id="latin">u</data>
+			<data id="ipa">ɯ</data>
+			<data id="hiragana">う</data>
+			<data id="katakana">ウ</data>
 		</character>
 		<character class="vowels">
-			<meta id="latin">e</meta>
-			<meta id="ipa">e</meta>
-			<meta id="hiragana">え</meta>
-			<meta id="katakana">エ</meta>
+			<data id="latin">e</data>
+			<data id="ipa">e</data>
+			<data id="hiragana">え</data>
+			<data id="katakana">エ</data>
 		</character>
 		<character class="vowels">
-			<meta id="latin">o</meta>
-			<meta id="ipa">o</meta>
-			<meta id="hiragana">お</meta>
-			<meta id="katakana">オ</meta>
+			<data id="latin">o</data>
+			<data id="ipa">o</data>
+			<data id="hiragana">お</data>
+			<data id="katakana">オ</data>
 		</character>
 		<character class="k">
-				<meta id="latin">ka</meta>
-				<meta id="ipa">ka</meta>
-				<meta id="hiragana">か</meta>
-				<meta id="katakana">カ</meta>
+				<data id="latin">ka</data>
+				<data id="ipa">ka</data>
+				<data id="hiragana">か</data>
+				<data id="katakana">カ</data>
 			</character>
 			<character class="k">
-				<meta id="latin">ki</meta>
-				<meta id="ipa">ki</meta>
-				<meta id="hiragana">き</meta>
-				<meta id="katakana">キ</meta>
+				<data id="latin">ki</data>
+				<data id="ipa">ki</data>
+				<data id="hiragana">き</data>
+				<data id="katakana">キ</data>
 			</character>
 			<character class="k">
-				<meta id="latin">ku</meta>
-				<meta id="ipa">kɯ</meta>
-				<meta id="hiragana">く</meta>
-				<meta id="katakana">ク</meta>
+				<data id="latin">ku</data>
+				<data id="ipa">kɯ</data>
+				<data id="hiragana">く</data>
+				<data id="katakana">ク</data>
 			</character>
 			<character class="k">
-				<meta id="latin">ke</meta>
-				<meta id="ipa">ke</meta>
-				<meta id="hiragana">け</meta>
-				<meta id="katakana">ケ</meta>
+				<data id="latin">ke</data>
+				<data id="ipa">ke</data>
+				<data id="hiragana">け</data>
+				<data id="katakana">ケ</data>
 			</character>
 			<character class="k">
-				<meta id="latin">ko</meta>
-				<meta id="ipa">ko</meta>
-				<meta id="hiragana">こ</meta>
-				<meta id="katakana">コ</meta>
+				<data id="latin">ko</data>
+				<data id="ipa">ko</data>
+				<data id="hiragana">こ</data>
+				<data id="katakana">コ</data>
 			</character>
 			<character class="s">
-				<meta id="latin">sa</meta>
-				<meta id="ipa">sa</meta>
-				<meta id="hiragana">さ</meta>
-				<meta id="katakana">サ</meta>
+				<data id="latin">sa</data>
+				<data id="ipa">sa</data>
+				<data id="hiragana">さ</data>
+				<data id="katakana">サ</data>
 			</character>
 			<character class="s">
-				<meta id="latin">shi</meta>
-				<meta id="ipa">ɕi</meta>
-				<meta id="hiragana">し</meta>
-				<meta id="katakana">シ</meta>
+				<data id="latin">shi</data>
+				<data id="ipa">ɕi</data>
+				<data id="hiragana">し</data>
+				<data id="katakana">シ</data>
 			</character>
 			<character class="s">
-				<meta id="latin">su</meta>
-				<meta id="ipa">sɯ</meta>
-				<meta id="hiragana">す</meta>
-				<meta id="katakana">ス</meta>
+				<data id="latin">su</data>
+				<data id="ipa">sɯ</data>
+				<data id="hiragana">す</data>
+				<data id="katakana">ス</data>
 			</character>
 			<character class="s">
-				<meta id="latin">se</meta>
-				<meta id="ipa">se</meta>
-				<meta id="hiragana">せ</meta>
-				<meta id="katakana">セ</meta>
+				<data id="latin">se</data>
+				<data id="ipa">se</data>
+				<data id="hiragana">せ</data>
+				<data id="katakana">セ</data>
 			</character>
 			<character class="s">
-				<meta id="latin">so</meta>
-				<meta id="ipa">so</meta>
-				<meta id="hiragana">そ</meta>
-				<meta id="katakana">ソ</meta>
+				<data id="latin">so</data>
+				<data id="ipa">so</data>
+				<data id="hiragana">そ</data>
+				<data id="katakana">ソ</data>
 			</character>
 			<character class="t">
-				<meta id="latin">ta</meta>
-				<meta id="ipa">ta</meta>
-				<meta id="hiragana">た</meta>
-				<meta id="katakana">タ</meta>
+				<data id="latin">ta</data>
+				<data id="ipa">ta</data>
+				<data id="hiragana">た</data>
+				<data id="katakana">タ</data>
 			</character>
 			<character class="t">
-				<meta id="latin">chi</meta>
-				<meta id="ipa">tɕi</meta>
-				<meta id="hiragana">ち</meta>
-				<meta id="katakana">チ</meta>
+				<data id="latin">chi</data>
+				<data id="ipa">tɕi</data>
+				<data id="hiragana">ち</data>
+				<data id="katakana">チ</data>
 			</character>
 			<character class="t">
-				<meta id="latin">tsu</meta>
-				<meta id="ipa">tsɯ</meta>
-				<meta id="hiragana">つ</meta>
-				<meta id="katakana">ツ</meta>
+				<data id="latin">tsu</data>
+				<data id="ipa">tsɯ</data>
+				<data id="hiragana">つ</data>
+				<data id="katakana">ツ</data>
 			</character>
 			<character class="t">
-				<meta id="latin">te</meta>
-				<meta id="ipa">te</meta>
-				<meta id="hiragana">て</meta>
-				<meta id="katakana">テ</meta>
+				<data id="latin">te</data>
+				<data id="ipa">te</data>
+				<data id="hiragana">て</data>
+				<data id="katakana">テ</data>
 			</character>
 			<character class="t">
-				<meta id="latin">to</meta>
-				<meta id="ipa">to</meta>
-				<meta id="hiragana">と</meta>
-				<meta id="katakana">ト</meta>
+				<data id="latin">to</data>
+				<data id="ipa">to</data>
+				<data id="hiragana">と</data>
+				<data id="katakana">ト</data>
 			</character>
 			<character class="n">
-				<meta id="latin">na</meta>
-				<meta id="ipa">na</meta>
-				<meta id="hiragana">な</meta>
-				<meta id="katakana">ナ</meta>
+				<data id="latin">na</data>
+				<data id="ipa">na</data>
+				<data id="hiragana">な</data>
+				<data id="katakana">ナ</data>
 			</character>
 			<character class="n">
-				<meta id="latin">ni</meta>
-				<meta id="ipa">ɲi</meta>
-				<meta id="hiragana">に</meta>
-				<meta id="katakana">ニ</meta>
+				<data id="latin">ni</data>
+				<data id="ipa">ɲi</data>
+				<data id="hiragana">に</data>
+				<data id="katakana">ニ</data>
 			</character>
 			<character class="n">
-				<meta id="latin">nu</meta>
-				<meta id="ipa">nɯ</meta>
-				<meta id="hiragana">ぬ</meta>
-				<meta id="katakana">ヌ</meta>
+				<data id="latin">nu</data>
+				<data id="ipa">nɯ</data>
+				<data id="hiragana">ぬ</data>
+				<data id="katakana">ヌ</data>
 			</character>
 			<character class="n">
-				<meta id="latin">ne</meta>
-				<meta id="ipa">ne</meta>
-				<meta id="hiragana">ね</meta>
-				<meta id="katakana">ネ</meta>
+				<data id="latin">ne</data>
+				<data id="ipa">ne</data>
+				<data id="hiragana">ね</data>
+				<data id="katakana">ネ</data>
 			</character>
 			<character class="n">
-				<meta id="latin">no</meta>
-				<meta id="ipa">no</meta>
-				<meta id="hiragana">の</meta>
-				<meta id="katakana">ノ</meta>
+				<data id="latin">no</data>
+				<data id="ipa">no</data>
+				<data id="hiragana">の</data>
+				<data id="katakana">ノ</data>
 			</character>
 			<character class="h">
-				<meta id="latin">ha</meta>
-				<meta id="ipa">ha</meta>
-				<meta id="hiragana">は</meta>
-				<meta id="katakana">ハ</meta>
+				<data id="latin">ha</data>
+				<data id="ipa">ha</data>
+				<data id="hiragana">は</data>
+				<data id="katakana">ハ</data>
 			</character>
 			<character class="h">
-				<meta id="latin">hi</meta>
-				<meta id="ipa">çi</meta>
-				<meta id="hiragana">ひ</meta>
-				<meta id="katakana">ヒ</meta>
+				<data id="latin">hi</data>
+				<data id="ipa">çi</data>
+				<data id="hiragana">ひ</data>
+				<data id="katakana">ヒ</data>
 			</character>
 			<character class="h">
-				<meta id="latin">fu</meta>
-				<meta id="ipa">ɸɯ</meta>
-				<meta id="hiragana">ふ</meta>
-				<meta id="katakana">フ</meta>
+				<data id="latin">fu</data>
+				<data id="ipa">ɸɯ</data>
+				<data id="hiragana">ふ</data>
+				<data id="katakana">フ</data>
 			</character>
 			<character class="h">
-				<meta id="latin">he</meta>
-				<meta id="ipa">he</meta>
-				<meta id="hiragana">へ</meta>
-				<meta id="katakana">ヘ</meta>
+				<data id="latin">he</data>
+				<data id="ipa">he</data>
+				<data id="hiragana">へ</data>
+				<data id="katakana">ヘ</data>
 			</character>
 			<character class="h">
-				<meta id="latin">ho</meta>
-				<meta id="ipa">ho</meta>
-				<meta id="hiragana">ほ</meta>
-				<meta id="katakana">ホ</meta>
+				<data id="latin">ho</data>
+				<data id="ipa">ho</data>
+				<data id="hiragana">ほ</data>
+				<data id="katakana">ホ</data>
 			</character>
 			<character class="m">
-				<meta id="latin">ma</meta>
-				<meta id="ipa">na</meta>
-				<meta id="hiragana">ま</meta>
-				<meta id="katakana">マ</meta>
+				<data id="latin">ma</data>
+				<data id="ipa">na</data>
+				<data id="hiragana">ま</data>
+				<data id="katakana">マ</data>
 			</character>
 			<character class="m">
-				<meta id="latin">mi</meta>
-				<meta id="ipa">mi</meta>
-				<meta id="hiragana">み</meta>
-				<meta id="katakana">ミ</meta>
+				<data id="latin">mi</data>
+				<data id="ipa">mi</data>
+				<data id="hiragana">み</data>
+				<data id="katakana">ミ</data>
 			</character>
 			<character class="m">
-				<meta id="latin">mu</meta>
-				<meta id="ipa">mɯ</meta>
-				<meta id="hiragana">む</meta>
-				<meta id="katakana">ム</meta>
+				<data id="latin">mu</data>
+				<data id="ipa">mɯ</data>
+				<data id="hiragana">む</data>
+				<data id="katakana">ム</data>
 			</character>
 			<character class="m">
-				<meta id="latin">me</meta>
-				<meta id="ipa">me</meta>
-				<meta id="hiragana">め</meta>
-				<meta id="katakana">メ</meta>
+				<data id="latin">me</data>
+				<data id="ipa">me</data>
+				<data id="hiragana">め</data>
+				<data id="katakana">メ</data>
 			</character>
 			<character class="m">
-				<meta id="latin">mo</meta>
-				<meta id="ipa">mo</meta>
-				<meta id="hiragana">も</meta>
-				<meta id="katakana">モ</meta>
+				<data id="latin">mo</data>
+				<data id="ipa">mo</data>
+				<data id="hiragana">も</data>
+				<data id="katakana">モ</data>
 			</character>
 			<character class="y">
-				<meta id="latin">ya</meta>
-				<meta id="ipa">ja</meta>
-				<meta id="hiragana">や</meta>
-				<meta id="katakana">ヤ</meta>
+				<data id="latin">ya</data>
+				<data id="ipa">ja</data>
+				<data id="hiragana">や</data>
+				<data id="katakana">ヤ</data>
 			</character>
 			<character class="y">
-				<meta id="latin">yu</meta>
-				<meta id="ipa">jɯ</meta>
-				<meta id="hiragana">ゆ</meta>
-				<meta id="katakana">ユ</meta>
+				<data id="latin">yu</data>
+				<data id="ipa">jɯ</data>
+				<data id="hiragana">ゆ</data>
+				<data id="katakana">ユ</data>
 			</character>
 			<character class="y">
-				<meta id="latin">yo</meta>
-				<meta id="ipa">jo</meta>
-				<meta id="hiragana">よ</meta>
-				<meta id="katakana">ヨ</meta>
+				<data id="latin">yo</data>
+				<data id="ipa">jo</data>
+				<data id="hiragana">よ</data>
+				<data id="katakana">ヨ</data>
 			</character>
 			<character class="r">
-				<meta id="latin">ra</meta>
-				<meta id="ipa">ɾa</meta>
-				<meta id="hiragana">ら</meta>
-				<meta id="katakana">ラ</meta>
+				<data id="latin">ra</data>
+				<data id="ipa">ɾa</data>
+				<data id="hiragana">ら</data>
+				<data id="katakana">ラ</data>
 			</character>
 			<character class="r">
-				<meta id="latin">ri</meta>
-				<meta id="ipa">ɾi</meta>
-				<meta id="hiragana">り</meta>
-				<meta id="katakana">リ</meta>
+				<data id="latin">ri</data>
+				<data id="ipa">ɾi</data>
+				<data id="hiragana">り</data>
+				<data id="katakana">リ</data>
 			</character>
 			<character class="r">
-				<meta id="latin">ru</meta>
-				<meta id="ipa">ɾɯ</meta>
-				<meta id="hiragana">る</meta>
-				<meta id="katakana">ル</meta>
+				<data id="latin">ru</data>
+				<data id="ipa">ɾɯ</data>
+				<data id="hiragana">る</data>
+				<data id="katakana">ル</data>
 			</character>
 			<character class="r">
-				<meta id="latin">re</meta>
-				<meta id="ipa">ɾe</meta>
-				<meta id="hiragana">れ</meta>
-				<meta id="katakana">レ</meta>
+				<data id="latin">re</data>
+				<data id="ipa">ɾe</data>
+				<data id="hiragana">れ</data>
+				<data id="katakana">レ</data>
 			</character>
 			<character class="r">
-				<meta id="latin">ro</meta>
-				<meta id="ipa">ɾo</meta>
-				<meta id="hiragana">ろ</meta>
-				<meta id="katakana">ロ</meta>
+				<data id="latin">ro</data>
+				<data id="ipa">ɾo</data>
+				<data id="hiragana">ろ</data>
+				<data id="katakana">ロ</data>
 			</character>
 			<character class="w">
-				<meta id="latin">wa</meta>
-				<meta id="ipa">ɰa</meta>
-				<meta id="hiragana">わ</meta>
-				<meta id="katakana">ワ</meta>
+				<data id="latin">wa</data>
+				<data id="ipa">ɰa</data>
+				<data id="hiragana">わ</data>
+				<data id="katakana">ワ</data>
 			</character>
 			<character class="w">
-				<meta id="latin">wo</meta>
-				<meta id="ipa">o</meta>
-				<meta id="hiragana">を</meta>
-				<meta id="katakana">ヲ</meta>
+				<data id="latin">wo</data>
+				<data id="ipa">o</data>
+				<data id="hiragana">を</data>
+				<data id="katakana">ヲ</data>
 			</character>
 			<character class="nn">
-				<meta id="latin">n</meta>
-				<meta id="ipa">ɴ</meta>
-				<meta id="hiragana">ん</meta>
-				<meta id="katakana">ン</meta>
+				<data id="latin">n</data>
+				<data id="ipa">ɴ</data>
+				<data id="hiragana">ん</data>
+				<data id="katakana">ン</data>
 			</character>
 			<character class="g">
-				<meta id="latin">ga</meta>
-				<meta id="ipa">ga</meta>
-				<meta id="hiragana">が</meta>
-				<meta id="katakana">ガ</meta>
+				<data id="latin">ga</data>
+				<data id="ipa">ga</data>
+				<data id="hiragana">が</data>
+				<data id="katakana">ガ</data>
 			</character>
 			<character class="g">
-				<meta id="latin">gi</meta>
-				<meta id="ipa">gi</meta>
-				<meta id="hiragana">ぎ</meta>
-				<meta id="katakana">ギ</meta>
+				<data id="latin">gi</data>
+				<data id="ipa">gi</data>
+				<data id="hiragana">ぎ</data>
+				<data id="katakana">ギ</data>
 			</character>
 			<character class="g">
-				<meta id="latin">gu</meta>
-				<meta id="ipa">gɯ</meta>
-				<meta id="hiragana">ぐ</meta>
-				<meta id="katakana">グ</meta>
+				<data id="latin">gu</data>
+				<data id="ipa">gɯ</data>
+				<data id="hiragana">ぐ</data>
+				<data id="katakana">グ</data>
 			</character>
 			<character class="g">
-				<meta id="latin">ge</meta>
-				<meta id="ipa">ge</meta>
-				<meta id="hiragana">げ</meta>
-				<meta id="katakana">ゲ</meta>
+				<data id="latin">ge</data>
+				<data id="ipa">ge</data>
+				<data id="hiragana">げ</data>
+				<data id="katakana">ゲ</data>
 			</character>
 			<character class="g">
-				<meta id="latin">go</meta>
-				<meta id="ipa">go</meta>
-				<meta id="hiragana">ご</meta>
-				<meta id="katakana">ゴ</meta>
+				<data id="latin">go</data>
+				<data id="ipa">go</data>
+				<data id="hiragana">ご</data>
+				<data id="katakana">ゴ</data>
 			</character>
 			<character class="z">
-				<meta id="latin">za</meta>
-				<meta id="ipa">(d)za</meta>
-				<meta id="hiragana">ざ</meta>
-				<meta id="katakana">ザ</meta>
+				<data id="latin">za</data>
+				<data id="ipa">(d)za</data>
+				<data id="hiragana">ざ</data>
+				<data id="katakana">ザ</data>
 			</character>
 			<character class="z">
-				<meta id="latin">ji</meta>
-				<meta id="ipa">(d)ʑi</meta>
-				<meta id="hiragana">じ</meta>
-				<meta id="katakana">ジ</meta>
+				<data id="latin">ji</data>
+				<data id="ipa">(d)ʑi</data>
+				<data id="hiragana">じ</data>
+				<data id="katakana">ジ</data>
 			</character>
 			<character class="z">
-				<meta id="latin">zu</meta>
-				<meta id="ipa">(d)zɯ</meta>
-				<meta id="hiragana">ず</meta>
-				<meta id="katakana">ズ</meta>
+				<data id="latin">zu</data>
+				<data id="ipa">(d)zɯ</data>
+				<data id="hiragana">ず</data>
+				<data id="katakana">ズ</data>
 			</character>
 			<character class="z">
-				<meta id="latin">ze</meta>
-				<meta id="ipa">(d)ze</meta>
-				<meta id="hiragana">ぜ</meta>
-				<meta id="katakana">ゼ</meta>
+				<data id="latin">ze</data>
+				<data id="ipa">(d)ze</data>
+				<data id="hiragana">ぜ</data>
+				<data id="katakana">ゼ</data>
 			</character>
 			<character class="z">
-				<meta id="latin">zo</meta>
-				<meta id="ipa">(d)zo</meta>
-				<meta id="hiragana">ぞ</meta>
-				<meta id="katakana">ゾ</meta>
+				<data id="latin">zo</data>
+				<data id="ipa">(d)zo</data>
+				<data id="hiragana">ぞ</data>
+				<data id="katakana">ゾ</data>
 			</character>
 			<character class="d">
-				<meta id="latin">da</meta>
-				<meta id="ipa">da</meta>
-				<meta id="hiragana">だ</meta>
-				<meta id="katakana">ダ</meta>
+				<data id="latin">da</data>
+				<data id="ipa">da</data>
+				<data id="hiragana">だ</data>
+				<data id="katakana">ダ</data>
 			</character>
 			<character class="d">
-				<meta id="latin">dji</meta>
-				<meta id="ipa">(d)ʑi</meta>
-				<meta id="hiragana">ぢ</meta>
-				<meta id="katakana">ヂ</meta>
+				<data id="latin">dji</data>
+				<data id="ipa">(d)ʑi</data>
+				<data id="hiragana">ぢ</data>
+				<data id="katakana">ヂ</data>
 			</character>
 			<character class="d">
-				<meta id="latin">dzu</meta>
-				<meta id="ipa">(d)zɯ</meta>
-				<meta id="hiragana">づ</meta>
-				<meta id="katakana">ヅ</meta>
+				<data id="latin">dzu</data>
+				<data id="ipa">(d)zɯ</data>
+				<data id="hiragana">づ</data>
+				<data id="katakana">ヅ</data>
 			</character>
 			<character class="d">
-				<meta id="latin">de</meta>
-				<meta id="ipa">de</meta>
-				<meta id="hiragana">で</meta>
-				<meta id="katakana">デ</meta>
+				<data id="latin">de</data>
+				<data id="ipa">de</data>
+				<data id="hiragana">で</data>
+				<data id="katakana">デ</data>
 			</character>
 			<character class="d">
-				<meta id="latin">do</meta>
-				<meta id="ipa">do</meta>
-				<meta id="hiragana">ど</meta>
-				<meta id="katakana">ド</meta>
+				<data id="latin">do</data>
+				<data id="ipa">do</data>
+				<data id="hiragana">ど</data>
+				<data id="katakana">ド</data>
 			</character>
 			<character class="b">
-				<meta id="latin">ba</meta>
-				<meta id="ipa">ba</meta>
-				<meta id="hiragana">ば</meta>
-				<meta id="katakana">バ</meta>
+				<data id="latin">ba</data>
+				<data id="ipa">ba</data>
+				<data id="hiragana">ば</data>
+				<data id="katakana">バ</data>
 			</character>
 			<character class="b">
-				<meta id="latin">bi</meta>
-				<meta id="ipa">bi</meta>
-				<meta id="hiragana">び</meta>
-				<meta id="katakana">ビ</meta>
+				<data id="latin">bi</data>
+				<data id="ipa">bi</data>
+				<data id="hiragana">び</data>
+				<data id="katakana">ビ</data>
 			</character>
 			<character class="b">
-				<meta id="latin">bu</meta>
-				<meta id="ipa">bɯ</meta>
-				<meta id="hiragana">ぶ</meta>
-				<meta id="katakana">ブ</meta>
+				<data id="latin">bu</data>
+				<data id="ipa">bɯ</data>
+				<data id="hiragana">ぶ</data>
+				<data id="katakana">ブ</data>
 			</character>
 			<character class="b">
-				<meta id="latin">be</meta>
-				<meta id="ipa">be</meta>
-				<meta id="hiragana">べ</meta>
-				<meta id="katakana">ベ</meta>
+				<data id="latin">be</data>
+				<data id="ipa">be</data>
+				<data id="hiragana">べ</data>
+				<data id="katakana">ベ</data>
 			</character>
 			<character class="b">
-				<meta id="latin">bo</meta>
-				<meta id="ipa">bo</meta>
-				<meta id="hiragana">ぼ</meta>
-				<meta id="katakana">ボ</meta>
+				<data id="latin">bo</data>
+				<data id="ipa">bo</data>
+				<data id="hiragana">ぼ</data>
+				<data id="katakana">ボ</data>
 			</character>
 			<character class="p">
-				<meta id="latin">pa</meta>
-				<meta id="ipa">pa</meta>
-				<meta id="hiragana">ぱ</meta>
-				<meta id="katakana">パ</meta>
+				<data id="latin">pa</data>
+				<data id="ipa">pa</data>
+				<data id="hiragana">ぱ</data>
+				<data id="katakana">パ</data>
 			</character>
 			<character class="p">
-				<meta id="latin">pi</meta>
-				<meta id="ipa">pi</meta>
-				<meta id="hiragana">ぴ</meta>
-				<meta id="katakana">ピ</meta>
+				<data id="latin">pi</data>
+				<data id="ipa">pi</data>
+				<data id="hiragana">ぴ</data>
+				<data id="katakana">ピ</data>
 			</character>
 			<character class="p">
-				<meta id="latin">pu</meta>
-				<meta id="ipa">pɯ</meta>
-				<meta id="hiragana">ぷ</meta>
-				<meta id="katakana">プ</meta>
+				<data id="latin">pu</data>
+				<data id="ipa">pɯ</data>
+				<data id="hiragana">ぷ</data>
+				<data id="katakana">プ</data>
 			</character>
 			<character class="p">
-				<meta id="latin">pe</meta>
-				<meta id="ipa">pe</meta>
-				<meta id="hiragana">ぺ</meta>
-				<meta id="katakana">ペ</meta>
+				<data id="latin">pe</data>
+				<data id="ipa">pe</data>
+				<data id="hiragana">ぺ</data>
+				<data id="katakana">ペ</data>
 			</character>
 			<character class="p">
-				<meta id="latin">po</meta>
-				<meta id="ipa">po</meta>
-				<meta id="hiragana">ぽ</meta>
-				<meta id="katakana">ポ</meta>
+				<data id="latin">po</data>
+				<data id="ipa">po</data>
+				<data id="hiragana">ぽ</data>
+				<data id="katakana">ポ</data>
 			</character>
 	</alphabet-characters>
 </alphabet-file>

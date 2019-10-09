@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Alphabets", "Alphabets", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm", "WinForm\WinForm.csproj", "{A336FD28-6593-46AB-A1D0-8EA9719CC5E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF\WPF.csproj", "{277A3FC1-DCCE-4F09-8FD5-FC0CA795A849}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A336FD28-6593-46AB-A1D0-8EA9719CC5E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A336FD28-6593-46AB-A1D0-8EA9719CC5E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A336FD28-6593-46AB-A1D0-8EA9719CC5E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277A3FC1-DCCE-4F09-8FD5-FC0CA795A849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277A3FC1-DCCE-4F09-8FD5-FC0CA795A849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277A3FC1-DCCE-4F09-8FD5-FC0CA795A849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277A3FC1-DCCE-4F09-8FD5-FC0CA795A849}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
