@@ -1,6 +1,6 @@
 # Foreign-Alphabet
 Learning tool for learning Foreign Alphabets and Syllabaries<br>
-This program is still a work in progress; however, the all releases are a very usable state, and I am actively developing this program
+This program is still a work in progress; however, all releases are a very usable state, and I am actively developing this program
 
 ## Who this application is for
 This program is for people who are beginners to learn a foreign language and want to learn a new Alphabet or Syllabary like Japanese Hiragana, Katakana.
