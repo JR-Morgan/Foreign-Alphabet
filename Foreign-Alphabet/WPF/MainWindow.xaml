@@ -9,25 +9,24 @@
         FontSize="18">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10" />
-            <ColumnDefinition Width="350" />
-            <ColumnDefinition Width="10" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <!--Left Menu-->
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="0" Margin="5">
             <Grid.RowDefinitions>
-                <RowDefinition Height="10" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="auto" />
-                <RowDefinition Height="10" />
             </Grid.RowDefinitions>
 
-            <TreeView x:Name="trvCharacterGroups" Grid.Column="1" Grid.Row="1" Margin="0,0,0,10" />
+            <TreeView x:Name="trvCharacterGroups" Grid.Row="0" Margin="0,0,0,10" >
+                
+            </TreeView>
             <!--Mode Menu-->
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="*" />
@@ -46,18 +45,18 @@
             </Grid>
         </Grid>
         <!--Display Section-->
-        <Grid Grid.Column="3">
+        <Grid Grid.Column="1" Grid.ColumnSpan="2" Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition  Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <RichTextBox x:Name="rtbDisplay" Grid.Row="1" Grid.RowSpan="2" MinHeight="300" MinWidth="400" />
-            
+
             <!--Input Section-->
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
@@ -68,11 +67,19 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                
-                <TextBox x:Name="txtInput"      Grid.Column="1" Grid.ColumnSpan="3"/>
-                <Button x:Name="btnInputSkip"   Grid.Column="4" Height="50"/>
-            </Grid>
 
+                <TextBox x:Name="txtInput"      Grid.Column="1" Grid.ColumnSpan="3" Margin="2.5" FontSize="24" TextAlignment="Center" VerticalContentAlignment="center"/>
+                <Button x:Name="btnInputSkip"   Grid.Column="4" Height="50" Margin="2.5" Content="Skip" />
+            </Grid>
+        </Grid>
+        <!--Meta Data Section-->
+        <Grid Grid.Column="4" Margin="5">
+            <TabControl x:Name="tabMetaData">
+                <TabItem Header="None"></TabItem>
+                <TabItem Header="TReading"></TabItem>
+                <TabItem Header="TMeaning"></TabItem>
+            </TabControl>
         </Grid>
     </Grid>
 </Window>
+    
